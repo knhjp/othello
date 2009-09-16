@@ -45,5 +45,11 @@ public class SimpleBoardTest extends OthelloTestCase {
         assertTrue(board.isMoveValid(1, 34));
         assertTrue(board.isMoveValid(1, 43));
 
+        //testing for actual valid moves for white
+        assertTrue(board.isMoveValid(-1, 46));
+        assertTrue(board.isMoveValid(-1, 64));
+        assertTrue(board.isMoveValid(-1, 35));
+        assertTrue(board.isMoveValid(-1, 53));
+
     }
 }
