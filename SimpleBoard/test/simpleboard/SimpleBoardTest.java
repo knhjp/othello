@@ -28,6 +28,9 @@ public class SimpleBoardTest extends OthelloTestCase {
     }
 
     public void testIsMoveValid() {
-        
+        SimpleBoard board = new SimpleBoard();
+        board.resetToStart();
+
+        assertFalse(board.isMoveValid(11));
     }
 }
