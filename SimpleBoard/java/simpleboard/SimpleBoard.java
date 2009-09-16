@@ -31,6 +31,6 @@ public class SimpleBoard implements Board {
     }
 
     @Override public void resetToStart() {
-        
+        System.arraycopy(initBoard,0,board,0,initBoard.length);
     }
 }
