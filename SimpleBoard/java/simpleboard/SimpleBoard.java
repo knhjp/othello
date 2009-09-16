@@ -30,7 +30,11 @@ public class SimpleBoard implements Board {
     }
 
     public SimpleBoard(SimpleBoard board) {
-        System.arraycopy(board.board,0,this.board,0,this.board.length);
+        copyBoard(board);
+    }
+
+    @Override public void copyBoard(Board board) {
+        System.arraycopy(((SimpleBoard)board).board,0,this.board,0,this.board.length);
     }
 
     @Override public int getSquare(int location) {

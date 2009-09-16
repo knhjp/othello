@@ -34,4 +34,10 @@ public interface Board {
      * @param location the location of where the move is being made
      */
     void makeMove(int color, int location);
+
+    /**
+     * Copies the input board
+     * @param board the board that you wish to copy
+     */
+    void copyBoard(Board board);
 }
