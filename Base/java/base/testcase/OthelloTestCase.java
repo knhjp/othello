@@ -1,5 +1,7 @@
 package base.testcase;
 
+import junit.framework.TestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package base.testcase;
  * Time: 3:24:26 PM
  * To change this template use File | Settings | File Templates.
  */
-public class OthelloTestCase {
+public class OthelloTestCase extends TestCase {
 }
