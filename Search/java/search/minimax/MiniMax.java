@@ -1,5 +1,7 @@
 package search.minimax;
 
+import search.TreeSearch;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package search.minimax;
  * Time: 6:12:11 PM
  * This class does the naive minimax search
  */
-public class MiniMax {
+public class MiniMax implements TreeSearch {
 }
