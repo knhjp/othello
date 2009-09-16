@@ -1,5 +1,7 @@
 package simpleboard;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package simpleboard;
  * Time: 3:08:40 PM
  * This class is a unit test for SimpleBoard
  */
-public class SimpleBoardTest {
+public class SimpleBoardTest extends OthelloTestCase {
 }
