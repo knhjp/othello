@@ -10,5 +10,5 @@ import base.board.Board;
  * This is the interface for searches
  */
 public interface TreeSearch {
-    int search(int color, Board board);
+    int search(int color, Board[] board, int boardIndex);
 }

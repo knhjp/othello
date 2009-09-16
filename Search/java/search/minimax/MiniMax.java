@@ -11,7 +11,7 @@ import base.board.Board;
  * This class does the naive minimax search
  */
 public class MiniMax implements TreeSearch {
-    @Override public int search(int color, Board board) {
+    @Override public int search(int color, Board[] board, int boardIndex) {
         return 0;
     }
 }
