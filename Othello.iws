@@ -2,8 +2,8 @@
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="&#10;# Brief commit desciption here&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base/java/base/eval/Evaluator.java" afterPath="$PROJECT_DIR$/Base/java/base/eval/Evaluator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Othello.iws" afterPath="$PROJECT_DIR$/Othello.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/java/base/eval/Evaluator.java" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="Othello.iws" />
@@ -74,7 +74,7 @@
       <file leaf-file-name="Evaluator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Base/java/base/eval/Evaluator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="198" selection-end="198" vertical-scroll-proportion="0.24907748">
+            <state line="8" column="29" selection-start="209" selection-end="209" vertical-scroll-proportion="0.22140221">
               <folding />
             </state>
           </provider>
@@ -393,7 +393,7 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="introducing the interface -- Evaluator (an interface that gives a score to a given position)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intorudcing Evalator, which is something that gives you a score given a position" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -408,6 +408,7 @@
     <MESSAGE value="introducing interface -- Board" />
     <MESSAGE value="added comments to the interface" />
     <MESSAGE value="introducing the interface -- Evaluator (an interface that gives a score to a given position)" />
+    <MESSAGE value="Intorudcing Evalator, which is something that gives you a score given a position" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -426,7 +427,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Base/java/base/eval/Evaluator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="198" selection-end="198" vertical-scroll-proportion="0.24907748">
+        <state line="8" column="29" selection-start="209" selection-end="209" vertical-scroll-proportion="0.22140221">
           <folding />
         </state>
       </provider>
