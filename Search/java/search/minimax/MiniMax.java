@@ -12,6 +12,7 @@ import base.board.Board;
  */
 public class MiniMax implements TreeSearch {
     @Override public int search(int color, Board[] board, int boardIndex) {
+        int bestScore = -65;
         for (int curLocation = 11 ; curLocation<89; curLocation++) {
             if (curLocation%10 == 9) {
                 curLocation +=2;
@@ -19,10 +20,10 @@ public class MiniMax implements TreeSearch {
 
             if (board[boardIndex].isMoveValid(color,curLocation)) {
                 board[boardIndex+1].copyBoard(board[boardIndex]);
-                search(-color,board,boardIndex+1);
+                bestScore = Math.max(bestScore,color * search(-color,board,boardIndex+1));
             }
         }
 
-        return 0;
+        return bestScore;
     }
 }
