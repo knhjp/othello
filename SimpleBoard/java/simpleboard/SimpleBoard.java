@@ -29,6 +29,10 @@ public class SimpleBoard implements Board {
         
     }
 
+    public SimpleBoard(SimpleBoard board) {
+        System.arraycopy(board.board,0,this.board,0,this.board.length);
+    }
+
     @Override public int getSquare(int location) {
         return board[location];
     }
