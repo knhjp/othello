@@ -36,16 +36,16 @@ public class SimpleBoard implements Board {
     }
 
     @Override public boolean isMoveValid(int color, int location) {
-        if (board[location]!=0) {
+        if (board[location] != 0) {
             return false;
         }
 
         for (int direction : directions) {
             int offset = location + direction;
-            if (board[offset]==-color) {
+            if (board[offset] == -color) {
                 do {
                     offset += direction;
-                } while (board[offset]==-color) ;
+                } while (board[offset] == -color) ;
                 if (board[offset] == color) {
                     return true;
                 }
@@ -56,6 +56,17 @@ public class SimpleBoard implements Board {
     }
 
     @Override public void makeMove(int color, int location) {
-        
+        for (int direction : directions) {
+            int offset = location + direction;
+            while (board[offset] == -color) {
+                offset += direction;
+            }
+            if (board[offset] == color) {
+                do {
+                    offset -= direction;
+                    board[offset] = color;
+                } while (offset != location);
+            }
+        }
     }
 }
