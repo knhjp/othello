@@ -14,6 +14,10 @@ public class SimpleBoardTest extends OthelloTestCase {
         SimpleBoard board = new SimpleBoard();
         board.resetToStart();
 
+        //testing corners
         assertEquals(0,board.getSquare(11));
+        assertEquals(0,board.getSquare(18));
+        assertEquals(0,board.getSquare(81));
+        assertEquals(0,board.getSquare(88));
     }
 }
