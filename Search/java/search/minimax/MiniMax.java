@@ -1,6 +1,7 @@
 package search.minimax;
 
 import search.TreeSearch;
+import base.board.Board;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,4 +11,7 @@ import search.TreeSearch;
  * This class does the naive minimax search
  */
 public class MiniMax implements TreeSearch {
+    @Override public int search(int color, Board board) {
+        return 0;
+    }
 }

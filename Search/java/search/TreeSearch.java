@@ -1,5 +1,7 @@
 package search;
 
+import base.board.Board;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -8,4 +10,5 @@ package search;
  * This is the interface for searches
  */
 public interface TreeSearch {
+    int search(int color, Board board);
 }
