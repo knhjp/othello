@@ -5,7 +5,7 @@ package simpleboard;
  * User: knhjp
  * Date: 16-Sep-2009
  * Time: 3:08:40 PM
- * To change this template use File | Settings | File Templates.
+ * This class is a unit test for SimpleBoard
  */
 public class SimpleBoardTest {
 }
