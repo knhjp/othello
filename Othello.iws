@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="" />
+    <list default="true" name="Default" comment="`">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Othello.iws" afterPath="$PROJECT_DIR$/Othello.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/java/base/eval/Evaluator.java" />
+    </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="Othello.iws" />
   </component>
@@ -59,10 +62,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Board.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base/java/base/board/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="58" selection-start="169" selection-end="169" vertical-scroll-proportion="0.19372694">
+            <state line="7" column="58" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Evaluator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Base/java/base/eval/Evaluator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="32" selection-start="178" selection-end="178" vertical-scroll-proportion="0.22140221">
               <folding />
             </state>
           </provider>
@@ -143,6 +155,10 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="base" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="eval" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -377,7 +393,7 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="introducing interface -- Board" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments to the interface" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -390,6 +406,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Added git integration on IntelliJ" />
     <MESSAGE value="introducing interface -- Board" />
+    <MESSAGE value="added comments to the interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -401,7 +418,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Base/java/base/board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="58" selection-start="169" selection-end="169" vertical-scroll-proportion="0.19372694">
+        <state line="7" column="58" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base/java/base/eval/Evaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="178" selection-end="178" vertical-scroll-proportion="0.22140221">
           <folding />
         </state>
       </provider>
