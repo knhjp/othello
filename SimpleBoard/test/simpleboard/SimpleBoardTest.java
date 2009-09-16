@@ -10,4 +10,10 @@ import base.testcase.OthelloTestCase;
  * This class is a unit test for SimpleBoard
  */
 public class SimpleBoardTest extends OthelloTestCase {
+    public void testResetToStart() {
+        SimpleBoard board = new SimpleBoard();
+        board.resetToStart();
+
+        assertEquals(0,board.getSquare(11));
+    }
 }
