@@ -22,5 +22,8 @@ public class SimpleBoardTest extends OthelloTestCase {
 
         //test for the center four pieces
         assertEquals(-1,board.getSquare(44));
+        assertEquals(1,board.getSquare(45));
+        assertEquals(1,board.getSquare(54));
+        assertEquals(-1,board.getSquare(55));
     }
 }
