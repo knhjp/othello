@@ -35,6 +35,10 @@ public class SimpleBoard implements Board {
     }
 
     @Override public boolean isMoveValid(int location) {
+        if (board[location]!=0) {
+            return false;
+        }
+
         return false;
     }
 }
