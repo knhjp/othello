@@ -64,6 +64,16 @@ public class SimpleBoardTest extends OthelloTestCase {
         assertEquals(1,board.getSquare(45));
         assertEquals(1,board.getSquare(55));
         assertEquals(1,board.getSquare(56));
+
+        board.makeMove(-1,66);
+
+        assertEquals(-1,board.getSquare(44));
+        assertEquals(1,board.getSquare(54));
+        assertEquals(1,board.getSquare(45));
+        assertEquals(-1,board.getSquare(55));
+        assertEquals(1,board.getSquare(56));
+        assertEquals(-1,board.getSquare(66));
+
     }
 
     public void testTransposition() {
