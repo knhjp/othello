@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="&#10;# Brief commit desciption here&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/java/base/board/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Othello.iws" afterPath="$PROJECT_DIR$/Othello.iws" />
-    </list>
+    <list default="true" name="Default" comment="" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="Othello.iws" />
   </component>
@@ -65,7 +62,7 @@
       <file leaf-file-name="Board.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Base/java/base/board/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="17" selection-start="197" selection-end="197" vertical-scroll-proportion="0.24907748">
+            <state line="7" column="58" selection-start="169" selection-end="169" vertical-scroll-proportion="0.19372694">
               <folding />
             </state>
           </provider>
@@ -380,7 +377,7 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added git integration on IntelliJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="introducing interface -- Board" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -392,6 +389,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Added git integration on IntelliJ" />
+    <MESSAGE value="introducing interface -- Board" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -403,7 +401,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Base/java/base/board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="197" selection-end="197" vertical-scroll-proportion="0.24907748">
+        <state line="7" column="58" selection-start="169" selection-end="169" vertical-scroll-proportion="0.19372694">
           <folding />
         </state>
       </provider>
