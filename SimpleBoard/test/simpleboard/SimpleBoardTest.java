@@ -93,4 +93,15 @@ public class SimpleBoardTest extends OthelloTestCase {
 
         assertEquals(board1,board2);
     }
+
+    public void testCopyConstructor() {
+        SimpleBoard board = new SimpleBoard();
+        board.resetToStart();
+
+        board.makeMove(1,65);
+        board.makeMove(-1,46);
+
+        SimpleBoard resultBoard = new SimpleBoard(board);
+        assertEquals(board,resultBoard);
+    }
 }
