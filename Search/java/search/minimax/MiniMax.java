@@ -17,7 +17,12 @@ public class MiniMax implements TreeSearch {
                 curLocation +=2;
             }
 
-            
+            if (board[boardIndex].isMoveValid(color,curLocation)) {
+                board[boardIndex+1].copyBoard(board[boardIndex]);
+                search(-color,board,boardIndex+1);
+            }
         }
+
+        return 0;
     }
 }
