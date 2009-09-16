@@ -54,6 +54,15 @@ public class SimpleBoardTest extends OthelloTestCase {
     }
 
     public void testMakeMove() {
-        
+        SimpleBoard board = new SimpleBoard();
+        board.resetToStart();
+
+        board.makeMove(1,56);
+
+        assertEquals(-1,board.getSquare(44));
+        assertEquals(1,board.getSquare(54));
+        assertEquals(1,board.getSquare(45));
+        assertEquals(1,board.getSquare(55));
+        assertEquals(1,board.getSquare(56));
     }
 }
