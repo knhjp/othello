@@ -34,7 +34,7 @@ public class SimpleBoard implements Board {
         System.arraycopy(initBoard,0,board,0,initBoard.length);
     }
 
-    @Override public boolean isMoveValid(int location) {
+    @Override public boolean isMoveValid(int color, int location) {
         if (board[location]!=0) {
             return false;
         }

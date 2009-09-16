@@ -31,16 +31,16 @@ public class SimpleBoardTest extends OthelloTestCase {
         SimpleBoard board = new SimpleBoard();
         board.resetToStart();
 
-        assertFalse(board.isMoveValid(11));
+        assertFalse(board.isMoveValid(1, 11));
 
         //check that places that already have a disc cannot have a valid move
-        assertFalse(board.isMoveValid(44));
-        assertFalse(board.isMoveValid(45));
-        assertFalse(board.isMoveValid(54));
-        assertFalse(board.isMoveValid(55));
+        assertFalse(board.isMoveValid(1, 44));
+        assertFalse(board.isMoveValid(1, 45));
+        assertFalse(board.isMoveValid(1, 54));
+        assertFalse(board.isMoveValid(1, 55));
 
         //testing for actual valid moves
-        assertTrue(board.isMoveValid(56));
+        assertTrue(board.isMoveValid(1, 56));
 
     }
 }
