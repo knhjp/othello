@@ -52,4 +52,8 @@ public class SimpleBoardTest extends OthelloTestCase {
         assertTrue(board.isMoveValid(-1, 53));
 
     }
+
+    public void testMakeMove() {
+        
+    }
 }

@@ -54,4 +54,8 @@ public class SimpleBoard implements Board {
 
         return false;
     }
+
+    @Override public void makeMove(int color, int location) {
+        
+    }
 }

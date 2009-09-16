@@ -27,4 +27,11 @@ public interface Board {
      * @return true if move is valid, force otherwise
      */
     boolean isMoveValid(int color, int location);
+
+    /**
+     * Precondition: The move is really a valid move
+     * @param color the color that is the next to move
+     * @param location the location of where the move is being made
+     */
+    void makeMove(int color, int location);
 }
