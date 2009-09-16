@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="" />
+    <list default="true" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Othello.ipr" afterPath="$PROJECT_DIR$/Othello.ipr" />
+    </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="Othello.iws" />
   </component>
