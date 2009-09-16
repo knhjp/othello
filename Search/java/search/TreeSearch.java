@@ -5,7 +5,7 @@ package search;
  * User: knhjp
  * Date: 16-Sep-2009
  * Time: 6:15:00 PM
- * To change this template use File | Settings | File Templates.
+ * This is the interface for searches
  */
 public interface TreeSearch {
 }
