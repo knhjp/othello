@@ -10,4 +10,6 @@ import base.board.Board;
  * This class is meant to be a simple implementation of Board -- it's not going to be the fastest
  */
 public class SimpleBoard implements Board {
+    public SimpleBoard() {
+    }
 }
