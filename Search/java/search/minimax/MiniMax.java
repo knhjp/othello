@@ -5,7 +5,7 @@ package search.minimax;
  * User: knhjp
  * Date: 16-Sep-2009
  * Time: 6:12:11 PM
- * To change this template use File | Settings | File Templates.
+ * This class does the naive minimax search
  */
 public class MiniMax {
 }
