@@ -10,4 +10,5 @@ package base.board;
 public interface Board {
     //Given the location of the board, return the content
     int getSquare(int location);
+    void resetToStart();
 }

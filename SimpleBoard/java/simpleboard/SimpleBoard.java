@@ -10,12 +10,27 @@ import base.board.Board;
  * This class is meant to be a simple implementation of Board -- it's not going to be the fastest
  */
 public class SimpleBoard implements Board {
+    private final static int[] initBoard = new int[]{
+            3,3,3,3,3,3,3,3,3,3,
+            3,0,0,0,0,0,0,0,0,3,
+            3,0,0,0,0,0,0,0,0,3,
+            3,0,0,0,0,0,0,0,0,3,
+            3,0,0,0,0,0,0,0,0,3,
+            3,0,0,0,0,0,0,0,0,3,
+            3,0,0,0,0,0,0,0,0,3,
+            3,0,0,0,0,0,0,0,0,3,
+            3,0,0,0,0,0,0,0,0,3,
+            3,3,3,3,3,3,3,3,3,3};
     private final int[] board = new int[100];
     public SimpleBoard() {
         
     }
 
-    public int getSquare(int location) {
+    @Override public int getSquare(int location) {
         return board[location];
+    }
+
+    @Override public void resetToStart() {
+        
     }
 }
