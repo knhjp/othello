@@ -8,4 +8,6 @@ package base.board;
  * This is the interface to represent a board (a position)
  */
 public interface Board {
+    //Given the location of the board, return the content
+    int getSquare(int location);
 }

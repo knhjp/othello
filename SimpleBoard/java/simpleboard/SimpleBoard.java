@@ -14,4 +14,8 @@ public class SimpleBoard implements Board {
     public SimpleBoard() {
         
     }
+
+    public int getSquare(int location) {
+        return board[location];
+    }
 }
