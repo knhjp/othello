@@ -12,6 +12,12 @@ import base.board.Board;
  */
 public class MiniMax implements TreeSearch {
     @Override public int search(int color, Board[] board, int boardIndex) {
-        return 0;
+        for (int curLocation = 11 ; curLocation<89; curLocation++) {
+            if (curLocation%10 == 9) {
+                curLocation +=2;
+            }
+
+            
+        }
     }
 }
