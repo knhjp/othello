@@ -21,6 +21,7 @@ public class SimpleBoard implements Board {
             3,0,0,0,0,0,0,0,0,3,
             3,0,0,0,0,0,0,0,0,3,
             3,3,3,3,3,3,3,3,3,3};
+    private final int[] directions = new int[]{-11,-10,-9,-1,1,9,10,11};
     private final int[] board = new int[100];
     public SimpleBoard() {
         
@@ -37,6 +38,10 @@ public class SimpleBoard implements Board {
     @Override public boolean isMoveValid(int color, int location) {
         if (board[location]!=0) {
             return false;
+        }
+
+        for (int direction : directions) {
+            
         }
 
         return false;
