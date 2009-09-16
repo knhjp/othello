@@ -11,16 +11,16 @@ import base.board.Board;
  * This class does the naive minimax search
  */
 public class MiniMax implements TreeSearch {
-    @Override public int search(int color, Board[] board, int boardIndex) {
+    @Override public int search(int color, Board[] board, int empties) {
         int bestScore = -65;
         for (int curLocation = 11 ; curLocation<89; curLocation++) {
             if (curLocation%10 == 9) {
                 curLocation +=2;
             }
 
-            if (board[boardIndex].isMoveValid(color,curLocation)) {
-                board[boardIndex+1].copyBoard(board[boardIndex]);
-                bestScore = Math.max(bestScore,color * search(-color,board,boardIndex+1));
+            if (board[empties].isMoveValid(color,curLocation)) {
+                board[empties-1].copyBoard(board[empties]);
+                bestScore = Math.max(bestScore,color * search(-color,board,empties-1));
             }
         }
 
