@@ -12,10 +12,6 @@ import base.board.Board;
 public class SimpleBoard implements Board {
     private final int[] board = new int[100];
     public SimpleBoard() {
-        initStart();
-    }
-
-    private void initStart() {
         
     }
 }
