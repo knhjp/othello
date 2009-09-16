@@ -24,6 +24,6 @@ public class MiniMax implements TreeSearch {
             }
         }
 
-        return bestScore;
+        return bestScore * color;
     }
 }
