@@ -41,7 +41,15 @@ public class SimpleBoard implements Board {
         }
 
         for (int direction : directions) {
-            
+            int offset = location + direction;
+            if (board[offset]==-color) {
+                do {
+                    offset += direction;
+                } while (board[offset]==-color) ;
+                if (board[offset] == color) {
+                    return true;
+                }
+            }
         }
 
         return false;
