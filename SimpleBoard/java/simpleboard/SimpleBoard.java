@@ -5,7 +5,7 @@ package simpleboard;
  * User: knhjp
  * Date: 16-Sep-2009
  * Time: 2:09:05 PM
- * To change this template use File | Settings | File Templates.
+ * This class is meant to be a simple implementation of Board -- it's not going to be the fastest
  */
 public class SimpleBoard {
 }
