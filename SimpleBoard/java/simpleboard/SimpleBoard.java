@@ -80,6 +80,10 @@ public class SimpleBoard implements Board {
         }
     }
 
+    @Override public int getBlackMinusWhite() {
+        return 0; //todo: unit test me and fix me
+    }
+
     @Override public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

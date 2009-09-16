@@ -40,4 +40,10 @@ public interface Board {
      * @param board the board that you wish to copy
      */
     void copyBoard(Board board);
+
+    /**
+     *
+     * @return The number of black discs (1) minus the number of white discs (-1)
+     */
+    int getBlackMinusWhite();
 }
