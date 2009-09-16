@@ -1,5 +1,7 @@
 package base.eval;
 
+import base.board.Board;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -8,4 +10,5 @@ package base.eval;
  * This is an interface to represent an evaluator that, given a Board, it will give you a score
  */
 public interface Evaluator {
+    double eval(Board board);
 }
