@@ -2,6 +2,8 @@ package simpleboard;
 
 import base.board.Board;
 
+import java.util.Arrays;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -21,7 +23,7 @@ public class SimpleBoard implements Board {
             3,0,0,0,0,0,0,0,0,3,
             3,0,0,0,0,0,0,0,0,3,
             3,3,3,3,3,3,3,3,3,3};
-    private final int[] directions = new int[]{-11,-10,-9,-1,1,9,10,11};
+    private final static int[] directions = new int[]{-11,-10,-9,-1,1,9,10,11};
     private final int[] board = new int[100];
     public SimpleBoard() {
         
@@ -68,5 +70,22 @@ public class SimpleBoard implements Board {
                 } while (offset != location);
             }
         }
+    }
+
+    @Override public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        SimpleBoard that = (SimpleBoard) o;
+
+        if (!Arrays.equals(board, that.board)) return false;
+
+        return true;
+    }
+
+    @Override public int hashCode() {
+        int result = directions != null ? Arrays.hashCode(directions) : 0;
+        result = 31 * result + (board != null ? Arrays.hashCode(board) : 0);
+        return result;
     }
 }
