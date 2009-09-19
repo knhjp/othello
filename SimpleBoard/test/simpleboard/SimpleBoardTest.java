@@ -67,7 +67,7 @@ public class SimpleBoardTest extends OthelloTestCase {
         assertEquals(1,board.getSquare(55));
         assertEquals(1,board.getSquare(56));
 
-        assertEquals(2,board.getBlackMinusWhite());
+        assertEquals(3,board.getBlackMinusWhite());
 
         board.makeMove(-1,66);
 
