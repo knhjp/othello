@@ -37,8 +37,4 @@ public abstract class AbstractMiniMax implements TreeSearch {
             return bestScore;
         }
     }
-
-
-
-    abstract int handlePass(int color, Board[] board, int empties);
 }
