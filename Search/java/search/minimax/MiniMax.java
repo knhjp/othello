@@ -10,7 +10,7 @@ import base.board.Board;
  * Time: 6:12:11 PM
  * This class does the naive minimax search
  */
-public class MiniMax implements TreeSearch {
+public abstract class MiniMax implements TreeSearch {
     private final static int minVal =-65; //this value has to be lower than the worst possible score (-64)
 
     @Override public int search(int color, Board[] board, int empties) {
