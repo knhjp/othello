@@ -28,7 +28,7 @@ public abstract class AbstractMiniMax implements TreeSearch {
         }
 
         if (bestScore == minVal) { //this happens in case of a pass
-            return handlePass(color,board,empties);
+            return -handlePass(-color,board,empties);
         } else {
             return bestScore;
         }
