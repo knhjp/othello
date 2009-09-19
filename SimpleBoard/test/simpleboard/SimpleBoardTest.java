@@ -114,11 +114,12 @@ public class SimpleBoardTest extends OthelloTestCase {
 
         board.makeMove(1,65);
         board.makeMove(-1,46);
+        board.makeMove(1,33);
 
         SimpleBoard resultBoard = new SimpleBoard(board);
         assertEquals(board,resultBoard);
-        assertEquals(0,board.getBlackMinusWhite());
-        assertEquals(0,resultBoard.getBlackMinusWhite());
+        assertEquals(3,board.getBlackMinusWhite());
+        assertEquals(3,resultBoard.getBlackMinusWhite());
 
     }
 }
