@@ -10,10 +10,13 @@ import base.board.Board;
  * This class handles MiniMax search when there has been no passes made yet
  */
 public class MiniMaxNoPass extends AbstractMiniMax {
+    private final MiniMaxOnePass miniMaxOnePass;
 
-    
+    public MiniMaxNoPass(MiniMaxOnePass miniMaxOnePass) {
+        this.miniMaxOnePass = miniMaxOnePass;
+    }
 
     @Override int handlePass(int color, Board[] board, int empties) {
-        return 0;
+        return miniMaxOnePass.search(color,board,empties);
     }
 }
