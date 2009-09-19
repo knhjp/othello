@@ -22,7 +22,7 @@ public abstract class MiniMax implements TreeSearch {
 
             if (board[empties].isMoveValid(color,curLocation)) {
                 board[empties-1].copyBoard(board[empties]);
-                
+                board[empties-1].makeMove(color,curLocation);
                 bestScore = Math.max(bestScore,-search(-color,board,empties-1));
             }
         }
