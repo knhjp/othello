@@ -25,6 +25,7 @@ public class SimpleBoard implements Board {
             3,3,3,3,3,3,3,3,3,3};
     private final static int[] directions = new int[]{-11,-10,-9,-1,1,9,10,11};
     private final int[] board = new int[100];
+    private int blackMinusWhite;
     public SimpleBoard() {
         
     }
@@ -34,7 +35,9 @@ public class SimpleBoard implements Board {
     }
 
     @Override public void copyBoard(Board board) {
-        System.arraycopy(((SimpleBoard)board).board,0,this.board,0,this.board.length);
+        SimpleBoard castBoard = (SimpleBoard) board;
+        System.arraycopy(castBoard.board,0,this.board,0,this.board.length);
+        this.blackMinusWhite = castBoard.blackMinusWhite;;
     }
 
     @Override public int getSquare(int location) {
@@ -43,6 +46,7 @@ public class SimpleBoard implements Board {
 
     @Override public void resetToStart() {
         System.arraycopy(initBoard,0,board,0,initBoard.length);
+        blackMinusWhite = 0;
     }
 
     @Override public boolean isMoveValid(int color, int location) {
@@ -66,22 +70,26 @@ public class SimpleBoard implements Board {
     }
 
     @Override public void makeMove(int color, int location) {
+        board[location] = color;
+        blackMinusWhite += color;
         for (int direction : directions) {
             int offset = location + direction;
             while (board[offset] == -color) {
                 offset += direction;
             }
             if (board[offset] == color) {
-                do {
-                    offset -= direction;
+                offset -= direction;
+                while (offset != location) {
                     board[offset] = color;
-                } while (offset != location);
+                    blackMinusWhite += color * 2;
+                    offset -= direction;
+                }
             }
         }
     }
 
     @Override public int getBlackMinusWhite() {
-        return 0; //todo: unit test me and fix me
+        return blackMinusWhite;
     }
 
     @Override public boolean equals(Object o) {
@@ -90,14 +98,15 @@ public class SimpleBoard implements Board {
 
         SimpleBoard that = (SimpleBoard) o;
 
+        if (blackMinusWhite != that.blackMinusWhite) return false;
         if (!Arrays.equals(board, that.board)) return false;
 
         return true;
     }
 
     @Override public int hashCode() {
-        int result = directions != null ? Arrays.hashCode(directions) : 0;
-        result = 31 * result + (board != null ? Arrays.hashCode(board) : 0);
+        int result = board != null ? Arrays.hashCode(board) : 0;
+        result = 31 * result + blackMinusWhite;
         return result;
     }
 }
