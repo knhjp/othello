@@ -1,5 +1,7 @@
 package search.minimax;
 
+import base.board.Board;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,8 @@ package search.minimax;
  * Time: 12:40:40 PM
  * This class handles the Minimax search when there is already one pass
  */
-public class MiniMaxOnePass {
+public class MiniMaxOnePass extends AbstractMiniMax {
+    @Override int handlePass(int color, Board[] board, int empties) {
+        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+    }
 }
