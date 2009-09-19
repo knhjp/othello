@@ -11,7 +11,7 @@ import java.util.Arrays;
  * Time: 2:09:05 PM
  * This class is meant to be a simple implementation of Board -- it's not going to be the fastest
  */
-public class SimpleBoard implements Board {
+public class NaiveBoard implements Board {
     private final static int[] initBoard = new int[]{
             3,3,3,3,3,3,3,3,3,3,
             3,0,0,0,0,0,0,0,0,3,
@@ -25,16 +25,16 @@ public class SimpleBoard implements Board {
             3,3,3,3,3,3,3,3,3,3};
     private final static int[] directions = new int[]{-11,-10,-9,-1,1,9,10,11};
     private final int[] board = new int[100];
-    public SimpleBoard() {
+    public NaiveBoard() {
         
     }
 
-    public SimpleBoard(SimpleBoard board) {
+    public NaiveBoard(NaiveBoard board) {
         copyBoard(board);
     }
 
     @Override public void copyBoard(Board board) {
-        System.arraycopy(((SimpleBoard)board).board,0,this.board,0,this.board.length);
+        System.arraycopy(((NaiveBoard)board).board,0,this.board,0,this.board.length);
     }
 
     @Override public int getSquare(int location) {
@@ -88,7 +88,7 @@ public class SimpleBoard implements Board {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        SimpleBoard that = (SimpleBoard) o;
+        NaiveBoard that = (NaiveBoard) o;
 
         if (!Arrays.equals(board, that.board)) return false;
 
