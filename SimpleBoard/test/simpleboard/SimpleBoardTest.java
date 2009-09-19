@@ -14,6 +14,8 @@ public class SimpleBoardTest extends OthelloTestCase {
         NaiveBoard board = new NaiveBoard();
         board.resetToStart();
 
+        assertEquals(0,board.getBlackMinusWhite());
+
         //testing corners
         assertEquals(0,board.getSquare(11));
         assertEquals(0,board.getSquare(18));
@@ -65,6 +67,8 @@ public class SimpleBoardTest extends OthelloTestCase {
         assertEquals(1,board.getSquare(55));
         assertEquals(1,board.getSquare(56));
 
+        assertEquals(3,board.getBlackMinusWhite());
+
         board.makeMove(-1,66);
 
         assertEquals(-1,board.getSquare(44));
@@ -73,6 +77,8 @@ public class SimpleBoardTest extends OthelloTestCase {
         assertEquals(-1,board.getSquare(55));
         assertEquals(1,board.getSquare(56));
         assertEquals(-1,board.getSquare(66));
+
+        assertEquals(0,board.getBlackMinusWhite());
 
     }
 
@@ -92,6 +98,14 @@ public class SimpleBoardTest extends OthelloTestCase {
         board2.makeMove(1,65);
 
         assertEquals(board1,board2);
+        assertEquals(3,board1.getBlackMinusWhite());
+        assertEquals(3,board2.getBlackMinusWhite());
+
+        board1.resetToStart();
+        board2.resetToStart();
+        assertEquals(board1,board2);
+        assertEquals(0,board1.getBlackMinusWhite());
+        assertEquals(0,board2.getBlackMinusWhite());
     }
 
     public void testCopyConstructor() {
@@ -100,8 +114,12 @@ public class SimpleBoardTest extends OthelloTestCase {
 
         board.makeMove(1,65);
         board.makeMove(-1,46);
+        board.makeMove(1,33);
 
         NaiveBoard resultBoard = new NaiveBoard(board);
         assertEquals(board,resultBoard);
+        assertEquals(3,board.getBlackMinusWhite());
+        assertEquals(3,resultBoard.getBlackMinusWhite());
+
     }
 }
