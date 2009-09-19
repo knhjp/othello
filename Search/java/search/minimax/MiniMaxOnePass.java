@@ -11,6 +11,6 @@ import base.board.Board;
  */
 public class MiniMaxOnePass extends AbstractMiniMax {
     @Override int handlePass(int color, Board[] board, int empties) {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        return board[empties].getBlackMinusWhite() * color;
     }
 }
