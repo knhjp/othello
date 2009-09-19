@@ -22,12 +22,17 @@ public abstract class MiniMax implements TreeSearch {
 
             if (board[empties].isMoveValid(color,curLocation)) {
                 board[empties-1].copyBoard(board[empties]);
+                
                 bestScore = Math.max(bestScore,-search(-color,board,empties-1));
             }
         }
 
-        //todo: handle the case with a pass
-
-        return bestScore * color;
+        if (bestScore == minVal) { //this happens in case of a pass
+            return handlePass(color,board,empties);
+        } else {
+            return bestScore;
+        }
     }
+
+    abstract int handlePass(int color, Board[] board, int empties);
 }
