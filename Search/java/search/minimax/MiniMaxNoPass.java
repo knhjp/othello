@@ -5,7 +5,7 @@ package search.minimax;
  * User: knhjp
  * Date: 19-Sep-2009
  * Time: 12:37:51 PM
- * To change this template use File | Settings | File Templates.
+ * This class handles MiniMax search when there has been no passes made yet
  */
 public class MiniMaxNoPass {
 }
