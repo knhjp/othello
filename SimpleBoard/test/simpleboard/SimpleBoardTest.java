@@ -117,5 +117,8 @@ public class SimpleBoardTest extends OthelloTestCase {
 
         SimpleBoard resultBoard = new SimpleBoard(board);
         assertEquals(board,resultBoard);
+        assertEquals(0,board.getBlackMinusWhite());
+        assertEquals(0,resultBoard.getBlackMinusWhite());
+
     }
 }
