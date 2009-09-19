@@ -5,7 +5,7 @@ package search.minimax;
  * User: knhjp
  * Date: 19-Sep-2009
  * Time: 1:02:47 PM
- * To change this template use File | Settings | File Templates.
+ * This class tests that we can do some simple search
  */
 public class MiniMaxTest {
 }
