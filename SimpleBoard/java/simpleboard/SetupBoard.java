@@ -7,5 +7,5 @@ package simpleboard;
  * Time: 1:04:01 PM
  * This board allows us to set the position
  */
-public class SetupBoard extends NaiveBoard {
+public class SetupBoard extends SimpleBoard {
 }

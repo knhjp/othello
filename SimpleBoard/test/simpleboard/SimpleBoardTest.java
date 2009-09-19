@@ -11,7 +11,7 @@ import base.testcase.OthelloTestCase;
  */
 public class SimpleBoardTest extends OthelloTestCase {
     public void testResetToStart() {
-        NaiveBoard board = new NaiveBoard();
+        SimpleBoard board = new SimpleBoard();
         board.resetToStart();
 
         assertEquals(0,board.getBlackMinusWhite());
@@ -30,7 +30,7 @@ public class SimpleBoardTest extends OthelloTestCase {
     }
 
     public void testIsMoveValid() {
-        NaiveBoard board = new NaiveBoard();
+        SimpleBoard board = new SimpleBoard();
         board.resetToStart();
 
         assertFalse(board.isMoveValid(1, 11));
@@ -56,7 +56,7 @@ public class SimpleBoardTest extends OthelloTestCase {
     }
 
     public void testMakeMove() {
-        NaiveBoard board = new NaiveBoard();
+        SimpleBoard board = new SimpleBoard();
         board.resetToStart();
 
         board.makeMove(1,56);
@@ -83,10 +83,10 @@ public class SimpleBoardTest extends OthelloTestCase {
     }
 
     public void testTransposition() {
-        NaiveBoard board1 = new NaiveBoard();
+        SimpleBoard board1 = new SimpleBoard();
         board1.resetToStart();
 
-        NaiveBoard board2 = new NaiveBoard();
+        SimpleBoard board2 = new SimpleBoard();
         board2.resetToStart();
 
         board1.makeMove(1,65);
@@ -109,14 +109,14 @@ public class SimpleBoardTest extends OthelloTestCase {
     }
 
     public void testCopyConstructor() {
-        NaiveBoard board = new NaiveBoard();
+        SimpleBoard board = new SimpleBoard();
         board.resetToStart();
 
         board.makeMove(1,65);
         board.makeMove(-1,46);
         board.makeMove(1,33);
 
-        NaiveBoard resultBoard = new NaiveBoard(board);
+        SimpleBoard resultBoard = new SimpleBoard(board);
         assertEquals(board,resultBoard);
         assertEquals(3,board.getBlackMinusWhite());
         assertEquals(3,resultBoard.getBlackMinusWhite());
