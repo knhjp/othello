@@ -11,6 +11,8 @@ import base.board.Board;
  */
 public class MiniMaxNoPass extends AbstractMiniMax {
 
+    
+
     @Override int handlePass(int color, Board[] board, int empties) {
         return 0;
     }
