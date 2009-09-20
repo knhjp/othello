@@ -9,6 +9,14 @@ package simpleboard;
  */
 public class SetupBoard extends SimpleBoard {
     int calcBlackMinusWhite() {
-        return 0;
+        int count = 0;
+        for (int curLocation = 11 ; curLocation<89; curLocation++) {
+            if (curLocation%10 == 9) {
+                curLocation +=2;
+            }
+            count+=board[curLocation];
+        }
+
+        return count;
     }
 }
