@@ -8,4 +8,7 @@ package simpleboard;
  * This board allows us to set the position
  */
 public class SetupBoard extends SimpleBoard {
+    int calcBlackMinusWhite() {
+        return 0;
+    }
 }
