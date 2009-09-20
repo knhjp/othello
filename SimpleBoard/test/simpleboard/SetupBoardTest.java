@@ -11,8 +11,12 @@ import base.testcase.OthelloTestCase;
  */
 public class SetupBoardTest extends OthelloTestCase {
     public void testCalcBlackMinusWhite() {
-        SetupBoard setupBoard = new SetupBoard();
-        setupBoard.resetToStart();
-        assertEquals(0,setupBoard.calcBlackMinusWhite());
+        SetupBoard board = new SetupBoard();
+        board.resetToStart();
+        assertEquals(0,board.calcBlackMinusWhite());
+
+        board.makeMove(1,56);
+        assertEquals(3,board.getBlackMinusWhite());
+        assertEquals(3,board.calcBlackMinusWhite());
     }
 }
