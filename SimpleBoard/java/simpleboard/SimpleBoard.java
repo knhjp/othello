@@ -25,7 +25,7 @@ public class SimpleBoard implements Board {
             3,3,3,3,3,3,3,3,3,3};
     private final static int[] directions = new int[]{-11,-10,-9,-1,1,9,10,11};
     final int[] board = new int[100];
-    private int blackMinusWhite;
+    int blackMinusWhite;
     public SimpleBoard() {
         
     }
