@@ -15,7 +15,15 @@ public class SetupBoardTest extends OthelloTestCase {
         board.resetToStart();
         assertEquals(0,board.calcBlackMinusWhite());
 
-        board.makeMove(1,56);
+        board.makeMove(1,34);
+        assertEquals(3,board.getBlackMinusWhite());
+        assertEquals(3,board.calcBlackMinusWhite());
+
+        board.makeMove(-1,53);
+        assertEquals(0,board.getBlackMinusWhite());
+        assertEquals(0,board.calcBlackMinusWhite());
+
+        board.makeMove(1,66);
         assertEquals(3,board.getBlackMinusWhite());
         assertEquals(3,board.calcBlackMinusWhite());
     }
