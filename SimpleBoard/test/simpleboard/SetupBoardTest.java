@@ -37,5 +37,13 @@ public class SetupBoardTest extends OthelloTestCase {
         board.setSquare(1,44);
         assertEquals(1,board.getSquare(44));
         assertEquals(2,board.getBlackMinusWhite());
+
+        //test invalid inputs
+        try {
+            board.setSquare(0,44);
+            fail("Should have throw an exception for setting the board wtih an invalid color");
+        } catch (Exception e) {
+            assertTrue(true);
+        }
     }
 }
