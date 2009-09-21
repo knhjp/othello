@@ -13,25 +13,25 @@ import base.board.Board;
 public class MiniMax implements TreeSearch {
     private final static int minVal =-65; //this value has to be lower than the worst possible score (-64)
 
-    @Override public int search(int color, Board[] board, int empties, boolean alreadyPassed) {
+    @Override public int search(int color, Board[] boards, int empties, boolean alreadyPassed) {
         int bestScore = minVal;
         for (int curLocation = 11 ; curLocation<89; curLocation++) {
             if (curLocation%10 == 9) {
                 curLocation +=2;
             }
 
-            if (board[empties].isMoveValid(color,curLocation)) {
-                board[empties-1].copyBoard(board[empties]);
-                board[empties-1].makeMove(color,curLocation);
-                bestScore = Math.max(bestScore,-search(-color,board,empties-1,false));
+            if (boards[empties].isMoveValid(color,curLocation)) {
+                boards[empties-1].copyBoard(boards[empties]);
+                boards[empties-1].makeMove(color,curLocation);
+                bestScore = Math.max(bestScore,-search(-color,boards,empties-1,false));
             }
         }
 
         if (bestScore == minVal) { //this happens in case of a pass
             if (alreadyPassed) {
-                return board[empties].getBlackMinusWhite() * color;
+                return boards[empties].getBlackMinusWhite() * color;
             } else {
-                return -search(-color,board,empties,true);
+                return -search(-color,boards,empties,true);
             }
         } else {
             return bestScore;
