@@ -9,6 +9,8 @@ package base.validate;
  */
 public class Require {
     public static void eq(int val1, String name1, int val2, String name2) {
-
+        if (val1 != val2) {
+            throw new RuntimeException(name1 + "!=" + name2);
+        }
     }
 }
