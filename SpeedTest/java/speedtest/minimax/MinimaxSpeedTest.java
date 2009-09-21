@@ -5,7 +5,7 @@ package speedtest.minimax;
  * User: knhjp
  * Date: Sep 21, 2009
  * Time: 6:10:38 PM
- * To change this template use File | Settings | File Templates.
+ * This is for testing the performance of MiniMax
  */
 public class MinimaxSpeedTest {
 }
