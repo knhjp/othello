@@ -40,6 +40,8 @@ public class MinimaxSpeedTest {
         }
         boards[empties] = board;
 
-        miniMax.search(color,boards,empties,alreadyPassed);
+        int score = miniMax.search(color, boards, empties, alreadyPassed);
+
+        System.out.println("score:"+score);
     }
 }
