@@ -40,8 +40,11 @@ public class MinimaxSpeedTest {
         }
         boards[empties] = board;
 
+        long beforeTime = System.currentTimeMillis();
         int score = miniMax.search(color, boards, empties, alreadyPassed);
+        long afterTime = System.currentTimeMillis();
 
         System.out.println("score:"+score);
+        System.out.println("time:"+(afterTime - beforeTime));
     }
 }
