@@ -92,7 +92,7 @@ public class SetupBoardTest extends OthelloTestCase {
         board.setBoard(myBoard);
 
         for (int curLocation = 0 ; curLocation<100; curLocation++) {
-            assertEquals(myBoard,board.getSquare(curLocation));
+            assertEquals(myBoard[curLocation],board.getSquare(curLocation));
         }
     }
 }
