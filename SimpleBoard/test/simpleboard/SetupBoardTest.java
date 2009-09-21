@@ -45,5 +45,33 @@ public class SetupBoardTest extends OthelloTestCase {
         } catch (Exception e) {
             assertTrue(true);
         }
+
+        try {
+            board.setSquare(1,8);
+            fail("Should have throw an exception for setting the board wtih an invalid location");
+        } catch (Exception e) {
+            assertTrue(true);
+        }
+
+        try {
+            board.setSquare(-1,91);
+            fail("Should have throw an exception for setting the board wtih an invalid location");
+        } catch (Exception e) {
+            assertTrue(true);
+        }
+
+        try {
+            board.setSquare(1,30);
+            fail("Should have throw an exception for setting the board wtih an invalid location");
+        } catch (Exception e) {
+            assertTrue(true);
+        }
+
+        try {
+            board.setSquare(-1,59);
+            fail("Should have throw an exception for setting the board wtih an invalid location");
+        } catch (Exception e) {
+            assertTrue(true);
+        }
     }
 }
