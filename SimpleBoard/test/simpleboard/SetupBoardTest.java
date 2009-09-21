@@ -89,6 +89,7 @@ public class SetupBoardTest extends OthelloTestCase {
                 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
 
         SetupBoard board = new SetupBoard();
+        board.resetToStart();
         board.setBoard(myBoard);
 
         for (int curLocation = 0 ; curLocation<100; curLocation++) {
