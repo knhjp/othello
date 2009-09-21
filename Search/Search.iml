@@ -9,6 +9,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Base" />
+    <orderEntry type="module" module-name="SimpleBoard" />
   </component>
 </module>
 
