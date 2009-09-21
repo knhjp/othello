@@ -74,4 +74,25 @@ public class SetupBoardTest extends OthelloTestCase {
             assertTrue(true);
         }
     }
+
+    public void testSetBoard() {
+        int[] myBoard = {
+                3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, 0, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, 0, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, 0, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, -1, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, 1, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, -1, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, 1, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, 1, 3,
+                3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+
+        SetupBoard board = new SetupBoard();
+        board.setBoard(myBoard);
+
+        for (int curLocation = 0 ; curLocation<100; curLocation++) {
+            assertEquals(myBoard,board.getSquare(curLocation));
+        }
+    }
 }
