@@ -12,7 +12,9 @@ import base.validate.Require;
 public class SetupBoard extends SimpleBoard {
     public void setSquare(int color, int location) {
         Require.eq(Math.abs(color),"color",1,"1");
-        //todo: validation
+        if (location < 11 || location >88 || location%10 == 0 || location%10 == 9) {
+            throw new IllegalArgumentException("Location " + location + "is not valid");
+        }
         board[location] = color;
         blackMinusWhite = calcBlackMinusWhite();
     }
