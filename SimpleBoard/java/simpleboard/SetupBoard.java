@@ -11,6 +11,7 @@ public class SetupBoard extends SimpleBoard {
     public void setSquare(int color, int location) {
         //todo: validation
         board[location] = color;
+        blackMinusWhite = calcBlackMinusWhite();
     }
 
     int calcBlackMinusWhite() {
