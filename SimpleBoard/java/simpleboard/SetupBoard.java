@@ -8,6 +8,11 @@ package simpleboard;
  * This board allows us to set the position
  */
 public class SetupBoard extends SimpleBoard {
+    public void setLocation(int color, int location) {
+        //todo: validation
+        board[location] = color;
+    }
+
     int calcBlackMinusWhite() {
         int count = 0;
         for (int curLocation = 11 ; curLocation<89; curLocation++) {
