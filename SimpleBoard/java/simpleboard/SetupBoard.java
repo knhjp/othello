@@ -30,4 +30,13 @@ public class SetupBoard extends SimpleBoard {
 
         return count;
     }
+
+    public void setBoard(int[] board) {
+        for (int curLocation = 11 ; curLocation<89; curLocation++) {
+            if (curLocation%10 == 9) {
+                curLocation +=2;
+            }
+            setSquare(board[curLocation],curLocation);
+        }
+    }
 }
