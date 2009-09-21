@@ -8,4 +8,7 @@ package speedtest.minimax;
  * This is for testing the performance of MiniMax
  */
 public class MinimaxSpeedTest {
+    public static void main(String[] args) {
+        
+    }
 }
