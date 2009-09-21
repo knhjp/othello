@@ -8,7 +8,7 @@ package simpleboard;
  * This board allows us to set the position
  */
 public class SetupBoard extends SimpleBoard {
-    public void setLocation(int color, int location) {
+    public void setSquare(int color, int location) {
         //todo: validation
         board[location] = color;
     }

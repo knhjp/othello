@@ -27,4 +27,14 @@ public class SetupBoardTest extends OthelloTestCase {
         assertEquals(3,board.getBlackMinusWhite());
         assertEquals(3,board.calcBlackMinusWhite());
     }
+
+    public void testSetSquare() {
+        SetupBoard board = new SetupBoard();
+        board.resetToStart();
+        assertEquals(0,board.calcBlackMinusWhite());
+
+        assertEquals(-1,board.getSquare(44));
+        board.setSquare(1,44);
+        assertEquals(1,board.getSquare(44));
+    }
 }
