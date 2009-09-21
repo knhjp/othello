@@ -8,6 +8,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Search" />
+    <orderEntry type="module" module-name="SimpleBoard" />
+    <orderEntry type="module" module-name="Base" />
   </component>
 </module>
 
