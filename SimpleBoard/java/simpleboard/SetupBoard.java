@@ -1,5 +1,7 @@
 package simpleboard;
 
+import base.validate.Require;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -9,6 +11,7 @@ package simpleboard;
  */
 public class SetupBoard extends SimpleBoard {
     public void setSquare(int color, int location) {
+        Require.eq(Math.abs(color),"color",1,"1");
         //todo: validation
         board[location] = color;
         blackMinusWhite = calcBlackMinusWhite();
