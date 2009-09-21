@@ -1,6 +1,7 @@
 package search.minimax;
 
 import base.testcase.OthelloTestCase;
+import base.board.Board;
 import simpleboard.SetupBoard;
 
 /**
@@ -28,6 +29,15 @@ public class MiniMaxTest extends OthelloTestCase {
         board.resetToStart();
         board.setBoard(myBoard);
 
-        
+        MiniMax miniMax = new MiniMax();
+
+        Board[] boards = new Board[60];
+        for (int i=0 ; i<boards.length ; i++) {
+            boards[i] = new SetupBoard();
+        }
+
+        boards[3] = board;
+        int score = miniMax.search(1, boards, 3, false);
+        assertEquals(64,score);
     }
 }
