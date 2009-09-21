@@ -10,12 +10,14 @@ import base.validate.Require;
  * This board allows us to set the position
  */
 public class SetupBoard extends SimpleBoard {
-    public void setSquare(int color, int location) {
-        Require.eq(Math.abs(color),"color",1,"1");
+    public void setSquare(int boardStatus, int location) {
+        if (!(boardStatus == 1 || boardStatus == 0 || boardStatus == -1)) {
+            throw new IllegalArgumentException("boardStatus " + boardStatus + "is not valid");
+        }
         if (location < 11 || location >88 || location%10 == 0 || location%10 == 9) {
             throw new IllegalArgumentException("Location " + location + "is not valid");
         }
-        board[location] = color;
+        board[location] = boardStatus;
         blackMinusWhite = calcBlackMinusWhite();
     }
 
