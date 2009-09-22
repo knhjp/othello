@@ -43,7 +43,7 @@ public class AlphaBetaSpeedtest {
         int runs = 10;
 
         long beforeTime = System.currentTimeMillis();
-        int score=0;
+        int score = 0;
         for (int i=0 ; i<runs ; i++) {
             score = alphaBeta.search(color, boards, empties, alreadyPassed, -65, 65);
         }
