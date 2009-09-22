@@ -44,4 +44,8 @@ public class MiniMax implements TreeSearch {
             return bestScore;
         }
     }
+
+    public int getNodeCount() {
+        return nodeCount;
+    }
 }
