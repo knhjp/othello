@@ -16,6 +16,7 @@ public class AlphaBeta {
     }
 
     public int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta) {
+        nodeCount++;
         boolean hasSearched = false;
         for (int curLocation = 11 ; curLocation<89; curLocation++) {
             if (curLocation%10 == 9) {
