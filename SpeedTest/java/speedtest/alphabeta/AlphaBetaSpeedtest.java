@@ -40,8 +40,13 @@ public class AlphaBetaSpeedtest {
         }
         boards[empties] = board;
 
+        int runs = 10;
+
         long beforeTime = System.currentTimeMillis();
-        int score = alphaBeta.search(color, boards, empties, alreadyPassed, -65, 65);
+        int score=0;
+        for (int i=0 ; i<runs ; i++) {
+            score = alphaBeta.search(color, boards, empties, alreadyPassed, -65, 65);
+        }
         long afterTime = System.currentTimeMillis();
 
         if (score!=10) {
@@ -55,5 +60,6 @@ public class AlphaBetaSpeedtest {
         System.out.println("score:"+score);
         System.out.println("time:"+ totalTime);
         System.out.println("nodeCount:"+nodeCount);
+        System.out.println("node/ms:"+ nodePerMs);
     }
 }
