@@ -1,5 +1,7 @@
 package search.alphabeta;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package search.alphabeta;
  * Time: 7:39:26 PM
  * This is a unit test for testing AlphaBeta
  */
-public class AlphaBetaTest {
+public class AlphaBetaTest extends OthelloTestCase {
 }
