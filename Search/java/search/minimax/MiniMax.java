@@ -20,6 +20,7 @@ public class MiniMax implements TreeSearch {
     }
 
     @Override public int search(int color, Board[] boards, int empties, boolean alreadyPassed) {
+        nodeCount++;
         int bestScore = minVal;
         for (int curLocation = 11 ; curLocation<89; curLocation++) {
             if (curLocation%10 == 9) {
