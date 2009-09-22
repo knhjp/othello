@@ -13,6 +13,9 @@ import base.board.Board;
 public class MiniMax implements TreeSearch {
     private final static int minVal =-65; //this value has to be lower than the worst possible score (-64)
 
+    public MiniMax() {
+    }
+
     @Override public int search(int color, Board[] boards, int empties, boolean alreadyPassed) {
         int bestScore = minVal;
         for (int curLocation = 11 ; curLocation<89; curLocation++) {
