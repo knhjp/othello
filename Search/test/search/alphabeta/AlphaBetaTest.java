@@ -69,4 +69,33 @@ public class AlphaBetaTest extends OthelloTestCase {
         int score = alphaBeta.search(1, boards, 3, false,-65,65);
         assertEquals(63,score);
     }
+
+    public void testWithOneBetterMove() {
+        int[] myBoard = {
+                3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                3, 1, 1, 1, 1, 1, 1, -1, 0, 3,
+                3, 1, 1, 1, 1, 1, 1, -1, 0, 3,
+                3, 1, 1, 1, 1, 1, 1, -1, 0, 3,
+                3, 1, 1, 1, 1, 1, 1, -1, -1, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, 1, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, -1, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, 1, 3,
+                3, 1, 1, 1, 1, 1, 1, 1, 1, 3,
+                3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+
+        SetupBoard board = new SetupBoard();
+        board.resetToStart();
+        board.setBoard(myBoard);
+
+        AlphaBeta miniMax = new AlphaBeta();
+
+        Board[] boards = new Board[60];
+        for (int i=0 ; i<boards.length ; i++) {
+            boards[i] = new SetupBoard();
+        }
+
+        boards[3] = board;
+        int score = miniMax.search(1, boards, 3, false,-65,65);
+        assertEquals(64,score);
+    }
 }
