@@ -12,6 +12,7 @@ import base.board.Board;
 public class AlphaBeta {
     private int nodeCount;
     public AlphaBeta() {
+        nodeCount=0;
     }
 
     public int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta) {
