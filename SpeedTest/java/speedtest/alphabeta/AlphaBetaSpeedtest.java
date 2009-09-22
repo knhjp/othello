@@ -48,7 +48,11 @@ public class AlphaBetaSpeedtest {
             throw new IllegalStateException("This should have solved to 10");
         }
 
+        int nodeCount = alphaBeta.getNodeCount();
+        long totalTime = afterTime - beforeTime;
+
         System.out.println("score:"+score);
-        System.out.println("time:"+(afterTime - beforeTime));
+        System.out.println("time:"+ totalTime);
+        System.out.println("nodeCount:"+nodeCount);
     }
 }
