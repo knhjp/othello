@@ -49,9 +49,12 @@ public class MinimaxSpeedTest {
         }
 
         int nodeCount = miniMax.getNodeCount();
+        long totalTime = afterTime - beforeTime;
+        long nodePerMs = nodeCount / totalTime;
 
         System.out.println("score:"+score);
-        System.out.println("time:"+(afterTime - beforeTime));
+        System.out.println("time:"+ totalTime);
         System.out.println("nodeCount:"+nodeCount);
+        System.out.println("node/ms:"+ nodePerMs);
     }
 }
