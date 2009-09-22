@@ -48,7 +48,10 @@ public class MinimaxSpeedTest {
             throw new IllegalStateException("This should have solved to 10");
         }
 
+        int nodeCount = miniMax.getNodeCount();
+
         System.out.println("score:"+score);
         System.out.println("time:"+(afterTime - beforeTime));
+        System.out.println("nodeCount:"+nodeCount);
     }
 }
