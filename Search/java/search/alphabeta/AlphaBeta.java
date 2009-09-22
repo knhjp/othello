@@ -44,5 +44,8 @@ public class AlphaBeta {
             }
         }
     }
-        
+
+    public int getNodeCount() {
+        return nodeCount;
+    }
 }
