@@ -50,6 +50,7 @@ public class AlphaBetaSpeedtest {
 
         int nodeCount = alphaBeta.getNodeCount();
         long totalTime = afterTime - beforeTime;
+        long nodePerMs = nodeCount / totalTime;
 
         System.out.println("score:"+score);
         System.out.println("time:"+ totalTime);
