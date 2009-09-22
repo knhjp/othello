@@ -5,7 +5,7 @@ package search.alphabeta;
  * User: knhjp
  * Date: Sep 21, 2009
  * Time: 7:39:26 PM
- * To change this template use File | Settings | File Templates.
+ * This is a unit test for testing AlphaBeta
  */
 public class AlphaBetaTest {
 }
