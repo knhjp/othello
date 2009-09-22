@@ -44,6 +44,10 @@ public class MinimaxSpeedTest {
         int score = miniMax.search(color, boards, empties, alreadyPassed);
         long afterTime = System.currentTimeMillis();
 
+        if (score!=10) {
+            throw new IllegalStateException("This should have solved to 10");
+        }
+
         System.out.println("score:"+score);
         System.out.println("time:"+(afterTime - beforeTime));
     }
