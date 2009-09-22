@@ -10,6 +10,9 @@ import base.board.Board;
  * This class does an alpha beta search
  */
 public class AlphaBeta {
+    public AlphaBeta() {
+    }
+
     public int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta) {
         boolean hasSearched = false;
         for (int curLocation = 11 ; curLocation<89; curLocation++) {
