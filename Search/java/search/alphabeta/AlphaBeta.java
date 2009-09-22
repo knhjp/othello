@@ -10,6 +10,7 @@ import base.board.Board;
  * This class does an alpha beta search
  */
 public class AlphaBeta {
+    private int nodeCount;
     public AlphaBeta() {
     }
 
