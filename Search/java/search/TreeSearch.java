@@ -11,5 +11,6 @@ import base.board.Board;
  */
 public interface TreeSearch {
     public final int negInf = -65;
+    public final int posInf = 65;
     int search(int color, Board[] boards, int empties, boolean alreadyPassed);
 }

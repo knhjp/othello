@@ -3,6 +3,7 @@ package search.alphabeta;
 import base.testcase.OthelloTestCase;
 import base.board.Board;
 import simpleboard.SetupBoard;
+import search.TreeSearch;
 
 /**
  * Created by IntelliJ IDEA.
@@ -37,7 +38,7 @@ public class AlphaBetaTest extends OthelloTestCase {
         }
 
         boards[3] = board;
-        int score = alphaBeta.search(1, boards, 3, false,-65,65);
+        int score = alphaBeta.search(1, boards, 3, false,TreeSearch.negInf,TreeSearch.posInf);
         assertEquals(64,score);
     }
 
@@ -66,7 +67,7 @@ public class AlphaBetaTest extends OthelloTestCase {
         }
 
         boards[3] = board;
-        int score = alphaBeta.search(1, boards, 3, false,-65,65);
+        int score = alphaBeta.search(1, boards, 3, false,TreeSearch.negInf,TreeSearch.posInf);
         assertEquals(63,score);
     }
 
@@ -95,7 +96,7 @@ public class AlphaBetaTest extends OthelloTestCase {
         }
 
         boards[3] = board;
-        int score = miniMax.search(1, boards, 3, false,-65,65);
+        int score = miniMax.search(1, boards, 3, false,TreeSearch.negInf,TreeSearch.posInf);
         assertEquals(64,score);
     }
 }

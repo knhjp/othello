@@ -11,8 +11,6 @@ import base.board.Board;
  * This class does the naive minimax search
  */
 public class MiniMax implements TreeSearch {
-    private final static int minVal =-65; //this value has to be lower than the worst possible score (-64)
-
     private int nodeCount;
 
     public MiniMax() {
@@ -21,7 +19,7 @@ public class MiniMax implements TreeSearch {
 
     @Override public int search(int color, Board[] boards, int empties, boolean alreadyPassed) {
         nodeCount++;
-        int bestScore = minVal;
+        int bestScore = TreeSearch.negInf;
         for (int curLocation = 11 ; curLocation<89; curLocation++) {
             if (curLocation%10 == 9) {
                 curLocation +=2;
@@ -34,7 +32,7 @@ public class MiniMax implements TreeSearch {
             }
         }
 
-        if (bestScore == minVal) { //this happens in case of a pass
+        if (bestScore == TreeSearch.negInf) { //this happens in case of a pass
             if (alreadyPassed) {
                 return boards[empties].getBlackMinusWhite() * color;
             } else {

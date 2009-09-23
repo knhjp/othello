@@ -3,6 +3,7 @@ package speedtest.alphabeta;
 import simpleboard.SetupBoard;
 import base.board.Board;
 import search.alphabeta.AlphaBeta;
+import search.TreeSearch;
 
 /**
  * Created by IntelliJ IDEA.
@@ -45,7 +46,7 @@ public class AlphaBetaSpeedtest {
         long beforeTime = System.currentTimeMillis();
         int score = 0;
         for (int i=0 ; i<runs ; i++) {
-            score = alphaBeta.search(color, boards, empties, alreadyPassed, -65, 65);
+            score = alphaBeta.search(color, boards, empties, alreadyPassed, TreeSearch.negInf, TreeSearch.posInf);
         }
         long afterTime = System.currentTimeMillis();
 
