@@ -40,7 +40,7 @@ public class AlphaBetaSpeedtest {
         }
         boards[empties] = board;
 
-        int runs = 10;
+        int runs = 500;
 
         long beforeTime = System.currentTimeMillis();
         int score = 0;
