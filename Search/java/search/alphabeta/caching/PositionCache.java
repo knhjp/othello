@@ -1,5 +1,7 @@
 package search.alphabeta.caching;
 
+import search.TreeSearch;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -9,7 +11,7 @@ package search.alphabeta.caching;
  * (Need to decide whether or not to cache the actual position, or just a hash of it)
  */
 public class PositionCache {
-    private int hashCode;
-    private int alpha;
-    private int beta;
+    private int hashCode = -1;
+    private int alpha = TreeSearch.negInf;
+    private int beta = TreeSearch.posInf;
 }
