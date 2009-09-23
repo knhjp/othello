@@ -10,5 +10,6 @@ package search.alphabeta.caching;
  */
 public class PositionCache {
     private int hashCode;
-    private int score;
+    private int alpha;
+    private int beta;
 }
