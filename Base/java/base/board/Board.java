@@ -46,4 +46,21 @@ public interface Board {
      * @return The number of black discs (1) minus the number of white discs (-1)
      */
     int getBlackMinusWhite();
+
+    static int[] allMoves = {
+        11, 18, 81, 88, //corners
+
+        12, 17, 21, 28, 71, 78, 82, 87, //c-squares
+        13, 16, 31, 38, 61, 68, 83, 86, //b-squares
+        14, 15, 41, 48, 51, 58, 84, 85, //a-squares
+
+        23, 26, 32, 37, 62, 67, 73, 76,
+        24, 25, 42, 47, 52, 57, 74, 75,
+
+        //sweet 16
+        33, 36, 63, 66, //corners
+        34, 35, 43, 46, 53, 56, 64, 65,
+
+        22, 27, 72, 77, //x-squares
+    };
 }
