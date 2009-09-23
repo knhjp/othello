@@ -9,4 +9,6 @@ package search.alphabeta.caching;
  * (Need to decide whether or not to cache the actual position, or just a hash of it)
  */
 public class PositionCache {
+    public PositionCache() {
+    }
 }
