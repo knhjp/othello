@@ -31,7 +31,7 @@ public class AlphaBetaCaching {
                 curScore = Math.max(curScore,-search(-color,boards,empties-1,false,-beta,-alpha));
                 alpha = Math.max(alpha, curScore);
                 if (beta <= alpha) {//beta cutoff
-                    return alpha;
+                    break;
                 }
             }
         }
