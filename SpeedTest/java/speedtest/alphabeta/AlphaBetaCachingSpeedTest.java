@@ -5,7 +5,7 @@ package speedtest.alphabeta;
  * User: knhjp
  * Date: Sep 24, 2009
  * Time: 6:35:45 PM
- * To change this template use File | Settings | File Templates.
+ * Speed test for AlphaBetaCaching
  */
 public class AlphaBetaCachingSpeedTest {
 }
