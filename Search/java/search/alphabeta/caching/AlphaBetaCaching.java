@@ -11,7 +11,7 @@ import base.board.Board;
  */
 public class AlphaBetaCaching {
     private int nodeCount;
-    public AlphaBetaCaching() {
+    public AlphaBetaCaching(int numBuckets) {
         nodeCount=0;
     }
 
