@@ -5,7 +5,7 @@ package search.alphabeta.caching;
  * User: knhjp
  * Date: Sep 23, 2009
  * Time: 9:10:29 PM
- * To change this template use File | Settings | File Templates.
+ * An unit test to test that AlphaBetaCaching is at least doing the right thing in some situations
  */
 public class AlphaBetaCachingTest {
 }
