@@ -18,6 +18,9 @@ public class AlphaBetaCaching {
     public AlphaBetaCaching(int numBuckets) {
         this.numBuckets = numBuckets;
         this.cache = new PositionCache[numBuckets];
+        for (int i=0 ; i<numBuckets ; i++) {
+            this.cache[i] = new PositionCache();
+        }
         nodeCount=0;
     }
 
