@@ -12,6 +12,6 @@ import search.TreeSearch;
  */
 public class PositionCache {
     private int hashCode = -1;
-    private int alpha = TreeSearch.negInf;
-    private int beta = TreeSearch.posInf;
+    private int lowerBound = TreeSearch.negInf;
+    private int upperBound = TreeSearch.posInf;
 }
