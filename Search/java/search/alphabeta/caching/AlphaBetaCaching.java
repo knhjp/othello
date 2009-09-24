@@ -23,6 +23,16 @@ public class AlphaBetaCaching {
 
     public int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta) {
         nodeCount++;
+
+        final int hashCode = boards[empties].hashCode();
+        final PositionCache positionCache = cache[hashCode % numBuckets];
+        if (hashCode == positionCache.hashCode) { //we have seen this position before, maybe we can do something useful with this
+            
+        } else {
+            positionCache.setNewHashCode(hashCode);
+        }
+
+
         int curScore = TreeSearch.negInf;
         for (int curLocation : Board.allMoves) {
             if (boards[empties].isMoveValid(color,curLocation)) {
