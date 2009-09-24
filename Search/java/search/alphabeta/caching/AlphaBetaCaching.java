@@ -12,9 +12,11 @@ import base.board.Board;
 public class AlphaBetaCaching {
     private int nodeCount;
     private final int numBuckets;
+    private final PositionCache[] cache;
 
     public AlphaBetaCaching(int numBuckets) {
         this.numBuckets = numBuckets;
+        this.cache = new PositionCache[numBuckets];
         nodeCount=0;
     }
 
