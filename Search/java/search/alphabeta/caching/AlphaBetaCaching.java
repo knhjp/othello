@@ -59,7 +59,7 @@ public class AlphaBetaCaching {
         }
 
         if (curScore != TreeSearch.negInf) {
-            return alpha;
+            return curScore;
         } else { //this happens in case of a pass
             if (alreadyPassed) {
                 return boards[empties].getBlackMinusWhite() * color;
