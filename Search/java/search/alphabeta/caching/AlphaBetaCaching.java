@@ -27,7 +27,16 @@ public class AlphaBetaCaching {
         final int hashCode = boards[empties].hashCode();
         final PositionCache positionCache = cache[hashCode % numBuckets];
         if (hashCode == positionCache.hashCode) { //we have seen this position before, maybe we can do something useful with this
-            
+            if (positionCache.lowerBound == positionCache.upperBound) { //if they equal to each other, we already know the score of the position
+                return positionCache.lowerBound; //doesn't matter which one we return
+            }
+            if (positionCache.lowerBound >= beta) { //if the lowest possible value is already above our window, we have a cutoff
+                return positionCache.lowerBound;
+            }
+            if (positionCache.upperBound <= alpha) { //likewise, if the position is going to be lower than our window
+                return positionCache.upperBound;
+            }
+
         } else {
             positionCache.setNewHashCode(hashCode);
         }
