@@ -1,6 +1,7 @@
 package search.alphabeta.caching;
 
 import base.board.Board;
+import search.TreeSearch;
 
 /**
  * Created by IntelliJ IDEA.
@@ -22,20 +23,20 @@ public class AlphaBetaCaching {
 
     public int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta) {
         nodeCount++;
-        boolean hasSearched = false;
+        int curScore = TreeSearch.negInf;
         for (int curLocation : Board.allMoves) {
             if (boards[empties].isMoveValid(color,curLocation)) {
-                hasSearched = true;
                 boards[empties-1].copyBoard(boards[empties]);
                 boards[empties-1].makeMove(color,curLocation);
-                alpha = Math.max(alpha,-search(-color,boards,empties-1,false,-beta,-alpha));
+                curScore = Math.max(curScore,-search(-color,boards,empties-1,false,-beta,-alpha));
+                alpha = Math.max(alpha, curScore);
                 if (beta <= alpha) {//beta cutoff
                     return alpha;
                 }
             }
         }
 
-        if (hasSearched) {
+        if (curScore != TreeSearch.negInf) {
             return alpha;
         } else { //this happens in case of a pass
             if (alreadyPassed) {
