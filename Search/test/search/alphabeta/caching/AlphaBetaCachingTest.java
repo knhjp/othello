@@ -1,5 +1,7 @@
 package search.alphabeta.caching;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package search.alphabeta.caching;
  * Time: 9:10:29 PM
  * An unit test to test that AlphaBetaCaching is at least doing the right thing in some situations
  */
-public class AlphaBetaCachingTest {
+public class AlphaBetaCachingTest extends OthelloTestCase {
 }
