@@ -109,4 +109,8 @@ public class SimpleBoard implements Board {
         result = 31 * result + blackMinusWhite;
         return result;
     }
+
+    @Override public int hashCodeWithColor(int color) {
+        return Math.abs(hashCode()^color);
+    }
 }

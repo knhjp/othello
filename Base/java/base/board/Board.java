@@ -47,6 +47,13 @@ public interface Board {
      */
     int getBlackMinusWhite();
 
+    /**
+     *
+     * @param color next color to move
+     * @return hash code for the board + position
+     */
+    int hashCodeWithColor(int color);
+
     static int[] allMoves = {
         11, 18, 81, 88, //corners
 

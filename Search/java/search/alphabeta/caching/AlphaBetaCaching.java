@@ -24,7 +24,7 @@ public class AlphaBetaCaching {
     public int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta) {
         nodeCount++;
 
-        final int hashCode = boards[empties].hashCode();
+        final int hashCode = boards[empties].hashCodeWithColor(color);
         final PositionCache positionCache = cache[hashCode % numBuckets];
         if (hashCode == positionCache.hashCode) { //we have seen this position before, maybe we can do something useful with this
             if (positionCache.lowerBound == positionCache.upperBound) { //if they equal to each other, we already know the score of the position
