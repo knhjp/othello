@@ -59,6 +59,14 @@ public class AlphaBetaCaching {
         }
 
         if (curScore != TreeSearch.negInf) {
+            //update cache before returning
+            if (curScore <= alpha) { //if curScore is lower than alpha, we don't know the exact score, but we know it can't be better than curScore
+                positionCache.upperBound = curScore;
+            } else if (curScore >= beta) {
+                positionCache.lowerBound = curScore;
+            } else { //if between alpha and beta, we know *exactly* what the score is
+                positionCache.lowerBound = positionCache.upperBound = curScore;
+            }
             return curScore;
         } else { //this happens in case of a pass
             if (alreadyPassed) {
