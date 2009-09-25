@@ -95,7 +95,7 @@ public class AlphaBetaCaching implements AlphaBetaInterface {
     }
 
     public int getNodeCount() {
-        return nodeCount;
+        return nodeCount + alphaBeta.getNodeCount();
     }
 
     public int numEmptyCache() {
