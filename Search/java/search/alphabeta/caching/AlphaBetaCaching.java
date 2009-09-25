@@ -2,6 +2,7 @@ package search.alphabeta.caching;
 
 import base.board.Board;
 import search.TreeSearch;
+import com.sun.istack.internal.Nullable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -29,8 +30,10 @@ public class AlphaBetaCaching {
         nodeCount++;
 
         final int hashCode = boards[empties].hashCodeWithColor(color);
-        final PositionCache positionCache = cache[hashCode % numBuckets];
-        if (hashCode == positionCache.hashCode) { //we have seen this position before, maybe we can do something useful with this
+        final PositionCache rawCache = cache[hashCode % numBuckets];
+        @Nullable final PositionCache positionCache;
+        if (hashCode == rawCache.hashCode) { //we have seen this position before, maybe we can do something useful with this
+            positionCache = rawCache;
             if (positionCache.lowerBound == positionCache.upperBound) { //if they equal to each other, we already know the score of the position
                 return positionCache.lowerBound; //doesn't matter which one we return
             }
@@ -42,7 +45,12 @@ public class AlphaBetaCaching {
             }
 
         } else {
-            positionCache.setNewHashCode(hashCode);
+            if (rawCache.empties < empties) {
+                positionCache = rawCache;
+                positionCache.setNewHashCode(hashCode);
+            } else {
+                positionCache = null;
+            }
         }
 
 
@@ -60,12 +68,14 @@ public class AlphaBetaCaching {
 
         if (curScore != TreeSearch.negInf) {
             //update cache before returning
-            if (curScore <= alpha) { //if curScore is lower than alpha, we don't know the exact score, but we know it can't be better than curScore
-                positionCache.upperBound = curScore;
-            } else if (curScore >= beta) {
-                positionCache.lowerBound = curScore;
-            } else { //if between alpha and beta, we know *exactly* what the score is
-                positionCache.lowerBound = positionCache.upperBound = curScore;
+            if (positionCache!=null) {
+                if (curScore <= alpha) { //if curScore is lower than alpha, we don't know the exact score, but we know it can't be better than curScore
+                    positionCache.upperBound = curScore;
+                } else if (curScore >= beta) {
+                    positionCache.lowerBound = curScore;
+                } else { //if between alpha and beta, we know *exactly* what the score is
+                    positionCache.lowerBound = positionCache.upperBound = curScore;
+                }
             }
             return curScore;
         } else { //this happens in case of a pass
