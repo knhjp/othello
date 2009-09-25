@@ -9,7 +9,7 @@ import base.board.Board;
  * Time: 7:02:09 PM
  * This class does an alpha beta search
  */
-public class AlphaBeta {
+public class AlphaBeta implements AlphaBetaInterface {
     private int nodeCount;
     public AlphaBeta() {
         nodeCount=0;

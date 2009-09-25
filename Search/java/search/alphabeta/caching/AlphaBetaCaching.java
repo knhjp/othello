@@ -3,6 +3,7 @@ package search.alphabeta.caching;
 import base.board.Board;
 import search.TreeSearch;
 import search.alphabeta.AlphaBeta;
+import search.alphabeta.AlphaBetaInterface;
 import com.sun.istack.internal.Nullable;
 
 /**
@@ -12,7 +13,7 @@ import com.sun.istack.internal.Nullable;
  * Time: 8:01:05 PM
  * This aims to do the same thing as AlphaBeta, except it caches positions already seen
  */
-public class AlphaBetaCaching {
+public class AlphaBetaCaching implements AlphaBetaInterface {
     private final int emptiesCutoff = 10;
 
     private int nodeCount;
