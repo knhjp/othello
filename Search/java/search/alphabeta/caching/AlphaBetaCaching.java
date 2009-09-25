@@ -18,10 +18,12 @@ public class AlphaBetaCaching implements AlphaBetaInterface {
 
     private int nodeCount;
     private final int numBuckets;
+    private final AlphaBeta alphaBeta;
     private final PositionCache[] cache;
 
     public AlphaBetaCaching(int numBuckets, AlphaBeta alphaBeta) {
         this.numBuckets = numBuckets;
+        this.alphaBeta = alphaBeta;
         this.cache = new PositionCache[numBuckets];
         for (int i=0 ; i<numBuckets ; i++) {
             this.cache[i] = new PositionCache();
