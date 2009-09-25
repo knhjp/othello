@@ -1,5 +1,7 @@
 package search.alphabeta;
 
+import base.board.Board;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -8,4 +10,5 @@ package search.alphabeta;
  * This makes a consistent interface to alpha-beta search
  */
 public interface AlphaBetaInterface {
+    int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta);
 }

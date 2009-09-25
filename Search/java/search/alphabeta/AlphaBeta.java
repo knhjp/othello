@@ -15,7 +15,7 @@ public class AlphaBeta implements AlphaBetaInterface {
         nodeCount=0;
     }
 
-    public int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta) {
+    @Override public int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta) {
         nodeCount++;
         boolean hasSearched = false;
         for (int curLocation : Board.allMoves) {

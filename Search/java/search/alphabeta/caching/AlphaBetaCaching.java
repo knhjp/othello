@@ -29,7 +29,7 @@ public class AlphaBetaCaching implements AlphaBetaInterface {
         nodeCount=0;
     }
 
-    public int search(final int color, final Board[] boards, final int empties, final boolean alreadyPassed,
+    @Override public int search(final int color, final Board[] boards, final int empties, final boolean alreadyPassed,
                       final int alpha, final int beta) {
         nodeCount++;
 
