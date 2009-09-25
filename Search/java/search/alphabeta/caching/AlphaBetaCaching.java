@@ -24,7 +24,8 @@ public class AlphaBetaCaching {
         nodeCount=0;
     }
 
-    public int search(int color, Board[] boards, int empties, boolean alreadyPassed, int alpha, int beta) {
+    public int search(final int color, final Board[] boards, final int empties, final boolean alreadyPassed,
+                      final int alpha, final int beta) {
         nodeCount++;
 
         final int hashCode = boards[empties].hashCodeWithColor(color);
