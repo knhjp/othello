@@ -47,7 +47,7 @@ public class AlphaBetaCaching {
         } else {
             if (rawCache.empties < empties) {
                 positionCache = rawCache;
-                positionCache.setNewHashCode(hashCode);
+                positionCache.setNewHashCode(hashCode,empties);
             } else {
                 positionCache = null;
             }
