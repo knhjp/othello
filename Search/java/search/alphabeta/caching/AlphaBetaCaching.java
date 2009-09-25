@@ -20,7 +20,7 @@ public class AlphaBetaCaching implements AlphaBetaInterface {
     private final int numBuckets;
     private final PositionCache[] cache;
 
-    public AlphaBetaCaching(int numBuckets) {
+    public AlphaBetaCaching(int numBuckets, AlphaBeta alphaBeta) {
         this.numBuckets = numBuckets;
         this.cache = new PositionCache[numBuckets];
         for (int i=0 ; i<numBuckets ; i++) {
@@ -56,7 +56,6 @@ public class AlphaBetaCaching implements AlphaBetaInterface {
                 positionCache = null;
             }
         }
-
 
         int curScore = TreeSearch.negInf;
         for (int curLocation : Board.allMoves) {

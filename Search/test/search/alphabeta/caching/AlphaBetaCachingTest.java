@@ -4,6 +4,7 @@ import base.testcase.OthelloTestCase;
 import base.board.Board;
 import simpleboard.SetupBoard;
 import search.TreeSearch;
+import search.alphabeta.AlphaBeta;
 
 /**
  * Created by IntelliJ IDEA.
@@ -32,7 +33,7 @@ public class AlphaBetaCachingTest extends OthelloTestCase {
         board.resetToStart();
         board.setBoard(myBoard);
 
-        AlphaBetaCaching alphaBeta = new AlphaBetaCaching(cacheSize);
+        AlphaBetaCaching alphaBeta = new AlphaBetaCaching(cacheSize, new AlphaBeta());
 
         Board[] boards = new Board[60];
         for (int i=0 ; i<boards.length ; i++) {
@@ -61,7 +62,7 @@ public class AlphaBetaCachingTest extends OthelloTestCase {
         board.resetToStart();
         board.setBoard(myBoard);
 
-        AlphaBetaCaching alphaBeta = new AlphaBetaCaching(cacheSize);
+        AlphaBetaCaching alphaBeta = new AlphaBetaCaching(cacheSize, new AlphaBeta());
 
         Board[] boards = new Board[60];
         for (int i=0 ; i<boards.length ; i++) {
@@ -90,7 +91,7 @@ public class AlphaBetaCachingTest extends OthelloTestCase {
         board.resetToStart();
         board.setBoard(myBoard);
 
-        AlphaBetaCaching miniMax = new AlphaBetaCaching(cacheSize);
+        AlphaBetaCaching miniMax = new AlphaBetaCaching(cacheSize, new AlphaBeta());
 
         Board[] boards = new Board[60];
         for (int i=0 ; i<boards.length ; i++) {

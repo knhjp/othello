@@ -4,6 +4,7 @@ import simpleboard.SetupBoard;
 import base.board.Board;
 import search.TreeSearch;
 import search.alphabeta.caching.AlphaBetaCaching;
+import search.alphabeta.AlphaBeta;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,7 +16,7 @@ import search.alphabeta.caching.AlphaBetaCaching;
 public class AlphaBetaCachingSpeedTest {
     public static void main(String[] args) {
         final int numBuckets = 1046527;
-        AlphaBetaCaching alphaBeta = new AlphaBetaCaching(numBuckets);
+        AlphaBetaCaching alphaBeta = new AlphaBetaCaching(numBuckets, new AlphaBeta());
 
         int[] myBoard = {
                 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
