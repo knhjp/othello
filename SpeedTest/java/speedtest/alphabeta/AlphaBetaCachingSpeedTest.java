@@ -20,13 +20,13 @@ public class AlphaBetaCachingSpeedTest {
         int[] myBoard = {
                 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
                 3, 0, 0, 0,-1, 0, 0, 0, 0, 3,
-                3, 0, 0, 1,-1,-1, 0, 0, 0, 3,
-                3, 0, 1, 1,-1,-1,-1, 0,-1, 3,
-                3, 1, 1, 1,-1, 1,-1,-1, 0, 3,
-                3, 0, 1, 1,-1,-1, 1,-1, 1, 3,
-                3, 0, 1, 1,-1,-1,-1, 1, 1, 3,
-                3, 1, 1, 1,-1, 1, 1, 1, 1, 3,
-                3, 1,-1,-1,-1, 1, 1, 1,-1, 3,
+                3, 0, 0,-1,-1, 0, 0, 0, 0, 3,
+                3,-1,-1,-1,-1, 1, 1, 1, 1, 3,
+                3,-1, 1,-1,-1, 1, 1, 1, 1, 3,
+                3,-1,-1,-1, 1, 1, 1,-1, 1, 3,
+                3,-1,-1,-1,-1, 1, 1, 1, 1, 3,
+                3, 0, 0,-1, 1,-1, 1, 1, 0, 3,
+                3, 0,-1,-1,-1,-1,-1, 0, 0, 3,
                 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
 
         SetupBoard board = new SetupBoard();
@@ -34,7 +34,7 @@ public class AlphaBetaCachingSpeedTest {
         board.setBoard(myBoard);
 
         int color = -1;
-        int empties = 17;
+        int empties = 19;
         boolean alreadyPassed = false;
         Board[] boards = new Board[60];
         for (int i=0 ; i<boards.length ; i++) {
