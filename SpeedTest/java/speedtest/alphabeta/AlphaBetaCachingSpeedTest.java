@@ -14,7 +14,7 @@ import search.alphabeta.caching.AlphaBetaCaching;
  */
 public class AlphaBetaCachingSpeedTest {
     public static void main(String[] args) {
-        final int numBuckets = 20161;
+        final int numBuckets = 1046527;
         AlphaBetaCaching alphaBeta = new AlphaBetaCaching(numBuckets);
 
         int[] myBoard = {
@@ -60,9 +60,13 @@ public class AlphaBetaCachingSpeedTest {
         long totalTime = afterTime - beforeTime;
         long nodePerMs = nodeCount / totalTime;
 
+        int numEmptyEntries = alphaBeta.numEmptyCache();
+        double perEmpty = numEmptyEntries / (double)numBuckets;
+
         System.out.println("score:"+score);
         System.out.println("time:"+ totalTime);
         System.out.println("nodeCount:"+nodeCount);
         System.out.println("node/ms:"+ nodePerMs);
+        System.out.println("%Empty:"+perEmpty);
     }
 }
