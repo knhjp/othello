@@ -80,4 +80,14 @@ public class AlphaBetaCaching {
     public int getNodeCount() {
         return nodeCount;
     }
+
+    public int numEmptyCache() {
+        int counter = 0;
+        for (int i=0 ; i<numBuckets ; i++) {
+            if (cache[i].hashCode==PositionCache.invalidHash) {
+                counter++;
+            }
+        }
+        return counter;
+    }
 }

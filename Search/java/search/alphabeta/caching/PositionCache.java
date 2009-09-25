@@ -11,7 +11,8 @@ import search.TreeSearch;
  * (Need to decide whether or not to cache the actual position, or just a hash of it)
  */
 public class PositionCache {
-    int hashCode = -1;
+    static final int invalidHash = -1;
+    int hashCode = invalidHash;
     int lowerBound = TreeSearch.negInf;
     int upperBound = TreeSearch.posInf;
 
