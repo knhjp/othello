@@ -14,7 +14,7 @@ import com.sun.istack.internal.Nullable;
  * This aims to do the same thing as AlphaBeta, except it caches positions already seen
  */
 public class AlphaBetaCaching implements AlphaBetaInterface {
-    private final int emptiesCutoff = 10;
+    private final int emptiesCutoff = 6;
 
     private int nodeCount;
     private final int numBuckets;
