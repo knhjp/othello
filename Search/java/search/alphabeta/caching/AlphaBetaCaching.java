@@ -59,12 +59,14 @@ public class AlphaBetaCaching implements AlphaBetaInterface {
             }
         }
 
+        AlphaBetaInterface alphaBetaInterface = empties == emptiesCutoff ? alphaBeta : this;
         int curScore = TreeSearch.negInf;
         for (int curLocation : Board.allMoves) {
             if (boards[empties].isMoveValid(color,curLocation)) {
                 boards[empties-1].copyBoard(boards[empties]);
                 boards[empties-1].makeMove(color,curLocation);
-                curScore = Math.max(curScore,-search(-color,boards,empties-1,false,-beta,-Math.max(alpha,curScore)));
+                curScore = Math.max(curScore,
+                        -alphaBetaInterface.search(-color,boards,empties-1,false,-beta,-Math.max(alpha,curScore)));
                 if (beta <= curScore) {//beta cutoff
                     break;
                 }
