@@ -15,6 +15,7 @@ public class PositionCache {
     int hashCode = invalidHash;
     int lowerBound = TreeSearch.negInf;
     int upperBound = TreeSearch.posInf;
+    int empties = -1;
 
     public void setNewHashCode(int hashCode) {
         this.hashCode = hashCode;
