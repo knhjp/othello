@@ -19,22 +19,22 @@ public class AlphaBetaCachingSpeedTest {
 
         int[] myBoard = {
                 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
-                3, 0, 0, 1, 1, 1, 1, 1, 0, 3,
-                3, 0, 0, 1, 1, -1, -1, -1, 0, 3,
-                3, 1, 1, -1, -1, 1, -1, -1, 1, 3,
-                3, 1, 1, -1, -1, -1, 1, -1, 1, 3,
-                3, 0, -1, 1, -1, -1, 1, -1, 1, 3,
-                3, -1, 0, 1, -1, -1, -1, -1, 1, 3,
-                3, 0, 0, 1, -1, -1, -1, -1, 1, 3,
-                3, 0, 0, 1, 1, 1, 1, 0, 0, 3,
+                3, 0, 0, 0,-1, 0, 0, 0, 0, 3,
+                3, 0, 0, 1,-1,-1, 0, 0, 0, 3,
+                3, 0, 1, 1,-1,-1,-1, 0,-1, 3,
+                3, 1, 1, 1,-1, 1,-1,-1, 0, 3,
+                3, 0, 1, 1,-1,-1, 1,-1, 1, 3,
+                3, 0, 1, 1,-1,-1,-1, 1, 1, 3,
+                3, 1, 1, 1,-1, 1, 1, 1, 1, 3,
+                3, 1,-1,-1,-1, 1, 1, 1,-1, 3,
                 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
 
         SetupBoard board = new SetupBoard();
         board.resetToStart();
         board.setBoard(myBoard);
 
-        int color = 1;
-        int empties = 14;
+        int color = -1;
+        int empties = 17;
         boolean alreadyPassed = false;
         Board[] boards = new Board[60];
         for (int i=0 ; i<boards.length ; i++) {
@@ -51,7 +51,7 @@ public class AlphaBetaCachingSpeedTest {
         }
         long afterTime = System.currentTimeMillis();
 
-        int expectedScore = -8;
+        int expectedScore = 8;
         if (score!= expectedScore) {
             throw new IllegalStateException("This should have solved to "+expectedScore+" but solved to "+score);
         }
