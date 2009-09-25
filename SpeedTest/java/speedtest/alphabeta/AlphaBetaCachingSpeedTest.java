@@ -14,7 +14,7 @@ import search.alphabeta.caching.AlphaBetaCaching;
  */
 public class AlphaBetaCachingSpeedTest {
     public static void main(String[] args) {
-        final int numBuckets = 20000;
+        final int numBuckets = 20161;
         AlphaBetaCaching alphaBeta = new AlphaBetaCaching(numBuckets);
 
         int[] myBoard = {
