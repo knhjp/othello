@@ -5,7 +5,7 @@ package base.board;
  * User: knhjp
  * Date: Sep 25, 2009
  * Time: 7:41:10 PM
- * To change this template use File | Settings | File Templates.
+ * This class tests the methods in BoardHelper
  */
 public class BaseHelperTest {
 }
