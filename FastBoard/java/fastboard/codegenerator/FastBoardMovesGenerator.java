@@ -5,7 +5,7 @@ package fastboard.codegenerator;
  * User: knhjp
  * Date: Sep 25, 2009
  * Time: 10:09:11 PM
- * To change this template use File | Settings | File Templates.
+ * This class writes code for fast move flipping
  */
 public class FastBoardMovesGenerator {
 }
