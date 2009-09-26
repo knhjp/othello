@@ -5,7 +5,7 @@ package fastboard;
  * User: knhjp
  * Date: Sep 25, 2009
  * Time: 8:37:11 PM
- * To change this template use File | Settings | File Templates.
+ * This is meant to be a fast implementation of Board
  */
 public class FastBoard {
 }
