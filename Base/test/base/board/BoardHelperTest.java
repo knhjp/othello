@@ -7,5 +7,5 @@ package base.board;
  * Time: 7:41:10 PM
  * This class tests the methods in BoardHelper
  */
-public class BaseHelperTest {
+public class BoardHelperTest {
 }
