@@ -25,5 +25,8 @@ public class BoardHelperTest extends OthelloTestCase {
 
         results = BoardHelper.stringToMoves("ac5H4");
         assertEquals(new int[]{35,84},results);
+
+        results = BoardHelper.stringToMoves("ae78390AKjfF8____ooooo___g1");
+        assertEquals(new int[]{57,68,71},results);
     }
 }
