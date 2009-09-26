@@ -8,4 +8,7 @@ package base.board;
  * This class tests the methods in BoardHelper
  */
 public class BoardHelperTest {
+    public void testStringToMoves() {
+        
+    }
 }
