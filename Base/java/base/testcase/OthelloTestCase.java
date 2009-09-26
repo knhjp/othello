@@ -11,4 +11,11 @@ import junit.framework.TestCase;
  * applies to all of my test cases
  */
 public class OthelloTestCase extends TestCase {
+    public static void assertEquals(int[] expected, int[] results) {
+        assertEquals(expected.length,results.length);
+
+        for (int i=0; i<expected.length ; i++) {
+            assertEquals(expected[i],results[i]);
+        }
+    }
 }
