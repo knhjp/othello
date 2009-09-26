@@ -18,4 +18,14 @@ public class FastBoard {
     private int a7_h7;
     private int a8_h8;
 
+    //vertical
+    private int a1_a8;
+    private int b1_b8;
+    private int c1_c8;
+    private int d1_d8;
+    private int e1_e8;
+    private int f1_f8;
+    private int g1_g8;
+    private int h1_h8;
+
 }
