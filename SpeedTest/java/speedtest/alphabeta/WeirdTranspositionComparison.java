@@ -13,4 +13,7 @@ package speedtest.alphabeta;
   * transposition table ? :)
  */
 public class WeirdTranspositionComparison {
+    public static void main(String[] args) {
+        
+    }
 }
