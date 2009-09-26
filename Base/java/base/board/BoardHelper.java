@@ -22,6 +22,7 @@ public class BoardHelper {
                 int nextDiff = nextChar - '1';
                 if (nextDiff>=0 && nextDiff<8) {
                     temp[counter] = (diff+1) * 10 + nextDiff +1;
+                    counter++;
                     i++;
                 }
             }
