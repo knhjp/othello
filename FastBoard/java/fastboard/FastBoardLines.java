@@ -5,7 +5,7 @@ package fastboard;
  * User: knhjp
  * Date: Sep 25, 2009
  * Time: 10:19:14 PM
- * To change this template use File | Settings | File Templates.
+ * This just holds all the objects for the auto-generated code to work on
  */
 public class FastBoardLines {
 }
