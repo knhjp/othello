@@ -113,4 +113,8 @@ public class SimpleBoard implements Board {
     @Override public int hashCodeWithColor(int color) {
         return Math.abs(hashCode()^color);
     }
+
+    public static int[] stringToMoves(String sequence) {
+        return new int[0];
+    }
 }
