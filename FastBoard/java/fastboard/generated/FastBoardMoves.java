@@ -1,7 +1,7 @@
 package fastboard.generated;
 
 /**
- * Created by IntelliJ IDEA.
+ * Created by FastBoardMovesGenerator.
  * User: knhjp
  * Date: Sep 25, 2009
  * Time: 10:10:09 PM
