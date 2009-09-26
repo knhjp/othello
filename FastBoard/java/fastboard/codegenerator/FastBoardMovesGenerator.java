@@ -8,7 +8,7 @@ package fastboard.codegenerator;
  * This class writes code for fast move flipping
  */
 public class FastBoardMovesGenerator {
-    public static void main(String[]) {
+    public static void main(String[] args) {
         
     }
 }
