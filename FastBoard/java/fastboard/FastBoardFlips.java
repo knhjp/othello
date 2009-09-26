@@ -8,6 +8,8 @@ package fastboard;
  * This class handles all the flipping/placing of squares
  */
 public class FastBoardFlips extends FastBoardLines {
+
+    //h8
     public void blackPlaceH8() {
         a8_h8+=1;
         a1_h8+=1;
