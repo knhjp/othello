@@ -1,5 +1,7 @@
 package fastboard.generated;
 
+import fastboard.FastBoardLines;
+
 /**
  * Created by FastBoardMovesGenerator.
  * User: knhjp
@@ -7,5 +9,5 @@ package fastboard.generated;
  * Time: 10:10:09 PM
  * This is an auto-generated class! Please edit FastBoardMovesGenerator instead if you want to make changes.
  */
-public class FastBoardMoves {
+public class FastBoardMoves extends FastBoardLines{
 }

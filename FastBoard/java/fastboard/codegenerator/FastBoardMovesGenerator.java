@@ -18,6 +18,9 @@ public class FastBoardMovesGenerator {
         writer.write("package fastboard.generated;");
         writer.newLine();
         writer.newLine();
+        writer.write("import fastboard.FastBoardLines;");
+        writer.newLine();
+        writer.newLine();
         writer.write("/**");
         writer.newLine();
         writer.write(" * Created by FastBoardMovesGenerator.");
@@ -32,7 +35,7 @@ public class FastBoardMovesGenerator {
         writer.newLine();
         writer.write(" */");
         writer.newLine();
-        writer.write("public class FastBoardMoves {");
+        writer.write("public class FastBoardMoves extends FastBoardLines{");
         writer.newLine();
         writer.write("}");
         writer.newLine();
