@@ -6,6 +6,7 @@ import base.board.Board;
 import search.alphabeta.caching.AlphaBetaCaching;
 import search.alphabeta.AlphaBeta;
 import search.TreeSearch;
+import search.minimax.MiniMax;
 
 /**
  * Created by IntelliJ IDEA.
@@ -49,8 +50,13 @@ public class WeirdTranspositionComparison {
 
         int simpleScore = alphaBeta.search(color, boards, empties, false, TreeSearch.negInf, TreeSearch.posInf);
 
+        MiniMax miniMax = new MiniMax();
+
+        int minMaxScore = miniMax.search(color,boards,empties,false);
+
         System.out.println("empties:"+empties+", color:"+color);
         System.out.println("cacheScore:"+cacheScore);
         System.out.println("simpleScore:"+simpleScore);
+        System.out.println("miniMaxScore:"+minMaxScore);
     }
 }
