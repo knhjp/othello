@@ -8,4 +8,7 @@ package base.board;
  * This class contains code for assisting dealing with Board
  */
 public class BoardHelper {
+    public static int[] stringToMoves(String sequence) {
+        return new int[0];
+    }
 }
