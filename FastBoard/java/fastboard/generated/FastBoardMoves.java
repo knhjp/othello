@@ -5,7 +5,7 @@ package fastboard.generated;
  * User: knhjp
  * Date: Sep 25, 2009
  * Time: 10:10:09 PM
- * To change this template use File | Settings | File Templates.
+ * This is an auto-generated class! Please edit FastBoardMovesGenerator instead if you want to make changes.
  */
 public class FastBoardMoves {
 }
