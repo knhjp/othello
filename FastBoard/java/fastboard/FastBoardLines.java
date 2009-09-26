@@ -8,6 +8,9 @@ package fastboard;
  * This just holds all the objects for the auto-generated code to work on
  */
 public class FastBoardLines {
+    //0 = empty, 1 = black, 2 = white
+
+    //for example: 0 = the whole line is empty. 1 = _______x, 2 = _______o, 3 = ______x_
     //horizonal
     protected int a1_h1;
     protected int a2_h2;
