@@ -9,6 +9,12 @@ package base.board;
  */
 public class BoardHelper {
     public static int[] stringToMoves(String sequence) {
-        return new int[0];
+        int[] temp = new int[60];
+        int counter = 0;
+        
+
+        int[] ret = new int[counter];
+        System.arraycopy(temp,0,ret,0,counter);
+        return ret;
     }
 }
