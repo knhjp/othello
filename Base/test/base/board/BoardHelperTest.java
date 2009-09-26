@@ -15,6 +15,9 @@ public class BoardHelperTest extends OthelloTestCase {
         assertEquals(new int[]{}, results); //garbage data
 
         results = BoardHelper.stringToMoves("f5");
-        assertEquals(new int[]{56},results);
+        assertEquals(new int[]{65},results);
+
+        results = BoardHelper.stringToMoves("A2");
+        assertEquals(new int[]{12},results);
     }
 }
