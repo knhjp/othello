@@ -1,5 +1,7 @@
 package base.board;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,8 +9,9 @@ package base.board;
  * Time: 7:41:10 PM
  * This class tests the methods in BoardHelper
  */
-public class BoardHelperTest {
+public class BoardHelperTest extends OthelloTestCase {
     public void testStringToMoves() {
-        
+        int[] results = BoardHelper.stringToMoves("ajshrjahu24ajha");
+        assertEquals(new int[]{}, results); //garbage data
     }
 }
