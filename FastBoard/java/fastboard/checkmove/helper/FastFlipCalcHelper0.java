@@ -9,7 +9,7 @@ package fastboard.checkmove.helper;
  */
 public class FastFlipCalcHelper0 implements FastFlipCalcHelper {
     @Override public boolean isWhite(int line) {
-        return false;
+        return line%3 == 2;
     }
 
     @Override public boolean isBlack(int line) {
