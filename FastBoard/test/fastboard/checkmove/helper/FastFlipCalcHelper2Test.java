@@ -32,6 +32,8 @@ public class FastFlipCalcHelper2Test extends OthelloTestCase {
         assertFalse(helper.isWhite(8));
         //9 = _____x__
         assertFalse(helper.isWhite(9));
+        //18 = _____o__
+        assertTrue(helper.isWhite(18));
     }
 
     public void testIsBlack() {
@@ -56,6 +58,8 @@ public class FastFlipCalcHelper2Test extends OthelloTestCase {
         assertFalse(helper.isBlack(8));
         //9 = _____x__
         assertTrue(helper.isBlack(9));
+        //18 = _____o__
+        assertFalse(helper.isBlack(18));
     }
 
     public void testIsEmpty() {
@@ -80,5 +84,7 @@ public class FastFlipCalcHelper2Test extends OthelloTestCase {
         assertTrue(helper.isEmpty(8));
         //9 = _____x__
         assertFalse(helper.isEmpty(9));
+        //18 = _____o__
+        assertFalse(helper.isEmpty(18));
     }
 }
