@@ -8,5 +8,15 @@ package fastboard.checkmove;
  * This class calculates "lines" to determine whether or not a move is valid due to this line
  */
 public class FastFlipCalc {
-    private static int threeToTheEight = 3*3*3*3*3*3*3*3;
+    private static int threeToTheEighth = 3*3*3*3*3*3*3*3;
+
+    public boolean[] calcIsMoveValidForBlack0() {
+        boolean[] ret = new boolean[threeToTheEighth];
+
+        for (int i=0 ; i<threeToTheEighth ; i++) {
+
+        }
+
+        return ret;
+    }
 }
