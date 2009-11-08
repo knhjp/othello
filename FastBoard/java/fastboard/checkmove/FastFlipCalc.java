@@ -5,7 +5,7 @@ package fastboard.checkmove;
  * User: knhjp
  * Date: Nov 7, 2009
  * Time: 6:11:03 PM
- * To change this template use File | Settings | File Templates.
+ * This class calculates "lines" to determine whether or not a move is valid due to this line
  */
 public class FastFlipCalc {
 }
