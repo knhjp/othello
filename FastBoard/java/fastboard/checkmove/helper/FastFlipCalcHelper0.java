@@ -17,6 +17,6 @@ public class FastFlipCalcHelper0 implements FastFlipCalcHelper {
     }
 
     @Override public boolean isEmpty(int line) {
-        return false;
+        return line%3 == 0;
     }
 }
