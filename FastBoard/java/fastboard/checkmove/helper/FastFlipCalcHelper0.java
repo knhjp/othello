@@ -13,7 +13,7 @@ public class FastFlipCalcHelper0 implements FastFlipCalcHelper {
     }
 
     @Override public boolean isBlack(int line) {
-        return false;
+        return line%3 == 1;
     }
 
     @Override public boolean isEmpty(int line) {
