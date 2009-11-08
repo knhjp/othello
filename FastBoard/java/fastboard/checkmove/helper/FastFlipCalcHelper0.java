@@ -8,5 +8,15 @@ package fastboard.checkmove.helper;
  * This class is used to determine the color of square 0
  */
 public class FastFlipCalcHelper0 implements FastFlipCalcHelper {
-    
+    @Override public boolean isWhite(int line) {
+        return false;
+    }
+
+    @Override public boolean isBlack(int line) {
+        return false;
+    }
+
+    @Override public boolean isEmpty(int line) {
+        return false;
+    }
 }
