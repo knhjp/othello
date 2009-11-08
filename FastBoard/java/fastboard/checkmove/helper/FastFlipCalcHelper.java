@@ -8,6 +8,17 @@ package fastboard.checkmove.helper;
  * This helper class it used to determine whether or not a disc is of a particular color
  */
 public interface FastFlipCalcHelper {
+    FastFlipCalcHelper[] helpers = new FastFlipCalcHelper[]{
+            new FastFlipCalcHelper0(),
+            new FastFlipCalcHelper1(),
+            new FastFlipCalcHelper2(),
+            new FastFlipCalcHelper3(),
+            new FastFlipCalcHelper4(),
+            new FastFlipCalcHelper5(),
+            new FastFlipCalcHelper6(),
+            new FastFlipCalcHelper7(),
+    };
+
     boolean isWhite(int line);
     boolean isBlack(int line);
     boolean isEmpty(int line);
