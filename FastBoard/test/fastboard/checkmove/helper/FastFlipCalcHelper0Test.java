@@ -41,4 +41,20 @@ public class FastFlipCalcHelper0Test extends OthelloTestCase {
         //5 = ______xo
         assertFalse(helper.isBlack(5));
     }
+
+    public void testIsEmpty() {
+        FastFlipCalcHelper0 helper = new FastFlipCalcHelper0();
+        //0 = ________
+        assertTrue(helper.isEmpty(0));
+        //1 = _______x
+        assertFalse(helper.isEmpty(1));
+        //2 = _______o
+        assertFalse(helper.isEmpty(2));
+        //3 = ______x_
+        assertTrue(helper.isEmpty(3));
+        //4 = ______xx
+        assertFalse(helper.isEmpty(4));
+        //5 = ______xo
+        assertFalse(helper.isEmpty(5));
+    }
 }
