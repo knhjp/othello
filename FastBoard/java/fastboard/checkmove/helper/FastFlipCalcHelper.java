@@ -1,4 +1,4 @@
-package fastboard.checkmove;
+package fastboard.checkmove.helper;
 
 /**
  * Created by IntelliJ IDEA.
