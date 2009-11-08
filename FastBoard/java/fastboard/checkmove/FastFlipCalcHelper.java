@@ -7,5 +7,5 @@ package fastboard.checkmove;
  * Time: 7:58:23 PM
  * This helper class it used to determine whethre or not a disc is of a particular color
  */
-public class FastFlipCalcHelper {
+public interface FastFlipCalcHelper {
 }
