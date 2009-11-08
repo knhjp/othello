@@ -5,7 +5,7 @@ package fastboard.checkmove;
  * User: knhjp
  * Date: Nov 7, 2009
  * Time: 7:58:23 PM
- * To change this template use File | Settings | File Templates.
+ * This helper class it used to determine whethre or not a disc is of a particular color
  */
 public class FastFlipCalcHelper {
 }
