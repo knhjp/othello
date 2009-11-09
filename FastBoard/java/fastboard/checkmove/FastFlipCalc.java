@@ -1,5 +1,7 @@
 package fastboard.checkmove;
 
+import fastboard.checkmove.helper.FastFlipCalcHelper;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -10,11 +12,38 @@ package fastboard.checkmove;
 public class FastFlipCalc {
     private static int threeToTheEighth = 3*3*3*3*3*3*3*3;
 
-    public boolean[] calcIsMoveValidForBlack0() {
+    public boolean[] calcIsMoveValidForBlack(final int index) {
         boolean[] ret = new boolean[threeToTheEighth];
 
-        for (int i=0 ; i<threeToTheEighth ; i++) {
+        for (int line=0 ; line<threeToTheEighth ; line++) {
+            ret[line] = false;
+            if (FastFlipCalcHelper.helpers[index].isEmpty(line)) {
+                if (index>1) {
+                    int curIndex = index - 1;
+                    if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
+                        do {
+                            curIndex--;
+                        } while (curIndex!=0 && FastFlipCalcHelper.helpers[curIndex].isWhite(line));
+                        if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
+                            ret[line] = true;
+                            break;
+                        }
+                    }
+                }
 
+                if (index <6) {
+                    int curIndex = index + 1;
+                    if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
+                        do {
+                            curIndex++;
+                        } while (curIndex!=7 && FastFlipCalcHelper.helpers[curIndex].isWhite(line));
+                        if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
+                            ret[line] = true;
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
         return ret;
