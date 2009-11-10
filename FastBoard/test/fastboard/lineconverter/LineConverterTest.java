@@ -1,6 +1,7 @@
 package fastboard.lineconverter;
 
 import base.testcase.OthelloTestCase;
+import fastboard.checkmove.FastFlipCalc;
 
 /**
  * Created by IntelliJ IDEA.
@@ -20,8 +21,11 @@ public class LineConverterTest extends OthelloTestCase {
         assertEquals("ooooooo_",LineConverter.convertLineToString(6558));
     }
 
-    public void testConvertStringToLine() {
-        assertEquals(0,LineConverter.convertStringToLine("________"));
+    public void testConvertStringToLineConsistentWithConvertLineToString() {
+        for (int i=0 ; i<FastFlipCalc.threeToTheEighth ; i++) {
+            String str = LineConverter.convertLineToString(i);
+            assertEquals(0,LineConverter.convertStringToLine(str));
+        }
 
     }
 }

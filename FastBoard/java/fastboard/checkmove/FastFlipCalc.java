@@ -10,7 +10,7 @@ import fastboard.checkmove.helper.FastFlipCalcHelper;
  * This class calculates "lines" to determine whether or not a move is valid due to this line
  */
 public class FastFlipCalc {
-    private static int threeToTheEighth = 3*3*3*3*3*3*3*3;
+    public static int threeToTheEighth = 3*3*3*3*3*3*3*3;
 
     public boolean[] calcIsMoveValidForBlack(final int index) {
         boolean[] ret = new boolean[threeToTheEighth];

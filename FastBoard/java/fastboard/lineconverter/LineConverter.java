@@ -31,7 +31,7 @@ public class LineConverter {
 
     public static int convertStringToLine(String string) {
         Require.eq(string.length(),"string.length",8,"8");
-
+        
         return 0;
     }
 }
