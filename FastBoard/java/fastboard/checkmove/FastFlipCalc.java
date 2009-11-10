@@ -16,8 +16,14 @@ public class FastFlipCalc {
         boolean[] ret = new boolean[threeToTheEighth];
 
         for (int line=0 ; line<threeToTheEighth ; line++) {
-            ret[line] = false;
-            if (FastFlipCalcHelper.helpers[index].isEmpty(line)) {
+            ret[line] = isMoveValidForBlackForThisLine(line,index);
+        }
+
+        return ret;
+    }
+
+    boolean isMoveValidForBlackForThisLine(int line, int index) {
+        if (FastFlipCalcHelper.helpers[index].isEmpty(line)) {
                 if (index>1) {
                     int curIndex = index - 1;
                     if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
@@ -25,8 +31,7 @@ public class FastFlipCalc {
                             curIndex--;
                         } while (curIndex!=0 && FastFlipCalcHelper.helpers[curIndex].isWhite(line));
                         if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
-                            ret[line] = true;
-                            break;
+                            return true;
                         }
                     }
                 }
@@ -38,14 +43,11 @@ public class FastFlipCalc {
                             curIndex++;
                         } while (curIndex!=7 && FastFlipCalcHelper.helpers[curIndex].isWhite(line));
                         if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
-                            ret[line] = true;
-                            break;
+                            return true;
                         }
                     }
                 }
             }
-        }
-
-        return ret;
+        return false;
     }
 }
