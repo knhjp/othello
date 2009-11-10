@@ -1,6 +1,7 @@
 package fastboard.checkmove;
 
 import base.testcase.OthelloTestCase;
+import fastboard.lineconverter.LineConverter;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,30 +16,26 @@ public class FastFlipCalcTest extends OthelloTestCase {
 
         int line;
         int index;
-        //0 = ________
 
-        line = 0;
+        line = LineConverter.convertStringToLine("________");
         index = 0;
         assertFalse(calc.isMoveValidForBlackForThisLine(line,index));
-        // 15 = _____xo_
-        line = 15;
+
+        line = LineConverter.convertStringToLine("_____xo_");
         index = 0;
         assertTrue(calc.isMoveValidForBlackForThisLine(line,index));
 
-        // 51 = ____xoo_
-        line = 51;
+        line = LineConverter.convertStringToLine("____xoo_");
         index = 0;
         assertTrue(calc.isMoveValidForBlackForThisLine(line,index));
 
         index = 1;
         assertFalse(calc.isMoveValidForBlackForThisLine(line,index));
 
-        // 47 = ____xo_o
-        line = 47;
+        line = LineConverter.convertStringToLine("____xo_o");
         assertTrue(calc.isMoveValidForBlackForThisLine(line,index));
 
-        // 723 = __oooox_ (3+18+54+162+486)
-        line = 723;
+        line = LineConverter.convertStringToLine("__oooox_");
         assertFalse(calc.isMoveValidForBlackForThisLine(line,0));
         assertFalse(calc.isMoveValidForBlackForThisLine(line,1));
         assertFalse(calc.isMoveValidForBlackForThisLine(line,2));
@@ -49,10 +46,10 @@ public class FastFlipCalcTest extends OthelloTestCase {
         assertFalse(calc.isMoveValidForBlackForThisLine(line,7));
 
         //test overflow
-        // 242 = ___ooooo
+        line = LineConverter.convertStringToLine("___ooooo");
         assertFalse(calc.isMoveValidForBlackForThisLine(line,5));
 
-        // 6558 = ooooooo_
+        line = LineConverter.convertStringToLine("ooooooo_");
         assertFalse(calc.isMoveValidForBlackForThisLine(line,0));
     }
 }
