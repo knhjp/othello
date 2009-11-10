@@ -24,7 +24,7 @@ public class LineConverterTest extends OthelloTestCase {
     public void testConvertStringToLineConsistentWithConvertLineToString() {
         for (int i=0 ; i<FastFlipCalc.threeToTheEighth ; i++) {
             String str = LineConverter.convertLineToString(i);
-            assertEquals(0,LineConverter.convertStringToLine(str));
+            assertEquals(i,LineConverter.convertStringToLine(str));
         }
 
     }
