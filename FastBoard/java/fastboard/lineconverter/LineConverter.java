@@ -1,5 +1,7 @@
 package fastboard.lineconverter;
 
+import base.validate.Require;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -25,5 +27,11 @@ public class LineConverter {
             line /=3;
         }
         return new String(charArr);
+    }
+
+    public static int convertStringToLine(String string) {
+        Require.eq(string.length(),"string.length",8,"8");
+
+        return 0;
     }
 }

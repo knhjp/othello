@@ -19,4 +19,9 @@ public class LineConverterTest extends OthelloTestCase {
         assertEquals("___ooooo",LineConverter.convertLineToString(242));
         assertEquals("ooooooo_",LineConverter.convertLineToString(6558));
     }
+
+    public void testConvertStringToLine() {
+        assertEquals(0,LineConverter.convertStringToLine("________"));
+
+    }
 }
