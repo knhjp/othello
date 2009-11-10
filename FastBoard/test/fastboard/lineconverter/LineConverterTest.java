@@ -5,7 +5,7 @@ package fastboard.lineconverter;
  * User: knhjp
  * Date: 10-Nov-2009
  * Time: 4:53:35 PM
- * To change this template use File | Settings | File Templates.
+ * This makes sure LineConverter does what it is supposed to
  */
 public class LineConverterTest {
 }
