@@ -39,7 +39,20 @@ public class FastFlipCalcTest extends OthelloTestCase {
 
         // 723 = __oooox_ (3+18+54+162+486)
         line = 723;
-        index = 0;
-        assertFalse(calc.isMoveValidForBlackForThisLine(line,index));
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,0));
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,1));
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,2));
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,3));
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,4));
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,5));
+        assertTrue(calc.isMoveValidForBlackForThisLine(line,6));
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,7));
+
+        //test overflow
+        // 242 = ___ooooo
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,5));
+
+        // 6558 = ooooooo_
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,0));
     }
 }
