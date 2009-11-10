@@ -1,5 +1,7 @@
 package fastboard.checkmove;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package fastboard.checkmove;
  * Time: 3:09:58 PM
  * This tests FastFlipCalc to make sure the arrays that it produced seems valid
  */
-public class FastFlipCalcTest {
+public class FastFlipCalcTest extends OthelloTestCase {
 }
