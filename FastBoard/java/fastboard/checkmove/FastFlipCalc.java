@@ -11,12 +11,17 @@ import fastboard.checkmove.helper.FastFlipCalcHelper;
  */
 public class FastFlipCalc {
     public static int threeToTheEighth = 3*3*3*3*3*3*3*3;
+    public static int squaresForALine = 8;
 
-    public boolean[] calcIsMoveValidForBlack(final int index) {
-        boolean[] ret = new boolean[threeToTheEighth];
+    public boolean[][] calcIsMoveValidForBlack() {
+        boolean[][] ret = new boolean[squaresForALine][];
 
-        for (int line=0 ; line<threeToTheEighth ; line++) {
-            ret[line] = isMoveValidForBlackForThisLine(line,index);
+        for (int index=0 ; index<ret.length ; index++) {
+            ret[index] = new boolean[threeToTheEighth];
+
+            for (int line=0 ; line<threeToTheEighth ; line++) {
+                ret[index][line] = isMoveValidForBlackForThisLine(line,index);
+            }
         }
 
         return ret;

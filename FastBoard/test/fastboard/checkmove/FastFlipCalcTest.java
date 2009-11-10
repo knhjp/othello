@@ -56,10 +56,17 @@ public class FastFlipCalcTest extends OthelloTestCase {
     public void testCalcIsMoveValidForBlack() {
         FastFlipCalc calc = new FastFlipCalc();
 
-        boolean[][] result = new boolean[8][]; 
+        boolean[][] result = calc.calcIsMoveValidForBlack();
 
-        for (int i=0 ; i<result.length ; i++) {
-            result[i] = calc.calcIsMoveValidForBlack(i);
-        }
+        int line = LineConverter.convertStringToLine("xoo__oox");
+        assertFalse(result[0][line]);
+        assertFalse(result[1][line]);
+        assertFalse(result[2][line]);
+        assertTrue(result[3][line]);
+        assertTrue(result[4][line]);
+        assertFalse(result[5][line]);
+        assertFalse(result[6][line]);
+        assertFalse(result[7][line]);
+
     }
 }
