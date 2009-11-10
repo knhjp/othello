@@ -32,5 +32,9 @@ public class FastFlipCalcTest extends OthelloTestCase {
 
         index = 1;
         assertFalse(calc.isMoveValidForBlackForThisLine(line,index));
+
+        // 47 = ____xo_o
+        line = 47;
+        assertTrue(calc.isMoveValidForBlackForThisLine(line,index));
     }
 }
