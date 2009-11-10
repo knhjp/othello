@@ -52,4 +52,14 @@ public class FastFlipCalcTest extends OthelloTestCase {
         line = LineConverter.convertStringToLine("ooooooo_");
         assertFalse(calc.isMoveValidForBlackForThisLine(line,0));
     }
+
+    public void testCalcIsMoveValidForBlack() {
+        FastFlipCalc calc = new FastFlipCalc();
+
+        boolean[][] result = new boolean[8][]; 
+
+        for (int i=0 ; i<result.length ; i++) {
+            result[i] = calc.calcIsMoveValidForBlack(i);
+        }
+    }
 }
