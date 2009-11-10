@@ -10,4 +10,7 @@ import base.testcase.OthelloTestCase;
  * This makes sure LineConverter does what it is supposed to
  */
 public class LineConverterTest extends OthelloTestCase {
+    public void testConvertLineToString() {
+        assertEquals("________",LineConverter.convertLineToString(0));
+    }
 }

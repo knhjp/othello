@@ -8,4 +8,7 @@ package fastboard.lineconverter;
  * This converts a line into character string, and the other way around
  */
 public class LineConverter {
+    public static String convertLineToString(int line) {
+        return "";
+    }
 }
