@@ -10,7 +10,7 @@ package fastboard.lineconverter;
 public class LineConverter {
     public static String convertLineToString(int line) {
         char[] charArr = new char[8];
-        for (int i=0 ; i<charArr.length ; i++) {
+        for (int i=charArr.length-1 ; i>=0 ; i--) {
             int value = line % 3;
             switch (value) {
                 case 0:
@@ -22,7 +22,7 @@ public class LineConverter {
                 case 2:
                     charArr[i] = 'o';
             }
-//            line /=3;
+            line /=3;
         }
         return new String(charArr);
     }
