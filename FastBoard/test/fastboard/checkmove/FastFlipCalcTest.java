@@ -20,8 +20,13 @@ public class FastFlipCalcTest extends OthelloTestCase {
         line = 0;
         index = 0;
         assertFalse(calc.isMoveValidForBlackForThisLine(line,index));
-        //  = _____xo_
+        // 15 = _____xo_
         line = 15;
+        index = 0;
+        assertTrue(calc.isMoveValidForBlackForThisLine(line,index));
+
+        // 51 = ____xoo_
+        line = 51;
         index = 0;
         assertTrue(calc.isMoveValidForBlackForThisLine(line,index));
     }
