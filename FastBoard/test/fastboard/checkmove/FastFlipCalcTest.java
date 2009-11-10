@@ -10,4 +10,19 @@ import base.testcase.OthelloTestCase;
  * This tests FastFlipCalc to make sure the arrays that it produced seems valid
  */
 public class FastFlipCalcTest extends OthelloTestCase {
+    public void testIsMoveValidForBlackForThisLine() {
+        FastFlipCalc calc = new FastFlipCalc();
+
+        int line;
+        int index;
+        //0 = ________
+
+        line = 0;
+        index = 0;
+        assertFalse(calc.isMoveValidForBlackForThisLine(line,index));
+        //  = _____xo_
+        line = 15;
+        index = 0;
+        assertTrue(calc.isMoveValidForBlackForThisLine(line,index));
+    }
 }
