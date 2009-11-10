@@ -31,7 +31,22 @@ public class LineConverter {
 
     public static int convertStringToLine(String string) {
         Require.eq(string.length(),"string.length",8,"8");
-        
-        return 0;
+        int ret = 0;
+        for (int i=0 ; i<8 ; i++) {
+            ret *= 3;
+            switch(string.charAt(i)) {
+                case 'x':
+                    ret += 1;
+                    break;
+                case 'o':
+                    ret += 2;
+                    break;
+                case '_':
+                    break;
+                default:
+                    throw new IllegalArgumentException("Invalid string "+string);
+            }
+        }
+        return ret;
     }
 }
