@@ -1,5 +1,7 @@
 package fastboard.lineconverter;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package fastboard.lineconverter;
  * Time: 4:53:35 PM
  * This makes sure LineConverter does what it is supposed to
  */
-public class LineConverterTest {
+public class LineConverterTest extends OthelloTestCase {
 }
