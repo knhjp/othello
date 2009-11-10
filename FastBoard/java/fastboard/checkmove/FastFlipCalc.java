@@ -41,13 +41,56 @@ public class FastFlipCalc {
                     }
                 }
 
-                if (index <6) {
+                if (index<6) {
                     int curIndex = index + 1;
                     if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
                         do {
                             curIndex++;
                         } while (curIndex!=7 && FastFlipCalcHelper.helpers[curIndex].isWhite(line));
                         if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        return false;
+    }
+
+    public boolean[][] calcIsMoveValidForWhite() {
+        boolean[][] ret = new boolean[squaresForALine][];
+
+        for (int index=0 ; index<ret.length ; index++) {
+            ret[index] = new boolean[threeToTheEighth];
+
+            for (int line=0 ; line<threeToTheEighth ; line++) {
+                ret[index][line] = isMoveValidForWhiteForThisLine(line,index);
+            }
+        }
+
+        return ret;
+    }
+
+    boolean isMoveValidForWhiteForThisLine(int line, int index) {
+        if (FastFlipCalcHelper.helpers[index].isEmpty(line)) {
+                if (index>1) {
+                    int curIndex = index - 1;
+                    if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
+                        do {
+                            curIndex--;
+                        } while (curIndex!=0 && FastFlipCalcHelper.helpers[curIndex].isBlack(line));
+                        if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
+                            return true;
+                        }
+                    }
+                }
+
+                if (index<6) {
+                    int curIndex = index + 1;
+                    if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
+                        do {
+                            curIndex++;
+                        } while (curIndex!=7 && FastFlipCalcHelper.helpers[curIndex].isBlack(line));
+                        if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
                             return true;
                         }
                     }
