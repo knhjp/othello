@@ -1,4 +1,4 @@
-package fastboard.checkmove.helper;
+package fastboard.checkmove.linedecoder;
 
 import base.testcase.OthelloTestCase;
 
@@ -9,9 +9,9 @@ import base.testcase.OthelloTestCase;
  * Time: 11:51:14 AM
  * This class tests and make sure FastFlipCalcHelper correctly determines whether or not a particular disc is white, black, or empty
  */
-public class FastFlipCalcHelper3Test extends OthelloTestCase {
+public class FastFlipCalcHelper1Test extends OthelloTestCase {
     public void testIsWhite() {
-        FastFlipCalcHelper3 helper = new FastFlipCalcHelper3();
+        FastFlipCalcHelper1 helper = new FastFlipCalcHelper1();
         //0 = ________
         assertFalse(helper.isWhite(0));
         //1 = _______x
@@ -25,23 +25,15 @@ public class FastFlipCalcHelper3Test extends OthelloTestCase {
         //5 = ______xo
         assertFalse(helper.isWhite(5));
         //6 = ______o_
-        assertFalse(helper.isWhite(6));
+        assertTrue(helper.isWhite(6));
         //7 = ______ox
-        assertFalse(helper.isWhite(7));
+        assertTrue(helper.isWhite(7));
         //8 = ______oo
-        assertFalse(helper.isWhite(8));
-        //9 = _____x__
-        assertFalse(helper.isWhite(9));
-        //18 = _____o__
-        assertFalse(helper.isWhite(18));
-        //27 = ____x___
-        assertFalse(helper.isWhite(27));
-        //54 = ____o___
-        assertTrue(helper.isWhite(54));
+        assertTrue(helper.isWhite(8));
     }
 
     public void testIsBlack() {
-        FastFlipCalcHelper3 helper = new FastFlipCalcHelper3();
+        FastFlipCalcHelper1 helper = new FastFlipCalcHelper1();
         //0 = ________
         assertFalse(helper.isBlack(0));
         //1 = _______x
@@ -49,29 +41,21 @@ public class FastFlipCalcHelper3Test extends OthelloTestCase {
         //2 = _______o
         assertFalse(helper.isBlack(2));
         //3 = ______x_
-        assertFalse(helper.isBlack(3));
+        assertTrue(helper.isBlack(3));
         //4 = ______xx
-        assertFalse(helper.isBlack(4));
+        assertTrue(helper.isBlack(4));
         //5 = ______xo
-        assertFalse(helper.isBlack(5));
+        assertTrue(helper.isBlack(5));
         //6 = ______o_
         assertFalse(helper.isBlack(6));
         //7 = ______ox
         assertFalse(helper.isBlack(7));
         //8 = ______oo
         assertFalse(helper.isBlack(8));
-        //9 = _____x__
-        assertFalse(helper.isBlack(9));
-        //18 = _____o__
-        assertFalse(helper.isBlack(18));
-        //27 = ____x___
-        assertTrue(helper.isBlack(27));
-        //54 = ____o___
-        assertFalse(helper.isBlack(54));
     }
 
     public void testIsEmpty() {
-        FastFlipCalcHelper3 helper = new FastFlipCalcHelper3();
+        FastFlipCalcHelper1 helper = new FastFlipCalcHelper1();
         //0 = ________
         assertTrue(helper.isEmpty(0));
         //1 = _______x
@@ -79,24 +63,16 @@ public class FastFlipCalcHelper3Test extends OthelloTestCase {
         //2 = _______o
         assertTrue(helper.isEmpty(2));
         //3 = ______x_
-        assertTrue(helper.isEmpty(3));
+        assertFalse(helper.isEmpty(3));
         //4 = ______xx
-        assertTrue(helper.isEmpty(4));
+        assertFalse(helper.isEmpty(4));
         //5 = ______xo
-        assertTrue(helper.isEmpty(5));
+        assertFalse(helper.isEmpty(5));
         //6 = ______o_
-        assertTrue(helper.isEmpty(6));
+        assertFalse(helper.isEmpty(6));
         //7 = ______ox
-        assertTrue(helper.isEmpty(7));
+        assertFalse(helper.isEmpty(7));
         //8 = ______oo
-        assertTrue(helper.isEmpty(8));
-        //9 = _____x__
-        assertTrue(helper.isEmpty(9));
-        //18 = _____o__
-        assertTrue(helper.isEmpty(18));
-        //27 = ____x___
-        assertFalse(helper.isEmpty(27));
-        //54 = ____o___
-        assertFalse(helper.isEmpty(54));
+        assertFalse(helper.isEmpty(8));
     }
 }
