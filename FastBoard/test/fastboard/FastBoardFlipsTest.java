@@ -1,5 +1,7 @@
 package fastboard;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package fastboard;
  * Time: 1:03:18 AM
  * This class tests whether or not FastBoardFlip does what it is supposed to do
  */
-public class FastBoardFlipsTest {
+public class FastBoardFlipsTest extends OthelloTestCase {
 }
