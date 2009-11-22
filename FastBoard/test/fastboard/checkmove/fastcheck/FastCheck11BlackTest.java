@@ -5,7 +5,7 @@ package fastboard.checkmove.fastcheck;
  * User: knhjp
  * Date: Nov 22, 2009
  * Time: 12:59:03 AM
- * To change this template use File | Settings | File Templates.
+ * Tests whether or not FastCheck11Black checks for valid moves properly
  */
 public class FastCheck11BlackTest {
 }
