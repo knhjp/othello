@@ -19,8 +19,8 @@ public class FastCheck11Black implements FastCheck {
 
     @Override public boolean isValidMove(FastBoardLines lines) {
         return
-                fastCheckCalcArray[0][lines.a1_a8] ||
-                fastCheckCalcArray[0][lines.a1_h1] ||
-                fastCheckCalcArray[0][lines.a1_h8];
+                fastCheckCalcArray[7][lines.a1_a8] ||
+                fastCheckCalcArray[7][lines.a1_h1] ||
+                fastCheckCalcArray[7][lines.a1_h8];
     }
 }
