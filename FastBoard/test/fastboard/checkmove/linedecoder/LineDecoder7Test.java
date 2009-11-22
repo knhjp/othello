@@ -9,9 +9,9 @@ import base.testcase.OthelloTestCase;
  * Time: 11:51:14 AM
  * This class tests and make sure FastFlipCalcHelper correctly determines whether or not a particular disc is white, black, or empty
  */
-public class FastFlipCalcHelper6Test extends OthelloTestCase {
+public class LineDecoder7Test extends OthelloTestCase {
     public void testIsWhite() {
-        FastFlipCalcHelper6 helper = new FastFlipCalcHelper6();
+        LineDecoder7 helper = new LineDecoder7();
         //0 = ________
         assertFalse(helper.isWhite(0));
         //1 = _______x
@@ -49,11 +49,16 @@ public class FastFlipCalcHelper6Test extends OthelloTestCase {
         //729 = _x______
         assertFalse(helper.isWhite(729));
         //1458 = _o______
-        assertTrue(helper.isWhite(1458));
+        assertFalse(helper.isWhite(1458));
+        //2187 = x_______
+        assertFalse(helper.isWhite(2187));
+        //4374 = o_______
+        assertTrue(helper.isWhite(4374));
+
     }
 
     public void testIsBlack() {
-        FastFlipCalcHelper6 helper = new FastFlipCalcHelper6();
+        LineDecoder7 helper = new LineDecoder7();
         //0 = ________
         assertFalse(helper.isBlack(0));
         //1 = _______x
@@ -89,13 +94,17 @@ public class FastFlipCalcHelper6Test extends OthelloTestCase {
         //486 = __o_____
         assertFalse(helper.isBlack(486));
         //729 = _x______
-        assertTrue(helper.isBlack(729));
+        assertFalse(helper.isBlack(729));
         //1458 = _o______
         assertFalse(helper.isBlack(1458));
+        //2187 = x_______
+        assertTrue(helper.isBlack(2187));
+        //4374 = o_______
+        assertFalse(helper.isBlack(4374));
     }
 
     public void testIsEmpty() {
-        FastFlipCalcHelper6 helper = new FastFlipCalcHelper6();
+        LineDecoder7 helper = new LineDecoder7();
         //0 = ________
         assertTrue(helper.isEmpty(0));
         //1 = _______x
@@ -131,8 +140,12 @@ public class FastFlipCalcHelper6Test extends OthelloTestCase {
         //486 = __o_____
         assertTrue(helper.isEmpty(486));
         //729 = _x______
-        assertFalse(helper.isEmpty(729));
+        assertTrue(helper.isEmpty(729));
         //1458 = _o______
-        assertFalse(helper.isEmpty(1458));
+        assertTrue(helper.isEmpty(1458));
+        //2187 = x_______
+        assertFalse(helper.isEmpty(2187));
+        //4374 = o_______
+        assertFalse(helper.isEmpty(4374));
     }
 }

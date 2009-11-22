@@ -11,12 +11,12 @@ public interface LineDecoder {
     LineDecoder[] decoders = new LineDecoder[]{
             new LineDecoder0(),
             new LineDecoder1(),
-            new FastFlipCalcHelper2(),
-            new FastFlipCalcHelper3(),
-            new FastFlipCalcHelper4(),
-            new FastFlipCalcHelper5(),
-            new FastFlipCalcHelper6(),
-            new FastFlipCalcHelper7(),
+            new LineDecoder2(),
+            new LineDecoder3(),
+            new LineDecoder4(),
+            new LineDecoder5(),
+            new LineDecoder6(),
+            new LineDecoder7(),
     };
 
     boolean isWhite(int line);
