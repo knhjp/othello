@@ -8,4 +8,9 @@ package fastboard.checkmove;
  * This interface should provides a way to check quickly whether or not a move is a valid move
  */
 public interface FastCheck {
+    FastCheck[][] fastChecks = new FastCheck[][]{
+            {},
+            {},
+            {}
+    };
 }
