@@ -17,4 +17,13 @@ public interface FastCheck {
     };
 
     boolean isValidMove(FastBoardLines lines);
+
+    static class Invalid implements FastCheck {
+        private Invalid() {
+        }
+
+        @Override public boolean isValidMove(FastBoardLines lines) {
+            throw new IllegalStateException("Shoudl not be calling this method");
+        }
+    }
 }
