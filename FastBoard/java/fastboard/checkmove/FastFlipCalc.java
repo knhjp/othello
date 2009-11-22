@@ -1,6 +1,6 @@
 package fastboard.checkmove;
 
-import fastboard.checkmove.linedecoder.FastFlipCalcHelper;
+import fastboard.checkmove.linedecoder.LineDecoder;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,14 +28,14 @@ public class FastFlipCalc {
     }
 
     boolean isMoveValidForBlackForThisLine(int line, int index) {
-        if (FastFlipCalcHelper.helpers[index].isEmpty(line)) {
+        if (LineDecoder.helpers[index].isEmpty(line)) {
                 if (index>1) {
                     int curIndex = index - 1;
-                    if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
+                    if (LineDecoder.helpers[curIndex].isWhite(line)) {
                         do {
                             curIndex--;
-                        } while (curIndex!=0 && FastFlipCalcHelper.helpers[curIndex].isWhite(line));
-                        if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
+                        } while (curIndex!=0 && LineDecoder.helpers[curIndex].isWhite(line));
+                        if (LineDecoder.helpers[curIndex].isBlack(line)) {
                             return true;
                         }
                     }
@@ -43,11 +43,11 @@ public class FastFlipCalc {
 
                 if (index<6) {
                     int curIndex = index + 1;
-                    if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
+                    if (LineDecoder.helpers[curIndex].isWhite(line)) {
                         do {
                             curIndex++;
-                        } while (curIndex!=7 && FastFlipCalcHelper.helpers[curIndex].isWhite(line));
-                        if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
+                        } while (curIndex!=7 && LineDecoder.helpers[curIndex].isWhite(line));
+                        if (LineDecoder.helpers[curIndex].isBlack(line)) {
                             return true;
                         }
                     }
@@ -71,14 +71,14 @@ public class FastFlipCalc {
     }
 
     boolean isMoveValidForWhiteForThisLine(int line, int index) {
-        if (FastFlipCalcHelper.helpers[index].isEmpty(line)) {
+        if (LineDecoder.helpers[index].isEmpty(line)) {
                 if (index>1) {
                     int curIndex = index - 1;
-                    if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
+                    if (LineDecoder.helpers[curIndex].isBlack(line)) {
                         do {
                             curIndex--;
-                        } while (curIndex!=0 && FastFlipCalcHelper.helpers[curIndex].isBlack(line));
-                        if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
+                        } while (curIndex!=0 && LineDecoder.helpers[curIndex].isBlack(line));
+                        if (LineDecoder.helpers[curIndex].isWhite(line)) {
                             return true;
                         }
                     }
@@ -86,11 +86,11 @@ public class FastFlipCalc {
 
                 if (index<6) {
                     int curIndex = index + 1;
-                    if (FastFlipCalcHelper.helpers[curIndex].isBlack(line)) {
+                    if (LineDecoder.helpers[curIndex].isBlack(line)) {
                         do {
                             curIndex++;
-                        } while (curIndex!=7 && FastFlipCalcHelper.helpers[curIndex].isBlack(line));
-                        if (FastFlipCalcHelper.helpers[curIndex].isWhite(line)) {
+                        } while (curIndex!=7 && LineDecoder.helpers[curIndex].isBlack(line));
+                        if (LineDecoder.helpers[curIndex].isWhite(line)) {
                             return true;
                         }
                     }
