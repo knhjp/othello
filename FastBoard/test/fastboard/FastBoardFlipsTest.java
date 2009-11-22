@@ -5,7 +5,7 @@ package fastboard;
  * User: knhjp
  * Date: Nov 22, 2009
  * Time: 1:03:18 AM
- * To change this template use File | Settings | File Templates.
+ * This class tests whether or not FastBoardFlip does what it is supposed to do
  */
 public class FastBoardFlipsTest {
 }
