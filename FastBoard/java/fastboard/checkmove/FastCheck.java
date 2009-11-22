@@ -12,9 +12,29 @@ import fastboard.FastBoardLines;
 public interface FastCheck {
     static final FastCheck invalid = new Invalid();
     FastCheck[][] fastChecks = new FastCheck[][]{
+            {   invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid,
+            },
             {},
-            {},
-            {}
+            {   invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid,                                                                         invalid,
+                invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid,
+            },
     };
 
     boolean isValidMove(FastBoardLines lines);
