@@ -1,6 +1,7 @@
 package fastboard;
 
 import base.testcase.OthelloTestCase;
+import fastboard.lineconverter.LineConverter;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,4 +11,16 @@ import base.testcase.OthelloTestCase;
  * This class tests whether or not FastBoardFlip does what it is supposed to do
  */
 public class FastBoardFlipsTest extends OthelloTestCase {
+    public void testBlackPlaceA1() {
+        FastBoardFlips flips = new FastBoardFlips();
+        assertEquals("________", LineConverter.convertLineToString(flips.a1_a8));
+        assertEquals("________", LineConverter.convertLineToString(flips.a1_h8));
+        assertEquals("________", LineConverter.convertLineToString(flips.a1_h1));
+
+        flips.blackPlaceA1();
+
+        assertEquals("x_______", LineConverter.convertLineToString(flips.a1_a8));
+        assertEquals("x_______", LineConverter.convertLineToString(flips.a1_h8));
+        assertEquals("x_______", LineConverter.convertLineToString(flips.a1_h1));
+    }
 }
