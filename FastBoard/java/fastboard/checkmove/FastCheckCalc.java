@@ -9,7 +9,7 @@ import fastboard.checkmove.linedecoder.LineDecoder;
  * Time: 6:11:03 PM
  * This class calculates "lines" to determine whether or not a move is valid due to this line
  */
-public class FastFlipCalc {
+public class FastCheckCalc {
     public final static int threeToTheEighth = 3*3*3*3*3*3*3*3;
     public final static int squaresForALine = 8;
 

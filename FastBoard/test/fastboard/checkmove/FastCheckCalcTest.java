@@ -10,9 +10,9 @@ import fastboard.lineconverter.LineConverter;
  * Time: 3:09:58 PM
  * This tests FastFlipCalc to make sure the arrays that it produced seems valid
  */
-public class FastFlipCalcTest extends OthelloTestCase {
+public class FastCheckCalcTest extends OthelloTestCase {
     public void testIsMoveValidForBlackForThisLine() {
-        FastFlipCalc calc = new FastFlipCalc();
+        FastCheckCalc calc = new FastCheckCalc();
 
         int line;
         int index;
@@ -54,7 +54,7 @@ public class FastFlipCalcTest extends OthelloTestCase {
     }
 
     public void testCalcIsMoveValidForBlack() {
-        FastFlipCalc calc = new FastFlipCalc();
+        FastCheckCalc calc = new FastCheckCalc();
 
         boolean[][] result = calc.calcIsMoveValidForBlack();
 
@@ -71,7 +71,7 @@ public class FastFlipCalcTest extends OthelloTestCase {
     }
 
     public void testCalcIsMoveValidForWhite() {
-        FastFlipCalc calc = new FastFlipCalc();
+        FastCheckCalc calc = new FastCheckCalc();
 
         boolean[][] result = calc.calcIsMoveValidForWhite();
 
