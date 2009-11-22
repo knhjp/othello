@@ -5,7 +5,7 @@ package fastboard.checkmove;
  * User: knhjp
  * Date: Nov 22, 2009
  * Time: 12:28:30 AM
- * To change this template use File | Settings | File Templates.
+ * This interface should provides a way to check quickly whether or not a move is a valid move
  */
 public interface FastCheck {
 }
