@@ -8,7 +8,7 @@ package fastboard.checkmove.linedecoder;
  * This helper class it used to determine whether or not a disc is of a particular color
  */
 public interface LineDecoder {
-    LineDecoder[] helpers = new LineDecoder[]{
+    LineDecoder[] decoders = new LineDecoder[]{
             new FastFlipCalcHelper0(),
             new FastFlipCalcHelper1(),
             new FastFlipCalcHelper2(),

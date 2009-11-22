@@ -28,14 +28,14 @@ public class FastFlipCalc {
     }
 
     boolean isMoveValidForBlackForThisLine(int line, int index) {
-        if (LineDecoder.helpers[index].isEmpty(line)) {
+        if (LineDecoder.decoders[index].isEmpty(line)) {
                 if (index>1) {
                     int curIndex = index - 1;
-                    if (LineDecoder.helpers[curIndex].isWhite(line)) {
+                    if (LineDecoder.decoders[curIndex].isWhite(line)) {
                         do {
                             curIndex--;
-                        } while (curIndex!=0 && LineDecoder.helpers[curIndex].isWhite(line));
-                        if (LineDecoder.helpers[curIndex].isBlack(line)) {
+                        } while (curIndex!=0 && LineDecoder.decoders[curIndex].isWhite(line));
+                        if (LineDecoder.decoders[curIndex].isBlack(line)) {
                             return true;
                         }
                     }
@@ -43,11 +43,11 @@ public class FastFlipCalc {
 
                 if (index<6) {
                     int curIndex = index + 1;
-                    if (LineDecoder.helpers[curIndex].isWhite(line)) {
+                    if (LineDecoder.decoders[curIndex].isWhite(line)) {
                         do {
                             curIndex++;
-                        } while (curIndex!=7 && LineDecoder.helpers[curIndex].isWhite(line));
-                        if (LineDecoder.helpers[curIndex].isBlack(line)) {
+                        } while (curIndex!=7 && LineDecoder.decoders[curIndex].isWhite(line));
+                        if (LineDecoder.decoders[curIndex].isBlack(line)) {
                             return true;
                         }
                     }
@@ -71,14 +71,14 @@ public class FastFlipCalc {
     }
 
     boolean isMoveValidForWhiteForThisLine(int line, int index) {
-        if (LineDecoder.helpers[index].isEmpty(line)) {
+        if (LineDecoder.decoders[index].isEmpty(line)) {
                 if (index>1) {
                     int curIndex = index - 1;
-                    if (LineDecoder.helpers[curIndex].isBlack(line)) {
+                    if (LineDecoder.decoders[curIndex].isBlack(line)) {
                         do {
                             curIndex--;
-                        } while (curIndex!=0 && LineDecoder.helpers[curIndex].isBlack(line));
-                        if (LineDecoder.helpers[curIndex].isWhite(line)) {
+                        } while (curIndex!=0 && LineDecoder.decoders[curIndex].isBlack(line));
+                        if (LineDecoder.decoders[curIndex].isWhite(line)) {
                             return true;
                         }
                     }
@@ -86,11 +86,11 @@ public class FastFlipCalc {
 
                 if (index<6) {
                     int curIndex = index + 1;
-                    if (LineDecoder.helpers[curIndex].isBlack(line)) {
+                    if (LineDecoder.decoders[curIndex].isBlack(line)) {
                         do {
                             curIndex++;
-                        } while (curIndex!=7 && LineDecoder.helpers[curIndex].isBlack(line));
-                        if (LineDecoder.helpers[curIndex].isWhite(line)) {
+                        } while (curIndex!=7 && LineDecoder.decoders[curIndex].isBlack(line));
+                        if (LineDecoder.decoders[curIndex].isWhite(line)) {
                             return true;
                         }
                     }
