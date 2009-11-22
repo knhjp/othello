@@ -10,6 +10,7 @@ import fastboard.FastBoardLines;
  * This interface should provides a way to check quickly whether or not a move is a valid move
  */
 public interface FastCheck {
+    static final FastCheck invalid = new Invalid();
     FastCheck[][] fastChecks = new FastCheck[][]{
             {},
             {},
