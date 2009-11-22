@@ -1,6 +1,6 @@
 package fastboard.checkmove;
 
-import fastboard.checkmove.helper.FastFlipCalcHelper;
+import fastboard.checkmove.linedecoder.FastFlipCalcHelper;
 
 /**
  * Created by IntelliJ IDEA.

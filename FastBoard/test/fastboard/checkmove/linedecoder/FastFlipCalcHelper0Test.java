@@ -1,4 +1,4 @@
-package fastboard.checkmove.helper;
+package fastboard.checkmove.linedecoder;
 
 import base.testcase.OthelloTestCase;
 
