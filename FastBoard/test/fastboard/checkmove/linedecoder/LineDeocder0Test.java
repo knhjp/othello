@@ -9,9 +9,9 @@ import base.testcase.OthelloTestCase;
  * Time: 11:51:14 AM
  * This class tests and make sure FastFlipCalcHelper correctly determines whether or not a particular disc is white, black, or empty 
  */
-public class FastFlipCalcHelper0Test extends OthelloTestCase {
+public class LineDeocder0Test extends OthelloTestCase {
     public void testIsWhite() {
-        FastFlipCalcHelper0 helper = new FastFlipCalcHelper0();
+        LineDecoder0 helper = new LineDecoder0();
         //0 = ________
         assertFalse(helper.isWhite(0));
         //1 = _______x
@@ -27,7 +27,7 @@ public class FastFlipCalcHelper0Test extends OthelloTestCase {
     }
 
     public void testIsBlack() {
-        FastFlipCalcHelper0 helper = new FastFlipCalcHelper0();
+        LineDecoder0 helper = new LineDecoder0();
         //0 = ________
         assertFalse(helper.isBlack(0));
         //1 = _______x
@@ -43,7 +43,7 @@ public class FastFlipCalcHelper0Test extends OthelloTestCase {
     }
 
     public void testIsEmpty() {
-        FastFlipCalcHelper0 helper = new FastFlipCalcHelper0();
+        LineDecoder0 helper = new LineDecoder0();
         //0 = ________
         assertTrue(helper.isEmpty(0));
         //1 = _______x

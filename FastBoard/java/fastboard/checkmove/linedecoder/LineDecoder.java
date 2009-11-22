@@ -9,7 +9,7 @@ package fastboard.checkmove.linedecoder;
  */
 public interface LineDecoder {
     LineDecoder[] decoders = new LineDecoder[]{
-            new FastFlipCalcHelper0(),
+            new LineDecoder0(),
             new FastFlipCalcHelper1(),
             new FastFlipCalcHelper2(),
             new FastFlipCalcHelper3(),
