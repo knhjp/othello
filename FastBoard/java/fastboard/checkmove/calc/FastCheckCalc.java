@@ -1,4 +1,4 @@
-package fastboard.checkmove;
+package fastboard.checkmove.calc;
 
 import fastboard.checkmove.linedecoder.LineDecoder;
 

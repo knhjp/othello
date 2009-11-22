@@ -1,4 +1,4 @@
-package fastboard.checkmove;
+package fastboard.checkmove.calc;
 
 import base.testcase.OthelloTestCase;
 import fastboard.lineconverter.LineConverter;

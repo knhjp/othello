@@ -1,7 +1,7 @@
 package fastboard.lineconverter;
 
 import base.testcase.OthelloTestCase;
-import fastboard.checkmove.FastCheckCalc;
+import fastboard.checkmove.calc.FastCheckCalc;
 
 /**
  * Created by IntelliJ IDEA.
