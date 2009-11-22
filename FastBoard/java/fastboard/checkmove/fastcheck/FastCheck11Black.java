@@ -11,7 +11,7 @@ import fastboard.FastBoardLines;
  * This class tells you, given the current configuration, whether or not 11 (a1) is a valid move
  */
 public class FastCheck11Black implements FastCheck {
-    public FastCheck11Black() {
+    public FastCheck11Black(boolean[][] fastCheckCalcArray) {
     }
 
     @Override public boolean isValidMove(FastBoardLines lines) {
