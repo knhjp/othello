@@ -18,6 +18,9 @@ public class FastCheck11Black implements FastCheck {
     }
 
     @Override public boolean isValidMove(FastBoardLines lines) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        return
+                fastCheckCalcArray[0][lines.a1_a8] ||
+                fastCheckCalcArray[0][lines.a1_h1] ||
+                fastCheckCalcArray[0][lines.a1_h8];
     }
 }
