@@ -26,5 +26,11 @@ public class FastCheck11BlackTest extends OthelloTestCase {
         assertFalse(check.isValidMove(flips));
         flips.a1_a8 = LineConverter.convertStringToLine("_oooooox");
         assertTrue(check.isValidMove(flips));
+
+        flips.a1_a8 = LineConverter.convertStringToLine("_ooooooo");
+        flips.a1_h8 = LineConverter.convertStringToLine("_ooooooo");
+        assertFalse(check.isValidMove(flips));
+        flips.a1_h8 = LineConverter.convertStringToLine("_oooooox");
+        assertTrue(check.isValidMove(flips));
     }
 }
