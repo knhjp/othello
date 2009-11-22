@@ -1,5 +1,7 @@
 package fastboard.checkmove.fastcheck;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package fastboard.checkmove.fastcheck;
  * Time: 12:59:03 AM
  * Tests whether or not FastCheck11Black checks for valid moves properly
  */
-public class FastCheck11BlackTest {
+public class FastCheck11BlackTest extends OthelloTestCase {
 }
