@@ -1,5 +1,7 @@
 package fastboard.checkmove;
 
+import fastboard.FastBoardLines;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -13,4 +15,6 @@ public interface FastCheck {
             {},
             {}
     };
+
+    boolean isValidMove(FastBoardLines lines);
 }
