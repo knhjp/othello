@@ -15,11 +15,11 @@ public class FastBoardFlips extends FastBoardLines {
         a1_a8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
     }
 
-    public void blackFlipA1() {
-        a1_h1-=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
-        a1_h8-=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
-        a1_a8-=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
-    }
+//    public void blackFlipA1() {
+//        a1_h1-=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+//        a1_h8-=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+//        a1_a8-=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+//    }
 
     public void whitePlaceA1() {
         a1_h1+=2 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
@@ -27,11 +27,11 @@ public class FastBoardFlips extends FastBoardLines {
         a1_a8+=2 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
     }
 
-    public void whiteFlipA1() {
-        a1_h1+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
-        a1_h8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
-        a1_a8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
-    }
+//    public void whiteFlipA1() {
+//        a1_h1+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+//        a1_h8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+//        a1_a8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+//    }
 
     //a2
     public void blackPlaceA2() {

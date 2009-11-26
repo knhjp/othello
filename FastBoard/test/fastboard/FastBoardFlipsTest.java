@@ -24,16 +24,16 @@ public class FastBoardFlipsTest extends OthelloTestCase {
         assertEquals("x_______", LineConverter.convertLineToString(flips.a1_h1));
     }
 
-    public void testBlackFlipsA1() {
+    public void testWhitePlaceA1() {
         FastBoardFlips flips = new FastBoardFlips();
-        flips.a1_a8 = LineConverter.convertStringToLine("o_______");
-        flips.a1_h8 = LineConverter.convertStringToLine("o_______");
-        flips.a1_h1 = LineConverter.convertStringToLine("o_______");
+        assertEquals("________", LineConverter.convertLineToString(flips.a1_a8));
+        assertEquals("________", LineConverter.convertLineToString(flips.a1_h8));
+        assertEquals("________", LineConverter.convertLineToString(flips.a1_h1));
 
-        flips.blackFlipA1();
+        flips.whitePlaceA1();
 
-        assertEquals("x_______", LineConverter.convertLineToString(flips.a1_a8));
-        assertEquals("x_______", LineConverter.convertLineToString(flips.a1_h8));
-        assertEquals("x_______", LineConverter.convertLineToString(flips.a1_h1));
+        assertEquals("o_______", LineConverter.convertLineToString(flips.a1_a8));
+        assertEquals("o_______", LineConverter.convertLineToString(flips.a1_h8));
+        assertEquals("o_______", LineConverter.convertLineToString(flips.a1_h1));
     }
 }
