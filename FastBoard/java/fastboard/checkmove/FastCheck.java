@@ -10,41 +10,31 @@ import fastboard.FastBoardLines;
  * This interface should provides a way to check quickly whether or not a move is a valid move
  */
 public interface FastCheck {
-    static final FastCheck invalid = new Invalid();
     FastCheck[][] fastChecks = new FastCheck[][]{
-            {   invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid,
+            {   null, null, null, null, null, null, null, null, null, null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null, null, null, null, null, null, null, null, null, null,
             },
             {},
-            {   invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid,                                                                         invalid,
-                invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid, invalid,
+            {   null, null, null, null, null, null, null, null, null, null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null,                                                                         null,
+                null, null, null, null, null, null, null, null, null, null,
             },
     };
 
     boolean isValidMove(FastBoardLines lines);
-
-    static class Invalid implements FastCheck {
-        private Invalid() {
-        }
-
-        @Override public boolean isValidMove(FastBoardLines lines) {
-            throw new IllegalStateException("Shoudl not be calling this method");
-        }
-    }
 }
