@@ -191,7 +191,7 @@ public class FastBoardFlips extends FastBoardLines {
     public void blackPlaceA8() {
         a8_h8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
         a8_h1+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
-        a1_a8+=1 * 3;
+        a1_a8+=1;
     }
 
     public void whitePlaceA8() {
