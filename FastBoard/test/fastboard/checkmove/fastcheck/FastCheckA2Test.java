@@ -10,7 +10,7 @@ import fastboard.checkmove.calc.FastCheckCalc;
  * User: knhjp
  * Date: Nov 29, 2009
  * Time: 02:27:03 PM
- * Tests whether or not FastCheckA1 checks for valid moves properly
+ * Tests whether or not FastCheckA2 checks for valid moves properly
  */
 public class FastCheckA2Test extends OthelloTestCase {
     public void testIsMoveValidBlack() {
