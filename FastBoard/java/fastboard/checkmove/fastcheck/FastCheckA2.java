@@ -7,7 +7,7 @@ import fastboard.FastBoardLines;
  * Created by IntelliJ IDEA.
  * User: knhjp
  * Date: Nov 29, 2009
- * Time: 14:47:58 PM
+ * Time: 02:12:58 PM
  * This class tells you, given the current configuration, whether or not a2 is a valid move
  */
 public class FastCheckA2 implements FastCheck {
@@ -21,6 +21,6 @@ public class FastCheckA2 implements FastCheck {
         return
                 fastCheckCalcArray[6][lines.a1_a8] ||
                 fastCheckCalcArray[7][lines.a2_h2] ||
-                fastCheckCalcArray[6][lines.a1_h8];
+                fastCheckCalcArray[6][lines.a2_g8];
     }
 }
