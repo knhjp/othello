@@ -10,10 +10,10 @@ import fastboard.FastBoardLines;
  * Time: 12:47:58 AM
  * This class tells you, given the current configuration, whether or not 11 (a1) is a valid move
  */
-public class FastCheckA1Black implements FastCheck {
+public class FastCheckA1 implements FastCheck {
     private boolean[][] fastCheckCalcArray;
 
-    public FastCheckA1Black(boolean[][] fastCheckCalcArray) {
+    public FastCheckA1(boolean[][] fastCheckCalcArray) {
         this.fastCheckCalcArray = fastCheckCalcArray;
     }
 

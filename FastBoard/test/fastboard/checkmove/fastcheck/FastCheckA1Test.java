@@ -10,13 +10,13 @@ import fastboard.checkmove.calc.FastCheckCalc;
  * User: knhjp
  * Date: Nov 22, 2009
  * Time: 12:59:03 AM
- * Tests whether or not FastCheckA1Black checks for valid moves properly
+ * Tests whether or not FastCheckA1 checks for valid moves properly
  */
-public class FastCheckA1BlackTest extends OthelloTestCase {
-    public void testIsMoveValid() {
+public class FastCheckA1Test extends OthelloTestCase {
+    public void testIsMoveValidBlack() {
         FastCheckCalc calc = new FastCheckCalc();
         boolean[][] fastCheckCalcArray = calc.calcIsMoveValidForBlack();
-        FastCheckA1Black check = new FastCheckA1Black(fastCheckCalcArray);
+        FastCheckA1 check = new FastCheckA1(fastCheckCalcArray);
 
         FastBoardFlips flips = new FastBoardFlips();
 
