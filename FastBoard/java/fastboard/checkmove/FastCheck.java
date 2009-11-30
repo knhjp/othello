@@ -1,7 +1,7 @@
 package fastboard.checkmove;
 
 import fastboard.FastBoardLines;
-import fastboard.checkmove.fastcheck.FastCheckA1Black;
+import fastboard.checkmove.fastcheck.FastCheckA1;
 import fastboard.checkmove.calc.FastCheckCalc;
 
 /**
@@ -20,9 +20,10 @@ public interface FastCheck {
         private static FastCheck[][] createFastChecks() {
             FastCheckCalc calc = new FastCheckCalc();
             boolean[][] black = calc.calcIsMoveValidForBlack();
+            boolean[][] white = calc.calcIsMoveValidForWhite();
             return new FastCheck[][]{
                     {   null, null, null, null, null, null, null, null, null, null,
-                        null, new FastCheckA1Black(black),                                            null,
+                        null, new FastCheckA1(black),                                            null,
                         null,                                                                         null,
                         null,                                                                         null,
                         null,                                                                         null,
@@ -34,7 +35,7 @@ public interface FastCheck {
                     },
                     {},
                     {   null, null, null, null, null, null, null, null, null, null,
-                        null,                                                                         null,
+                        null, new FastCheckA1(white),                                                 null,
                         null,                                                                         null,
                         null,                                                                         null,
                         null,                                                                         null,
