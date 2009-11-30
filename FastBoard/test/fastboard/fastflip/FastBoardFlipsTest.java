@@ -1,4 +1,4 @@
-package fastboard;
+package fastboard.fastflip;
 
 import base.testcase.OthelloTestCase;
 import fastboard.lineconverter.LineConverter;

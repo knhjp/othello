@@ -1,7 +1,7 @@
 package fastboard.checkmove.fastcheck;
 
 import base.testcase.OthelloTestCase;
-import fastboard.FastBoardFlips;
+import fastboard.fastflip.FastBoardFlips;
 import fastboard.lineconverter.LineConverter;
 import fastboard.checkmove.calc.FastCheckCalc;
 

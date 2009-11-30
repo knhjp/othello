@@ -1,4 +1,6 @@
-package fastboard;
+package fastboard.fastflip;
+
+import fastboard.FastBoardLines;
 
 /**
  * Created by IntelliJ IDEA.
