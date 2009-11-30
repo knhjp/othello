@@ -8,9 +8,9 @@ import fastboard.lineconverter.LineConverter;
  * User: knhjp
  * Date: Nov 22, 2009
  * Time: 1:03:18 AM
- * This class tests whether or not FastBoardFlip does what it is supposed to do
+ * This class tests whether or not FastBoardFlip does what it is supposed to do for column A
  */
-public class FastBoardFlipsTest extends OthelloTestCase {
+public class FastBoardFlipsAColumnTest extends OthelloTestCase {
     public void testBlackPlaceA1() {
         FastBoardFlips flips = new FastBoardFlips();
         assertEquals("________", LineConverter.convertLineToString(flips.a1_a8));
