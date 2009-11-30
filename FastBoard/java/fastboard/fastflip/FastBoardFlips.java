@@ -221,7 +221,7 @@ public class FastBoardFlips extends FastBoardLines {
         b1_b8+=2 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
     }
 
-    public void WhiteFlipB1() {
+    public void whiteFlipB1() {
         a1_h1+=1 * 3 * 3 * 3 * 3 * 3 * 3;
         b1_h7+=1 * 3 * 3 * 3 * 3 * 3 * 3;
         b1_b8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
