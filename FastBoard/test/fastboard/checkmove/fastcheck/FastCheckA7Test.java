@@ -39,4 +39,31 @@ public class FastCheckA7Test extends OthelloTestCase {
         flips.a7_g1 = LineConverter.convertStringToLine("__ooooox");
         assertTrue(check.isValidMove(flips));
     }
+
+    public void testIsMoveValidWhite() {
+        FastCheckCalc calc = new FastCheckCalc();
+        boolean[][] fastCheckCalcArray = calc.calcIsMoveValidForWhite();
+        FastCheckA7 check = new FastCheckA7(fastCheckCalcArray);
+
+        FastBoardFlips flips = new FastBoardFlips();
+
+        assertFalse(check.isValidMove(flips));
+
+        flips.a1_a8 = LineConverter.convertStringToLine("oxxxxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.a1_a8 = LineConverter.convertStringToLine("oxxxxx_o");
+        assertTrue(check.isValidMove(flips));
+
+        flips.a1_a8 = LineConverter.convertStringToLine("_xxxx_ox");
+        flips.a7_h7 = LineConverter.convertStringToLine("_oxxxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.a7_h7 = LineConverter.convertStringToLine("_xxo____");
+        assertTrue(check.isValidMove(flips));
+
+        flips.a7_h7 = LineConverter.convertStringToLine("_oxxoxox");
+        flips.a7_g1 = LineConverter.convertStringToLine("_xxxxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.a7_g1 = LineConverter.convertStringToLine("__xxxxxo");
+        assertTrue(check.isValidMove(flips));
+    }
 }
