@@ -375,7 +375,7 @@ public class FastBoardFlipsBColumnTest extends OthelloTestCase {
 
         flips.b1_b8 = LineConverter.convertStringToLine("_____o__");
         flips.a5_d8 = LineConverter.convertStringToLine("_____o__");
-        flips.a6_h6 = LineConverter.convertStringToLine("_o_______");
+        flips.a6_h6 = LineConverter.convertStringToLine("_o______");
         flips.a7_g1 = LineConverter.convertStringToLine("__o_____");
 
         flips.blackFlipB6();
@@ -444,7 +444,7 @@ public class FastBoardFlipsBColumnTest extends OthelloTestCase {
         assertEquals("________", LineConverter.convertLineToString(flips.a8_h1));
 
         flips.b1_b8 = LineConverter.convertStringToLine("______o_");
-        flips.a1_a8 = LineConverter.convertStringToLine("______o_");
+        flips.a6_c8 = LineConverter.convertStringToLine("______o_");
         flips.a7_h7 = LineConverter.convertStringToLine("_o______");
         flips.a8_h1 = LineConverter.convertStringToLine("_o______");
 
@@ -479,15 +479,15 @@ public class FastBoardFlipsBColumnTest extends OthelloTestCase {
         assertEquals("________", LineConverter.convertLineToString(flips.a8_h1));
 
         flips.b1_b8 = LineConverter.convertStringToLine("______x_");
-        flips.a1_a8 = LineConverter.convertStringToLine("______x_");
+        flips.a6_c8 = LineConverter.convertStringToLine("______x_");
         flips.a7_h7 = LineConverter.convertStringToLine("_x______");
         flips.a8_h1 = LineConverter.convertStringToLine("_x______");
 
         flips.whiteFlipB7();
 
         assertEquals("______o_", LineConverter.convertLineToString(flips.b1_b8));
-        assertEquals("________", LineConverter.convertLineToString(flips.a6_c8));
-        assertEquals("_o_______", LineConverter.convertLineToString(flips.a7_h7));
+        assertEquals("______o_", LineConverter.convertLineToString(flips.a6_c8));
+        assertEquals("_o______", LineConverter.convertLineToString(flips.a7_h7));
         assertEquals("_o______", LineConverter.convertLineToString(flips.a8_h1));
     }
 
