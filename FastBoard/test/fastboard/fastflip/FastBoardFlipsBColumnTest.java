@@ -510,13 +510,13 @@ public class FastBoardFlipsBColumnTest extends OthelloTestCase {
         assertEquals("________", LineConverter.convertLineToString(flips.a8_h8));
         assertEquals("________", LineConverter.convertLineToString(flips.b8_h2));
 
-        flips.b1_b8 = LineConverter.convertStringToLine("______o_");
-        flips.a7_h7 = LineConverter.convertStringToLine("_o______");
+        flips.b1_b8 = LineConverter.convertStringToLine("__xo___o");
+        flips.a8_h8 = LineConverter.convertStringToLine("_o______");
         flips.b8_h2 = LineConverter.convertStringToLine("_o______");
 
         flips.blackFlipB8();
 
-        assertEquals("______x_", LineConverter.convertLineToString(flips.b1_b8));
+        assertEquals("__xo___x", LineConverter.convertLineToString(flips.b1_b8));
         assertEquals("_x______", LineConverter.convertLineToString(flips.a8_h8));
         assertEquals("_x______", LineConverter.convertLineToString(flips.b8_h2));
     }
@@ -540,13 +540,13 @@ public class FastBoardFlipsBColumnTest extends OthelloTestCase {
         assertEquals("________", LineConverter.convertLineToString(flips.a8_h8));
         assertEquals("________", LineConverter.convertLineToString(flips.b8_h2));
 
-        flips.b1_b8 = LineConverter.convertStringToLine("______x_");
-        flips.a7_h7 = LineConverter.convertStringToLine("_x______");
+        flips.b1_b8 = LineConverter.convertStringToLine("__oxo__x");
+        flips.a8_h8 = LineConverter.convertStringToLine("_x______");
         flips.b8_h2 = LineConverter.convertStringToLine("_x______");
 
         flips.whiteFlipB8();
 
-        assertEquals("______o_", LineConverter.convertLineToString(flips.b1_b8));
+        assertEquals("__oxo__o", LineConverter.convertLineToString(flips.b1_b8));
         assertEquals("_o______", LineConverter.convertLineToString(flips.a8_h8));
         assertEquals("_o______", LineConverter.convertLineToString(flips.b8_h2));
     }
