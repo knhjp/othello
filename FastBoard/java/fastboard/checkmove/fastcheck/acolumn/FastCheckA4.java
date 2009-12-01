@@ -1,7 +1,7 @@
-package fastboard.checkmove.fastcheck;
+package fastboard.checkmove.fastcheck.acolumn;
 
-import fastboard.checkmove.FastCheck;
 import fastboard.FastBoardLines;
+import fastboard.checkmove.FastCheck;
 
 /**
  * Created by IntelliJ IDEA.
