@@ -426,6 +426,65 @@ public class FastBoardFlips extends FastBoardLines {
         b1_b8+=1;
     }
 
+    //c1
+    public void blackPlaceC1() {
+        a1_h1+=1 * 3 * 3 * 3 * 3 * 3;
+        c1_h6+=1 * 3 * 3 * 3 * 3 * 3;
+        a3_c1+=1;
+        c1_c8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void blackFlipC1() {
+        a1_h1-=1 * 3 * 3 * 3 * 3 * 3;
+        c1_h6-=1 * 3 * 3 * 3 * 3 * 3;
+        a3_c1-=1;
+        c1_c8-=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceC1() {
+        a1_h1+=2 * 3 * 3 * 3 * 3 * 3;
+        c1_h6+=2 * 3 * 3 * 3 * 3 * 3;
+        a3_c1+=2;
+        c1_c8+=2 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whiteFlipC1() {
+        a1_h1+=1 * 3 * 3 * 3 * 3 * 3;
+        c1_h6+=1 * 3 * 3 * 3 * 3 * 3;
+        a3_c1+=1;
+        c1_c8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    //c2
+    public void blackPlaceC2() {
+        a2_h2+=1 * 3 * 3 * 3 * 3 * 3;
+        b1_h7+=1 * 3 * 3 * 3 * 3 * 3;
+        a4_d1+=1 * 3;
+        c1_c8+=1 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void blackFlipC2() {
+        a2_h2-=1 * 3 * 3 * 3 * 3 * 3;
+        b1_h7-=1 * 3 * 3 * 3 * 3 * 3;
+        a4_d1-=1 * 3;
+        c1_c8-=1 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceC2() {
+        a2_h2+=2 * 3 * 3 * 3 * 3 * 3;
+        b1_h7+=2 * 3 * 3 * 3 * 3 * 3;
+        a4_d1+=2 * 3;
+        c1_c8+=2 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whiteFlipC2() {
+        a2_h2+=1 * 3 * 3 * 3 * 3 * 3;
+        b1_h7+=1 * 3 * 3 * 3 * 3 * 3;
+        a4_d1+=1 * 3;
+        c1_c8+=1 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+
     //h8
     public void blackPlaceH8() {
         a8_h8+=1;
