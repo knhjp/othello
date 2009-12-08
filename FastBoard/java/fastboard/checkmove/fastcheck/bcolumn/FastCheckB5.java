@@ -8,7 +8,7 @@ import fastboard.checkmove.FastCheck;
  * User: knhjp
  * Date: Nov 29, 2009
  * Time: 03:19:22 PM
- * This class tells you, given the current configuration, whether or not a5 is a valid move
+ * This class tells you, given the current configuration, whether or not b5 is a valid move
  */
 public class FastCheckB5 implements FastCheck {
     private boolean[][] fastCheckCalcArray;
