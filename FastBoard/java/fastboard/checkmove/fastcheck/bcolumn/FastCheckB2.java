@@ -21,7 +21,6 @@ public class FastCheckB2 implements FastCheck {
         return
                 fastCheckCalcArray[6][lines.b1_b8] ||
                 fastCheckCalcArray[6][lines.a2_h2] ||
-                fastCheckCalcArray[6][lines.a1_h8] ||
-                fastCheckCalcArray[1][lines.a3_c1];
+                fastCheckCalcArray[6][lines.a1_h8];
     }
 }
