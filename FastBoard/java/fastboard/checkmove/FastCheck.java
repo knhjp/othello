@@ -1,8 +1,8 @@
 package fastboard.checkmove;
 
 import fastboard.FastBoardLines;
-import fastboard.checkmove.fastcheck.FastCheckA1;
 import fastboard.checkmove.calc.FastCheckCalc;
+import fastboard.checkmove.fastcheck.acolumn.FastCheckA1;
 
 /**
  * Created by IntelliJ IDEA.
