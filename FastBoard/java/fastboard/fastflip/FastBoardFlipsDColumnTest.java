@@ -5,7 +5,7 @@ package fastboard.fastflip;
  * User: knhjp
  * Date: Dec 9, 2009
  * Time: 8:37:37 PM
- * To change this template use File | Settings | File Templates.
+ * This tests whether or not we are dealing with flipping and placing discs on the d column properly
  */
 public class FastBoardFlipsDColumnTest {
 }
