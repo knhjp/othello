@@ -21,6 +21,7 @@ public class FastCheckC1 implements FastCheck {
         return
                 fastCheckCalcArray[7][lines.c1_c8] ||
                 fastCheckCalcArray[5][lines.a1_h1] ||
-                fastCheckCalcArray[5][lines.c1_h6];
+                fastCheckCalcArray[5][lines.c1_h6] ||
+                fastCheckCalcArray[0][lines.a3_c1];
     }
 }
