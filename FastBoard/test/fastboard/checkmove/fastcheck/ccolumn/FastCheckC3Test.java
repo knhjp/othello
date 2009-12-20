@@ -53,4 +53,45 @@ public class FastCheckC3Test extends OthelloTestCase {
         flips.a5_e1 = LineConverter.convertStringToLine("___xo___");
         assertTrue(check.isValidMove(flips));
     }
+
+    public void testIsMoveValidWhite() {
+        FastCheckCalc calc = new FastCheckCalc();
+        boolean[][] fastCheckCalcArray = calc.calcIsMoveValidForWhite();
+        FastCheckC3 check = new FastCheckC3(fastCheckCalcArray);
+
+        FastBoardFlips flips = new FastBoardFlips();
+
+        assertFalse(check.isValidMove(flips));
+
+        flips.c1_c8 = LineConverter.convertStringToLine("oxxxxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.c1_c8 = LineConverter.convertStringToLine("ox______");
+        assertTrue(check.isValidMove(flips));
+        flips.c1_c8 = LineConverter.convertStringToLine("xo_xxxxo");
+        assertTrue(check.isValidMove(flips));
+
+        flips.c1_c8 = LineConverter.convertStringToLine("_xxxx_ox");
+        flips.a1_h8 = LineConverter.convertStringToLine("_xx__x__");
+        assertFalse(check.isValidMove(flips));
+        flips.a1_h8 = LineConverter.convertStringToLine("___xoxx_");
+        assertTrue(check.isValidMove(flips));
+        flips.a1_h8 = LineConverter.convertStringToLine("ox_ooooo");
+        assertTrue(check.isValidMove(flips));
+
+        flips.a1_h8 = LineConverter.convertStringToLine("__xx_ooo");
+        flips.a3_h3 = LineConverter.convertStringToLine("___oxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.a3_h3 = LineConverter.convertStringToLine("___xxo__");
+        assertTrue(check.isValidMove(flips));
+        flips.a3_h3 = LineConverter.convertStringToLine("ox_oooo_");
+        assertTrue(check.isValidMove(flips));
+
+        flips.a3_h3 = LineConverter.convertStringToLine("________");
+        flips.a5_e1 = LineConverter.convertStringToLine("_____xxo");
+        assertFalse(check.isValidMove(flips));
+        flips.a5_e1 = LineConverter.convertStringToLine("______xo");
+        assertTrue(check.isValidMove(flips));
+        flips.a5_e1 = LineConverter.convertStringToLine("___ox___");
+        assertTrue(check.isValidMove(flips));
+    }
 }
