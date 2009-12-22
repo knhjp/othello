@@ -890,6 +890,35 @@ public class FastBoardFlips extends FastBoardLines {
         d1_d8+=1;
     }
 
+    //e1
+    public void blackPlaceE1() {
+        a1_h1+=1 * 3 * 3 * 3;
+        e1_h4+=1 * 3 * 3 * 3;
+        a5_e1+=1;
+        e1_e8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void blackFlipE1() {
+        a1_h1-=1 * 3 * 3 * 3;
+        e1_h4-=1 * 3 * 3 * 3;
+        a5_e1-=1;
+        e1_e8-=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceE1() {
+        a1_h1+=2 * 3 * 3 * 3;
+        e1_h4+=2 * 3 * 3 * 3;
+        a5_e1+=2;
+        e1_e8+=2 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whiteFlipE1() {
+        a1_h1+=1 * 3 * 3 * 3;
+        e1_h4+=1 * 3 * 3 * 3;
+        a5_e1+=1;
+        e1_e8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
     //h8
     public void blackPlaceH8() {
         a8_h8+=1;
