@@ -5,7 +5,7 @@ package evaluator;
  * User: knhjp
  * Date: 22-Dec-2009
  * Time: 5:11:24 PM
- * To change this template use File | Settings | File Templates.
+ * This class is meant to be a simple version to see how we should implement an evaluator
  */
 public class SimpleEvaluator {
 }
