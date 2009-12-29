@@ -7,5 +7,5 @@ package evaluator.position;
  * Time: 8:25:47 PM
  * This is the implementation how how to store a position on disk
  */
-public class PositionOnDisk {
+public class PositionOnDisk implements PositionSerializer {
 }
