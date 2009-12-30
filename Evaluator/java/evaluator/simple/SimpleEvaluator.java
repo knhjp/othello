@@ -11,6 +11,10 @@ import base.eval.Evaluator;
  * This class is meant to be a simple version to see how we should implement an evaluator
  */
 public class SimpleEvaluator implements Evaluator {
+    //for externalization
+    public SimpleEvaluator() {
+    }
+
     @Override public double eval(Board board) {
         return 0;
     }
