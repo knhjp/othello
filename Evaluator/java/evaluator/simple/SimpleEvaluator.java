@@ -50,17 +50,17 @@ public class SimpleEvaluator implements Evaluator, Externalizable {
     private int[] f8_h6;
 
     //diagonal \
-    public int[] f1_h3;
-    public int[] e1_h4;
-    public int[] d1_h5;
-    public int[] c1_h6;
-    public int[] b1_h7;
-    public int[] a1_h8;
-    public int[] a2_g8;
-    public int[] a3_f8;
-    public int[] a4_e8;
-    public int[] a5_d8;
-    public int[] a6_c8;
+    private int[] f1_h3;
+    private int[] e1_h4;
+    private int[] d1_h5;
+    private int[] c1_h6;
+    private int[] b1_h7;
+    private int[] a1_h8;
+    private int[] a2_g8;
+    private int[] a3_f8;
+    private int[] a4_e8;
+    private int[] a5_d8;
+    private int[] a6_c8;
 
     //for externalization
     public SimpleEvaluator() {
