@@ -74,8 +74,7 @@ public class SimpleEvaluator implements Evaluator, Externalizable {
 
     }
 
-    @Override
-    public void readExternal(ObjectInput objectInput) throws IOException, ClassNotFoundException {
+    @Override public void readExternal(ObjectInput objectInput) throws IOException, ClassNotFoundException {
         
     }
 }
