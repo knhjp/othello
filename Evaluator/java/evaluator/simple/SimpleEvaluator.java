@@ -66,7 +66,7 @@ public class SimpleEvaluator implements Evaluator, Externalizable {
     public SimpleEvaluator() {
     }
 
-    @Override public double eval(Board board) {
+    @Override public int eval(Board board) {
         return 0;
     }
 
