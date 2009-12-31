@@ -501,73 +501,73 @@ public class FastBoardFlipsFColumnTest extends OthelloTestCase {
         assertEquals("_____o__", LineConverter.convertLineToString(flips.e8_h5));
     }
 
-    public void testClackPlaceE8() {
+    public void testClackPlaceF8() {
         FastBoardFlips flips = new FastBoardFlips();
-        assertEquals("________", LineConverter.convertLineToString(flips.e1_e8));
-        assertEquals("________", LineConverter.convertLineToString(flips.a4_e8));
+        assertEquals("________", LineConverter.convertLineToString(flips.f1_f8));
+        assertEquals("________", LineConverter.convertLineToString(flips.a3_f8));
         assertEquals("________", LineConverter.convertLineToString(flips.a8_h8));
-        assertEquals("________", LineConverter.convertLineToString(flips.e8_h5));
+        assertEquals("________", LineConverter.convertLineToString(flips.f8_h6));
 
-        flips.blackPlaceE8();
+        flips.blackPlaceF8();
 
-        assertEquals("_______x", LineConverter.convertLineToString(flips.e1_e8));
-        assertEquals("_______x", LineConverter.convertLineToString(flips.a4_e8));
-        assertEquals("____x___", LineConverter.convertLineToString(flips.a8_h8));
-        assertEquals("____x___", LineConverter.convertLineToString(flips.e8_h5));
+        assertEquals("_______x", LineConverter.convertLineToString(flips.f1_f8));
+        assertEquals("_______x", LineConverter.convertLineToString(flips.a3_f8));
+        assertEquals("_____x__", LineConverter.convertLineToString(flips.a8_h8));
+        assertEquals("_____x__", LineConverter.convertLineToString(flips.f8_h6));
     }
 
-    public void testClackFlipE8() {
+    public void testClackFlipF8() {
         FastBoardFlips flips = new FastBoardFlips();
-        assertEquals("________", LineConverter.convertLineToString(flips.e1_e8));
-        assertEquals("________", LineConverter.convertLineToString(flips.a4_e8));
+        assertEquals("________", LineConverter.convertLineToString(flips.f1_f8));
+        assertEquals("________", LineConverter.convertLineToString(flips.a3_f8));
         assertEquals("________", LineConverter.convertLineToString(flips.a8_h8));
-        assertEquals("________", LineConverter.convertLineToString(flips.e8_h5));
+        assertEquals("________", LineConverter.convertLineToString(flips.f8_h6));
 
-        flips.e1_e8 = LineConverter.convertStringToLine("_______o");
-        flips.a4_e8 = LineConverter.convertStringToLine("_______o");
-        flips.a8_h8 = LineConverter.convertStringToLine("____o___");
-        flips.e8_h5 = LineConverter.convertStringToLine("____o___");
+        flips.f1_f8 = LineConverter.convertStringToLine("_______o");
+        flips.a3_f8 = LineConverter.convertStringToLine("_______o");
+        flips.a8_h8 = LineConverter.convertStringToLine("_____o__");
+        flips.f8_h6 = LineConverter.convertStringToLine("_____o__");
 
-        flips.blackFlipE8();
+        flips.blackFlipF8();
 
-        assertEquals("_______x", LineConverter.convertLineToString(flips.e1_e8));
-        assertEquals("_______x", LineConverter.convertLineToString(flips.a4_e8));
-        assertEquals("____x___", LineConverter.convertLineToString(flips.a8_h8));
-        assertEquals("____x___", LineConverter.convertLineToString(flips.e8_h5));
+        assertEquals("_______x", LineConverter.convertLineToString(flips.f1_f8));
+        assertEquals("_______x", LineConverter.convertLineToString(flips.a3_f8));
+        assertEquals("_____x__", LineConverter.convertLineToString(flips.a8_h8));
+        assertEquals("_____x__", LineConverter.convertLineToString(flips.f8_h6));
     }
 
-    public void testWhitePlaceE8() {
+    public void testWhitePlaceF8() {
         FastBoardFlips flips = new FastBoardFlips();
-        assertEquals("________", LineConverter.convertLineToString(flips.e1_e8));
-        assertEquals("________", LineConverter.convertLineToString(flips.a4_e8));
+        assertEquals("________", LineConverter.convertLineToString(flips.f1_f8));
+        assertEquals("________", LineConverter.convertLineToString(flips.a3_f8));
         assertEquals("________", LineConverter.convertLineToString(flips.a8_h8));
-        assertEquals("________", LineConverter.convertLineToString(flips.e8_h5));
+        assertEquals("________", LineConverter.convertLineToString(flips.f8_h6));
 
-        flips.whitePlaceE8();
+        flips.whitePlaceF8();
 
-        assertEquals("_______o", LineConverter.convertLineToString(flips.e1_e8));
-        assertEquals("_______o", LineConverter.convertLineToString(flips.a4_e8));
-        assertEquals("____o___", LineConverter.convertLineToString(flips.a8_h8));
-        assertEquals("____o___", LineConverter.convertLineToString(flips.e8_h5));
+        assertEquals("_______o", LineConverter.convertLineToString(flips.f1_f8));
+        assertEquals("_______o", LineConverter.convertLineToString(flips.a3_f8));
+        assertEquals("_____o__", LineConverter.convertLineToString(flips.a8_h8));
+        assertEquals("_____o__", LineConverter.convertLineToString(flips.f8_h6));
     }
 
-    public void testWhiteFlipE8() {
+    public void testWhiteFlipF8() {
         FastBoardFlips flips = new FastBoardFlips();
-        assertEquals("________", LineConverter.convertLineToString(flips.e1_e8));
-        assertEquals("________", LineConverter.convertLineToString(flips.a4_e8));
+        assertEquals("________", LineConverter.convertLineToString(flips.f1_f8));
+        assertEquals("________", LineConverter.convertLineToString(flips.a3_f8));
         assertEquals("________", LineConverter.convertLineToString(flips.a8_h8));
-        assertEquals("________", LineConverter.convertLineToString(flips.e8_h5));
+        assertEquals("________", LineConverter.convertLineToString(flips.f8_h6));
 
-        flips.e1_e8 = LineConverter.convertStringToLine("_______x");
-        flips.a4_e8 = LineConverter.convertStringToLine("_______x");
-        flips.a8_h8 = LineConverter.convertStringToLine("____x___");
-        flips.e8_h5 = LineConverter.convertStringToLine("____x___");
+        flips.f1_f8 = LineConverter.convertStringToLine("_______x");
+        flips.a3_f8 = LineConverter.convertStringToLine("_______x");
+        flips.a8_h8 = LineConverter.convertStringToLine("_____x__");
+        flips.f8_h6 = LineConverter.convertStringToLine("_____x__");
 
-        flips.whiteFlipE8();
+        flips.whiteFlipF8();
 
-        assertEquals("_______o", LineConverter.convertLineToString(flips.e1_e8));
-        assertEquals("_______o", LineConverter.convertLineToString(flips.a4_e8));
-        assertEquals("____o___", LineConverter.convertLineToString(flips.a8_h8));
-        assertEquals("____o___", LineConverter.convertLineToString(flips.e8_h5));
+        assertEquals("_______o", LineConverter.convertLineToString(flips.f1_f8));
+        assertEquals("_______o", LineConverter.convertLineToString(flips.a3_f8));
+        assertEquals("_____o__", LineConverter.convertLineToString(flips.a8_h8));
+        assertEquals("_____o__", LineConverter.convertLineToString(flips.f8_h6));
     }
 }
