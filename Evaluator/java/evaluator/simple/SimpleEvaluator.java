@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
+import fastboard.FastBoard;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -15,7 +17,7 @@ import java.io.ObjectOutput;
  * Time: 5:11:24 PM
  * This class is meant to be a simple version to see how we should implement an evaluator
  */
-public class SimpleEvaluator implements Evaluator, Externalizable {
+public class SimpleEvaluator implements Evaluator<FastBoard>, Externalizable {
     //horizonal
     private int[] a1_h1;
     private int[] a2_h2;
@@ -66,7 +68,7 @@ public class SimpleEvaluator implements Evaluator, Externalizable {
     public SimpleEvaluator() {
     }
 
-    @Override public int eval(Board board) {
+    @Override public int eval(FastBoard board) {
         return 0;
     }
 
