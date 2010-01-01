@@ -1437,6 +1437,147 @@ public class FastBoardFlips extends FastBoardLines {
         g1_g8+=1 * 3 * 3 * 3 * 3 * 3;
     }
 
+    //g4
+    public void blackPlaceG4() {
+        a4_h4+=1 * 3;
+        d1_h5+=1 * 3;
+        c8_h3+=1 * 3;
+        g1_g8+=1 * 3 * 3 * 3 * 3;
+    }
+
+    public void blackFlipG4() {
+        a4_h4-=1 * 3;
+        d1_h5-=1 * 3;
+        c8_h3-=1 * 3;
+        g1_g8-=1 * 3 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceG4() {
+        a4_h4+=2 * 3;
+        d1_h5+=2 * 3;
+        c8_h3+=2 * 3;
+        g1_g8+=2 * 3 * 3 * 3 * 3;
+    }
+
+    public void whiteFlipG4() {
+        a4_h4+=1 * 3;
+        d1_h5+=1 * 3;
+        c8_h3+=1 * 3;
+        g1_g8+=1 * 3 * 3 * 3 * 3;
+    }
+
+    //g5
+    public void blackPlaceG5() {
+        a5_h5+=1 * 3;
+        c1_h6+=1 * 3;
+        d8_h4+=1 * 3;
+        g1_g8+=1 * 3 * 3 * 3;
+    }
+
+    public void blackFlipG5() {
+        a5_h5-=1 * 3;
+        c1_h6-=1 * 3;
+        d8_h4-=1 * 3;
+        g1_g8-=1 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceG5() {
+        a5_h5+=2 * 3;
+        c1_h6+=2 * 3;
+        d8_h4+=2 * 3;
+        g1_g8+=2 * 3 * 3 * 3;
+    }
+
+    public void whiteFlipG5() {
+        a5_h5+=1 * 3;
+        c1_h6+=1 * 3;
+        d8_h4+=1 * 3;
+        g1_g8+=1 * 3 * 3 * 3;
+    }
+
+    //g6
+    public void blackPlaceG6() {
+        a6_h6+=1 * 3;
+        b1_h7+=1 * 3;
+        e8_h5+=1 * 3;
+        g1_g8+=1 * 3 * 3;
+    }
+
+    public void blackFlipG6() {
+        a6_h6-=1 * 3;
+        b1_h7-=1 * 3;
+        e8_h5-=1 * 3;
+        g1_g8-=1 * 3 * 3;
+    }
+
+    public void whitePlaceG6() {
+        a6_h6+=2 * 3;
+        b1_h7+=2 * 3;
+        e8_h5+=2 * 3;
+        g1_g8+=2 * 3 * 3;
+    }
+
+    public void whiteFlipG6() {
+        a6_h6+=1 * 3;
+        b1_h7+=1 * 3;
+        e8_h5+=1 * 3;
+        g1_g8+=1 * 3 * 3;
+    }
+
+    //g7
+    public void blackPlaceG7() {
+        a7_h7+=1 * 3;
+        a1_h8+=1 * 3;
+        f8_h6+=1 * 3;
+        g1_g8+=1 * 3;
+    }
+
+    public void blackFlipG7() {
+        a7_h7-=1 * 3;
+        a1_h8-=1 * 3;
+        f8_h6-=1 * 3;
+        g1_g8-=1 * 3;
+    }
+
+    public void whitePlaceG7() {
+        a7_h7+=2 * 3;
+        a1_h8+=2 * 3;
+        f8_h6+=2 * 3;
+        g1_g8+=2 * 3;
+    }
+
+    public void whiteFlipG7() {
+        a7_h7+=1 * 3;
+        a1_h8+=1 * 3;
+        f8_h6+=1 * 3;
+        g1_g8+=1 * 3;
+    }
+
+    //g8
+    public void blackPlaceG8() {
+        a8_h8+=1 * 3;
+        a2_g8+=1;
+        g1_g8+=1;
+    }
+
+    public void blackFlipG8() {
+        a8_h8-=1 * 3;
+        a2_g8-=1;
+        g1_g8-=1;
+    }
+
+    public void whitePlaceG8() {
+        a8_h8+=2 * 3;
+        a2_g8+=2;
+        g1_g8+=2;
+    }
+
+    public void whiteFlipG8() {
+        a8_h8+=1 * 3 * 3;
+        a2_g8+=1;
+        g1_g8+=1;
+    }
+
     //h8
     public void blackPlaceH8() {
         a8_h8+=1;
