@@ -71,11 +71,25 @@ public class SimpleEvaluator implements Evaluator, Externalizable {
     }
 
     @Override public void writeExternal(ObjectOutput objectOutput) throws IOException {
+        write(objectOutput,a1_h1);
 
     }
 
-    @Override
-    public void readExternal(ObjectInput objectInput) throws IOException, ClassNotFoundException {
-        
+    @Override public void readExternal(ObjectInput objectInput) throws IOException, ClassNotFoundException {
+        a1_h1 = new int[objectInput.readInt()];
+        read(objectInput,a1_h1);
+    }
+
+    private void write(ObjectOutput objectOutput, int[] arr) throws IOException {
+        objectOutput.writeInt(arr.length);
+        for (int element : arr) {
+            objectOutput.writeInt(element);
+        }
+    }
+
+    private void read(ObjectInput objectInput, int[] arr) throws IOException {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = objectInput.readInt();
+        }
     }
 }
