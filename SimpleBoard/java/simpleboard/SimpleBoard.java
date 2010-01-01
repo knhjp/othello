@@ -11,7 +11,7 @@ import java.util.Arrays;
  * Time: 2:09:05 PM
  * This class is meant to be a simple implementation of Board -- it's not going to be the fastest
  */
-public class SimpleBoard implements Board {
+public class SimpleBoard implements Board<SimpleBoard> {
     private final static int[] initBoard = new int[]{
             3,3,3,3,3,3,3,3,3,3,
             3,0,0,0,0,0,0,0,0,3,
@@ -34,10 +34,9 @@ public class SimpleBoard implements Board {
         copyBoard(board);
     }
 
-    @Override public void copyBoard(Board board) {
-        SimpleBoard castBoard = (SimpleBoard) board;
-        System.arraycopy(castBoard.board,0,this.board,0,this.board.length);
-        this.blackMinusWhite = castBoard.blackMinusWhite;
+    @Override public void copyBoard(SimpleBoard board) {
+        System.arraycopy(board.board,0,this.board,0,this.board.length);
+        this.blackMinusWhite = board.blackMinusWhite;
     }
 
     @Override public int getSquare(int location) {
