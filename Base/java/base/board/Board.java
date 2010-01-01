@@ -39,7 +39,7 @@ public interface Board<B extends Board> {
      * Copies the input board
      * @param board the board that you wish to copy
      */
-    void copyBoard(Board board);
+    void copyBoard(B board);
 
     /**
      *
