@@ -1,6 +1,7 @@
 package fastboard;
 
 import base.board.Board;
+import fastboard.fastflip.FastBoardFlips;
 
 /**
  * Created by IntelliJ IDEA.
@@ -9,7 +10,7 @@ import base.board.Board;
  * Time: 8:37:11 PM
  * This is meant to be a fast implementation of Board
  */
-public class FastBoard implements Board<FastBoard> {
+public class FastBoard extends FastBoardFlips implements Board<FastBoard> {
     @Override public int getSquare(int location) {
         return 0;
     }
