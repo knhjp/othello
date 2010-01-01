@@ -9,7 +9,7 @@ import base.board.Board;
  * Time: 8:37:11 PM
  * This is meant to be a fast implementation of Board
  */
-public class FastBoard implements Board {
+public class FastBoard implements Board<FastBoard> {
     @Override public int getSquare(int location) {
         return 0;
     }
@@ -26,7 +26,7 @@ public class FastBoard implements Board {
 
     }
 
-    @Override public void copyBoard(Board board) {
+    @Override public void copyBoard(FastBoard board) {
 
     }
 
