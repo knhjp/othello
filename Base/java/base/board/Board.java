@@ -7,7 +7,7 @@ package base.board;
  * Time: 10:29:07 AM
  * This is the interface to represent a board (a position)
  */
-public interface Board {
+public interface Board<B extends Board> {
     /**
      * Given the location of the board, return the content
      * @param location This is the location of the board, 11 = A1, 18 =H1
