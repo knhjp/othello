@@ -1,6 +1,6 @@
 package fastboard.lineflipper;
 
-import fastboard.FastBoardLines;
+import fastboard.fastflip.FastBoardFlips;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,5 +15,5 @@ public interface LineFlipper {
      * @param lines the current configuration of the board
      * @return the number of discDiff changed
      */
-    int flipLine(FastBoardLines lines);
+    int flipLine(FastBoardFlips lines);
 }
