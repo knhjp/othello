@@ -10,7 +10,7 @@ import fastboard.fastflip.FastBoardFlips;
  * Time: 7:37:03 AM
  * This flips along a1_a8, 6 discs for index 0 (a8)
  */
-public class LineFlipper_a1_a8_6_0_0 implements LineFlipper {
+public class LineFlipper_a1_a8_6_0_0_Black implements LineFlipper {
     @Override public int flipLine(FastBoardFlips lines) {
         lines.blackFlipA2();
         lines.blackFlipA3();
