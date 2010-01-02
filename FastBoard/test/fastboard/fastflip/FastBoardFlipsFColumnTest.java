@@ -8,7 +8,7 @@ import fastboard.lineconverter.LineConverter;
  * User: knhjp
  * Date: Dec 9, 2009
  * Time: 8:37:37 PM
- * This tests whether or not we are dealing with flipping and placing discs on the e column properly
+ * This tests whether or not we are dealing with flipping and placing discs on the f column properly
  */
 public class FastBoardFlipsFColumnTest extends OthelloTestCase {
     public void testClackPlaceF1() {
