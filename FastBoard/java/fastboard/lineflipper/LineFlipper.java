@@ -10,5 +10,10 @@ import fastboard.FastBoardLines;
  * LineFlipper flips discs on a line given the line current configuration
  */
 public interface LineFlipper {
+    /**
+     * Flips a series of discs on a line
+     * @param lines the current configuration of the board
+     * @return the number of discDiff changed
+     */
     int flipLine(FastBoardLines lines);
 }
