@@ -7,5 +7,5 @@ package fastboard.lineflipper.a1_a8.index1;
  * Time: 7:42:30 AM
  * This flips along a1_a8, 5 discs for index 1 (a7)
  */
-public class LineFlipper_a1_a8_5_0_1 {
+public class LineFlipper_a1_a8_5_0_1_Black {
 }
