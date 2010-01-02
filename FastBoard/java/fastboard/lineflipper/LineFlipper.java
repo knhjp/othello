@@ -1,5 +1,7 @@
 package fastboard.lineflipper;
 
+import fastboard.FastBoardLines;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ed
@@ -8,4 +10,5 @@ package fastboard.lineflipper;
  * LineFlipper flips discs on a line given the line current configuration
  */
 public interface LineFlipper {
+    int flipLine(FastBoardLines lines);
 }
