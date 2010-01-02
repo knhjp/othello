@@ -8,9 +8,9 @@ import fastboard.lineconverter.LineConverter;
  * User: knhjp
  * Date: Dec 9, 2009
  * Time: 8:37:37 PM
- * This tests whether or not we are dealing with flipping and placing discs on the f column properly
+ * This tests whether or not we are dealing with flipping and placing discs on the g column properly
  */
-public class FastBoardFlipsFColumnTest extends OthelloTestCase {
+public class FastBoardFlipsGColumnTest extends OthelloTestCase {
     public void testClackPlaceF1() {
         FastBoardFlips flips = new FastBoardFlips();
         assertEquals("________", LineConverter.convertLineToString(flips.f1_f8));
