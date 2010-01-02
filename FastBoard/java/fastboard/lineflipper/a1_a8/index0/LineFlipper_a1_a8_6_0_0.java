@@ -1,4 +1,4 @@
-package fastboard.lineflipper.a1_a8;
+package fastboard.lineflipper.a1_a8.index0;
 
 /**
  * Created by IntelliJ IDEA.
