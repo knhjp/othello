@@ -1573,7 +1573,7 @@ public class FastBoardFlips extends FastBoardLines {
     }
 
     public void whiteFlipG8() {
-        a8_h8+=1 * 3 * 3;
+        a8_h8+=1 * 3;
         a2_g8+=1;
         g1_g8+=1;
     }
