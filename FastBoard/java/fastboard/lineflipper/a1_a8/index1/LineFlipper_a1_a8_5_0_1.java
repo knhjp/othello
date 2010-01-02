@@ -5,7 +5,7 @@ package fastboard.lineflipper.a1_a8.index1;
  * User: ed
  * Date: Jan 2, 2010
  * Time: 7:42:30 AM
- * To change this template use File | Settings | File Templates.
+ * This flips along a1_a8, 5 discs for index 1 (a7)
  */
 public class LineFlipper_a1_a8_5_0_1 {
 }
