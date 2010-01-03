@@ -1,7 +1,7 @@
 package fastboard.fastmake.fastmake;
 
 import fastboard.fastmake.FastMake;
-import fastboard.FastBoardLines;
+import fastboard.fastflip.FastBoardFlips;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,7 +11,7 @@ import fastboard.FastBoardLines;
  * This updates the current board depending on the existing position for A1
  */
 public class FastMakeA1 implements FastMake {
-    @Override public int makeMove(FastBoardLines lines) {
+    @Override public int makeMove(FastBoardFlips lines) {
         return 0;
     }
 }

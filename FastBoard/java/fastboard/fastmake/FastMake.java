@@ -1,6 +1,6 @@
 package fastboard.fastmake;
 
-import fastboard.FastBoardLines;
+import fastboard.fastflip.FastBoardFlips;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,5 +17,5 @@ public interface FastMake {
      * @param lines the current representation. The position will be updated here as well
      * @return change in disc differences (to be added with the current disc difference)
      */
-    int makeMove(FastBoardLines lines);
+    int makeMove(FastBoardFlips lines);
 }
