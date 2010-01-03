@@ -12,6 +12,10 @@ import fastboard.fastflip.FastBoardFlips;
  */
 public class FastMakeA1 implements FastMake {
     @Override public int makeMove(FastBoardFlips lines) {
-        return 0;
+        int discDiff = 0;
+
+        lines.blackPlaceA1();
+        discDiff +=1;
+        return discDiff;
     }
 }
