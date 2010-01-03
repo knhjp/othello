@@ -47,4 +47,39 @@ public class FastCheckC8Test extends OthelloTestCase {
         flips.a6_c8 = LineConverter.convertStringToLine("_____xo_");
         assertTrue(check.isValidMove(flips));
     }
+
+    public void testIsMoveValidWhite() {
+        FastCheckCalc calc = new FastCheckCalc();
+        boolean[][] fastCheckCalcArray = calc.calcIsMoveValidForWhite();
+        FastCheckC8 check = new FastCheckC8(fastCheckCalcArray);
+
+        FastBoardFlips flips = new FastBoardFlips();
+
+        assertFalse(check.isValidMove(flips));
+
+        flips.c1_c8 = LineConverter.convertStringToLine("oxxxxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.c1_c8 = LineConverter.convertStringToLine("oxxxxxx_");
+        assertTrue(check.isValidMove(flips));
+
+        flips.c1_c8 = LineConverter.convertStringToLine("_xxxx_ox");
+        flips.a8_h8 = LineConverter.convertStringToLine("oo_oxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.a8_h8 = LineConverter.convertStringToLine("___xxo__");
+        assertTrue(check.isValidMove(flips));
+        flips.a8_h8 = LineConverter.convertStringToLine("ox______");
+        assertTrue(check.isValidMove(flips));
+
+        flips.a8_h8 = LineConverter.convertStringToLine("_oxxoxox");
+        flips.c8_h3 = LineConverter.convertStringToLine("___oxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.c8_h3 = LineConverter.convertStringToLine("___xxxxo");
+        assertTrue(check.isValidMove(flips));
+
+        flips.c8_h3 = LineConverter.convertStringToLine("____xxxo");
+        flips.a6_c8 = LineConverter.convertStringToLine("_____xo_");
+        assertFalse(check.isValidMove(flips));
+        flips.a6_c8 = LineConverter.convertStringToLine("_____ox_");
+        assertTrue(check.isValidMove(flips));
+    }
 }
