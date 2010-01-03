@@ -2,6 +2,7 @@ package fastboard;
 
 import base.board.Board;
 import fastboard.fastflip.FastBoardFlips;
+import fastboard.checkmove.FastCheck;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,6 +12,9 @@ import fastboard.fastflip.FastBoardFlips;
  * This is meant to be a fast implementation of Board
  */
 public class FastBoard extends FastBoardFlips implements Board<FastBoard> {
+    public FastBoard() {
+    }
+
     @Override public int getSquare(int location) {
         return 0;
     }
@@ -20,7 +24,7 @@ public class FastBoard extends FastBoardFlips implements Board<FastBoard> {
     }
 
     @Override public boolean isMoveValid(int color, int location) {
-        return false;
+        return FastCheck.fastChecks[color][location].isValidMove(this);
     }
 
     @Override public void makeMove(int color, int location) {
