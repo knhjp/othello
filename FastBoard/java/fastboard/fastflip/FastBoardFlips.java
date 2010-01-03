@@ -1573,9 +1573,188 @@ public class FastBoardFlips extends FastBoardLines {
     }
 
     public void whiteFlipG8() {
-        a8_h8+=1 * 3 * 3;
+        a8_h8+=1 * 3;
         a2_g8+=1;
         g1_g8+=1;
+    }
+
+    //H1
+    public void blackPlaceH1() {
+        a1_h1+=1;
+        a8_h1+=1;
+        h1_h8+=1 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceH1() {
+        a1_h1+=2;
+        a8_h1+=2;
+        h1_h8+=2 * 3 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    //h2
+    public void blackPlaceH2() {
+        a2_h2+=1;
+        b8_h2+=1;
+        h1_h8+=1 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void blackFlipH2() {
+        a2_h2-=1;
+        b8_h2-=1;
+        h1_h8-=1 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceH2() {
+        a2_h2+=2;
+        b8_h2+=2;
+        h1_h8+=2 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whiteFlipH2() {
+        a2_h2+=1;
+        b8_h2+=1;
+        h1_h8+=1 * 3 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    //h3
+    public void blackPlaceH3() {
+        a3_h3+=1;
+        f1_h3+=1;
+        c8_h3+=1;
+        h1_h8+=1 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void blackFlipH3() {
+        a3_h3-=1;
+        f1_h3-=1;
+        c8_h3-=1;
+        h1_h8-=1 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceH3() {
+        a3_h3+=2;
+        f1_h3+=2;
+        c8_h3+=2;
+        h1_h8+=2 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    public void whiteFlipH3() {
+        a3_h3+=1;
+        f1_h3+=1;
+        c8_h3+=1;
+        h1_h8+=1 * 3 * 3 * 3 * 3 * 3;
+    }
+
+    //h4
+    public void blackPlaceH4() {
+        a4_h4+=1;
+        e1_h4+=1;
+        d8_h4+=1;
+        h1_h8+=1 * 3 * 3 * 3 * 3;
+    }
+
+    public void blackFlipH4() {
+        a4_h4-=1;
+        e1_h4-=1;
+        d8_h4-=1;
+        h1_h8-=1 * 3 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceH4() {
+        a4_h4+=2;
+        e1_h4+=2;
+        d8_h4+=2;
+        h1_h8+=2 * 3 * 3 * 3 * 3;
+    }
+
+    public void whiteFlipH4() {
+        a4_h4+=1;
+        e1_h4+=1;
+        d8_h4+=1;
+        h1_h8+=1 * 3 * 3 * 3 * 3;
+    }
+
+    //h5
+    public void blackPlaceH5() {
+        a5_h5+=1;
+        d1_h5+=1;
+        e8_h5+=1;
+        h1_h8+=1 * 3 * 3 * 3;
+    }
+
+    public void blackFlipH5() {
+        a5_h5-=1;
+        d1_h5-=1;
+        e8_h5-=1;
+        h1_h8-=1 * 3 * 3 * 3;
+    }
+
+    public void whitePlaceH5() {
+        a5_h5+=2;
+        d1_h5+=2;
+        e8_h5+=2;
+        h1_h8+=2 * 3 * 3 * 3;
+    }
+
+    public void whiteFlipH5() {
+        a5_h5+=1;
+        d1_h5+=1;
+        e8_h5+=1;
+        h1_h8+=1 * 3 * 3 * 3;
+    }
+
+    //h6
+    public void blackPlaceH6() {
+        a6_h6+=1;
+        c1_h6+=1;
+        f8_h6+=1;
+        h1_h8+=1 * 3 * 3;
+    }
+
+    public void blackFlipH6() {
+        a6_h6-=1;
+        c1_h6-=1;
+        f8_h6-=1;
+        h1_h8-=1 * 3 * 3;
+    }
+
+    public void whitePlaceH6() {
+        a6_h6+=2;
+        c1_h6+=2;
+        f8_h6+=2;
+        h1_h8+=2 * 3 * 3;
+    }
+
+    public void whiteFlipH6() {
+        a6_h6+=1;
+        c1_h6+=1;
+        f8_h6+=1;
+        h1_h8+=1 * 3 * 3;
+    }
+
+    //h7
+    public void blackPlaceH7() {
+        a7_h7+=1;
+        b1_h7+=1;
+        h1_h8+=1 * 3;
+    }
+
+    public void blackFlipH7() {
+        a7_h7-=1;
+        b1_h7-=1;
+        h1_h8-=1 * 3;
+    }
+
+    public void whitePlaceH7() {
+        a7_h7+=2;
+        b1_h7+=2;
+        h1_h8+=2 * 3;
+    }
+
+    public void whiteFlipH7() {
+        a7_h7+=1;
+        b1_h7+=1;
+        h1_h8+=1 * 3;
     }
 
     //h8
