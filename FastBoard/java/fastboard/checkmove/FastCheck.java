@@ -23,7 +23,7 @@ public interface FastCheck {
             boolean[][] white = calc.calcIsMoveValidForWhite();
             return new FastCheck[][]{
                     {   null, null, null, null, null, null, null, null, null, null,
-                        null, new FastCheckA1(black),                                            null,
+                        null, new FastCheckA1(white),                                            null,
                         null,                                                                         null,
                         null,                                                                         null,
                         null,                                                                         null,
@@ -35,7 +35,7 @@ public interface FastCheck {
                     },
                     {},
                     {   null, null, null, null, null, null, null, null, null, null,
-                        null, new FastCheckA1(white),                                                 null,
+                        null, new FastCheckA1(black),                                                 null,
                         null,                                                                         null,
                         null,                                                                         null,
                         null,                                                                         null,
