@@ -15,6 +15,6 @@ public class A8_LineFlipper_a1_a8_3_0_Black implements LineFlipper {
         lines.blackFlipA5();
         lines.blackFlipA6();
         lines.blackFlipA7();
-        return 8;
+        return 6;
     }
 }
