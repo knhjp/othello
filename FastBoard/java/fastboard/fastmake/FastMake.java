@@ -8,4 +8,5 @@ package fastboard.fastmake;
  * This interface is meant to be like FastFlip, providing a way to make moves based on the line configurations
  */
 public interface FastMake {
+    FastMake[][] fastMakes = null;
 }
