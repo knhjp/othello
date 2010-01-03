@@ -10,7 +10,7 @@ import fastboard.lineconverter.LineConverter;
  * User: knhjp
  * Date: Nov 22, 2009
  * Time: 12:59:03 AM
- * Tests whether or not FastCheckB1 checks for valid moves properly
+ * Tests whether or not FastCheckC1 checks for valid moves properly
  */
 public class FastCheckC1Test extends OthelloTestCase {
     public void testIsMoveValidBlack() {
