@@ -1,5 +1,7 @@
 package fastboard.fastmake;
 
+import fastboard.FastBoardLines;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ed
@@ -9,4 +11,6 @@ package fastboard.fastmake;
  */
 public interface FastMake {
     FastMake[][] fastMakes = null;
+
+    int makeMove(FastBoardLines lines);
 }
