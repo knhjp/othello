@@ -12,5 +12,10 @@ import fastboard.FastBoardLines;
 public interface FastMake {
     FastMake[][] fastMakes = null;
 
+    /**
+     * Given the current configuration of the lines, it decides which discs to flip to make a move
+     * @param lines the current representation. The position will be updated here as well
+     * @return change in disc differences (to be added with the current disc difference)
+     */
     int makeMove(FastBoardLines lines);
 }
