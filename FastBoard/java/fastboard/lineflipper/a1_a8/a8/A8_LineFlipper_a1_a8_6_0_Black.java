@@ -1,4 +1,4 @@
-package fastboard.lineflipper.a1_a8.index0;
+package fastboard.lineflipper.a1_a8.a8;
 
 import fastboard.lineflipper.LineFlipper;
 import fastboard.fastflip.FastBoardFlips;
