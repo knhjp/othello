@@ -11,6 +11,9 @@ import fastboard.fastflip.FastBoardFlips;
  * This is meant to be a fast implementation of Board
  */
 public class FastBoard extends FastBoardFlips implements Board<FastBoard> {
+    public FastBoard() {
+    }
+
     @Override public int getSquare(int location) {
         return 0;
     }
