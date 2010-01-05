@@ -3,6 +3,7 @@ package fastboard;
 import base.board.Board;
 import fastboard.fastflip.FastBoardFlips;
 import fastboard.checkmove.FastCheck;
+import fastboard.fastmake.FastMake;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,7 +29,7 @@ public class FastBoard extends FastBoardFlips implements Board<FastBoard> {
     }
 
     @Override public void makeMove(int color, int location) {
-
+        FastMake.fastMakes[color][location].makeMove(this);
     }
 
     @Override public void copyBoard(FastBoard board) {
