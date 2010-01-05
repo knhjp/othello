@@ -10,7 +10,7 @@ import fastboard.fastflip.FastBoardFlips;
  * Time: 2:24:19 PM
  * This updates the current board depending on the existing position for A1
  */
-public class FastMakeA1 implements FastMake {
+public class FastMakeA1_Black implements FastMake {
     @Override public int makeMove(FastBoardFlips lines) {
         int discDiff = 0;
 
