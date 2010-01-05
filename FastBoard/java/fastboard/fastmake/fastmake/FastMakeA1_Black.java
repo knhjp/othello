@@ -8,7 +8,7 @@ import fastboard.fastflip.FastBoardFlips;
  * User: ed
  * Date: Jan 3, 2010
  * Time: 2:24:19 PM
- * This updates the current board depending on the existing position for A1
+ * This updates the current board depending on the existing position for A1 for black
  */
 public class FastMakeA1_Black implements FastMake {
     @Override public int makeMove(FastBoardFlips lines) {
