@@ -2,6 +2,7 @@ package fastboard.fastmake.fastmake;
 
 import fastboard.fastmake.FastMake;
 import fastboard.fastflip.FastBoardFlips;
+import fastboard.lineflipper.LineFlipper;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,7 +13,7 @@ import fastboard.fastflip.FastBoardFlips;
  */
 public class FastMakeA1_Black implements FastMake {
     @Override public int makeMove(FastBoardFlips lines) {
-        int discDiff = 0;
+        int discDiff = LineFlipper.blackLineFlippers_a1_a8[lines.a1_a8].flipLine(lines);
 
         lines.blackPlaceA1();
         discDiff +=1;

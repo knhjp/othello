@@ -10,7 +10,7 @@ import fastboard.fastflip.FastBoardFlips;
  * LineFlipper flips discs on a line given the line current configuration
  */
 public interface LineFlipper {
-    LineFlipper[] blackLineFlippers = null;
+    LineFlipper[] blackLineFlippers_a1_a8 = null;
     /**
      * Flips a series of discs on a line
      * @param lines the current configuration of the board
