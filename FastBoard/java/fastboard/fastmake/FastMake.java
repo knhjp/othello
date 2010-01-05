@@ -10,7 +10,11 @@ import fastboard.fastflip.FastBoardFlips;
  * This interface is meant to be like FastFlip, providing a way to make moves based on the line configurations
  */
 public interface FastMake {
-    FastMake[][] fastMakes = null;
+    FastMake[][] fastMakes = {
+            {},
+            {},
+            {}
+    };
 
     /**
      * Given the current configuration of the lines, it decides which discs to flip to make a move
