@@ -11,6 +11,9 @@ import fastboard.fastflip.FastBoardFlips;
  */
 public interface LineFlipper {
     LineFlipper[] blackLineFlippers_a1_a8 = null;
+    LineFlipper[] blackLineFlippers_a1_h1 = null;
+    LineFlipper[] blackLineFlippers_a1_h8 = null;
+
     /**
      * Flips a series of discs on a line
      * @param lines the current configuration of the board
