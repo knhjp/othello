@@ -15,7 +15,8 @@ public class FastMakeA1_Black implements FastMake {
     @Override public int makeMove(FastBoardFlips lines) {
         int discDiff =
                 LineFlipper.blackLineFlippers_a1_a8[lines.a1_a8].flipLine(lines) +
-                LineFlipper.blackLineFlippers_a1_h1[lines.a1_h1].flipLine(lines);
+                LineFlipper.blackLineFlippers_a1_h1[lines.a1_h1].flipLine(lines) +
+                LineFlipper.blackLineFlippers_a1_h8[lines.a1_h8].flipLine(lines);
 
         lines.blackPlaceA1();
         discDiff +=1;
