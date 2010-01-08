@@ -51,4 +51,43 @@ public class FastCheckD6Test extends OthelloTestCase {
         flips.b8_h2 = LineConverter.convertStringToLine("____ooox");
         assertTrue(check.isValidMove(flips));
     }
+
+    public void testIsMoveValidWhite() {
+        FastCheckCalc calc = new FastCheckCalc();
+        boolean[][] fastCheckCalcArray = calc.calcIsMoveValidForWhite();
+        FastCheckD6 check = new FastCheckD6(fastCheckCalcArray);
+
+        FastBoardFlips flips = new FastBoardFlips();
+
+        assertFalse(check.isValidMove(flips));
+
+        flips.d1_d8 = LineConverter.convertStringToLine("oxxxxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.d1_d8 = LineConverter.convertStringToLine("oxxxx_oo");
+        assertTrue(check.isValidMove(flips));
+        flips.d1_d8 = LineConverter.convertStringToLine("ooooo_xo");
+        assertTrue(check.isValidMove(flips));
+
+        flips.d1_d8 = LineConverter.convertStringToLine("_xxxx_ox");
+        flips.a3_f8 = LineConverter.convertStringToLine("______xx");
+        assertFalse(check.isValidMove(flips));
+        flips.a3_f8 = LineConverter.convertStringToLine("______xo");
+        assertTrue(check.isValidMove(flips));
+        flips.a3_f8 = LineConverter.convertStringToLine("___ox___");
+        assertTrue(check.isValidMove(flips));
+
+        flips.a3_f8 = LineConverter.convertStringToLine("_____x_o");
+        flips.a6_h6 = LineConverter.convertStringToLine("____oxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.a6_h6 = LineConverter.convertStringToLine("____xxo_");
+        assertTrue(check.isValidMove(flips));
+        flips.a6_h6 = LineConverter.convertStringToLine("oxx_____");
+        assertTrue(check.isValidMove(flips));
+
+        flips.a6_h6 = LineConverter.convertStringToLine("___oxoox");
+        flips.b8_h2 = LineConverter.convertStringToLine("___xxxxo");
+        assertFalse(check.isValidMove(flips));
+        flips.b8_h2 = LineConverter.convertStringToLine("____xxxo");
+        assertTrue(check.isValidMove(flips));
+    }
 }
