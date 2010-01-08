@@ -457,7 +457,7 @@ public class FastBoardFlipsHColumnTest extends OthelloTestCase {
         assertEquals("________", LineConverter.convertLineToString(flips.a1_h8));
         assertEquals("________", LineConverter.convertLineToString(flips.a8_h8));
 
-        flips.whitePlaceG8();
+        flips.whitePlaceH8();
 
         assertEquals("_______o", LineConverter.convertLineToString(flips.h1_h8));
         assertEquals("_______o", LineConverter.convertLineToString(flips.a1_h8));
