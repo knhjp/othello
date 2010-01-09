@@ -8,7 +8,7 @@ import fastboard.fastflip.FastBoardFlips;
  * User: ed
  * Date: Jan 2, 2010
  * Time: 7:42:30 AM
- * This flips along a1_a8, 5 discs for a7 for black
+ * This flips along a1_a8, 3 discs for a7 for black
  */
 public class A7_LineFlipper_a1_a8_3_0_Black implements LineFlipper {
     @Override public int flipLine(FastBoardFlips lines) {
