@@ -5,7 +5,7 @@ package fastboard.lineflipper.calc;
  * User: ed
  * Date: Jan 10, 2010
  * Time: 1:59:41 PM
- * To change this template use File | Settings | File Templates.
+ * This test that we are computing the LineFlipperNumFlip arrays properly
  */
 public class LineFlipperNumFlipCalcTest {
 }
