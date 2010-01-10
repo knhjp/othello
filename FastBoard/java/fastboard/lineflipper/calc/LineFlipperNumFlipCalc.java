@@ -8,4 +8,8 @@ package fastboard.lineflipper.calc;
  * This class calculates how many pieces would be flip given a certain line configuration
  */
 public class LineFlipperNumFlipCalc {
+
+    public int[][] calcNumFlipForBlack() {
+        return null;
+    }
 }
