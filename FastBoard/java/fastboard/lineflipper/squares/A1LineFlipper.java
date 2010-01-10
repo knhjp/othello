@@ -15,6 +15,7 @@ public class A1LineFlipper {
     public final LineFlipper[] a1_blackLineFlippers_a1_h8 = null;
 
     public A1LineFlipper() {
-        a1_blackLineFlippers_a1_a8 = new LineFlipper[3 * 3 * 3 * 3 * 3 *3 *3 *3];
+        a1_blackLineFlippers_a1_a8 = new LineFlipper[3 * 3 * 3 * 3 * 3 * 3 * 3 * 3];
+
     }
 }
