@@ -16,11 +16,11 @@ public class LineFlipperNumFlipCalc {
      * @return an int[][] for the results. Result[index][line] means how  many discs you would flip for a given
      * index and line configuration
      */
-    public int[][] calcNumFlipForBlack() {
-        int[][] ret = new int[FastCheckCalc.squaresForALine][];
+    public NumFlip[][] calcNumFlipForBlack() {
+        NumFlip[][] ret = new NumFlip[FastCheckCalc.squaresForALine][];
 
         for (int index=0 ; index<ret.length ; index++) {
-            ret[index] = new int[FastCheckCalc.threeToTheEighth];
+            ret[index] = new NumFlip[FastCheckCalc.threeToTheEighth];
 
             for (int line=0 ; line<FastCheckCalc.threeToTheEighth ; line++) {
                 ret[index][line] = numFlipForBlackForThisLine(line,index);
@@ -30,7 +30,7 @@ public class LineFlipperNumFlipCalc {
         return ret;
     }
 
-    private int numFlipForBlackForThisLine(int line, int index) {
-        return 0;
+    private NumFlip numFlipForBlackForThisLine(int line, int index) {
+        return null;
     }
 }
