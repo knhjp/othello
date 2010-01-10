@@ -1,5 +1,7 @@
 package fastboard.lineflipper.calc;
 
+import fastboard.checkmove.calc.FastCheckCalc;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ed
@@ -15,6 +17,20 @@ public class LineFlipperNumFlipCalc {
      * index and line configuration
      */
     public int[][] calcNumFlipForBlack() {
-        return null;
+        int[][] ret = new int[FastCheckCalc.squaresForALine][];
+
+        for (int index=0 ; index<ret.length ; index++) {
+            ret[index] = new int[FastCheckCalc.threeToTheEighth];
+
+            for (int line=0 ; line<FastCheckCalc.threeToTheEighth ; line++) {
+                ret[index][line] = numFlipForBlackForThisLine(line,index);
+            }
+        }
+
+        return ret;
+    }
+
+    private int numFlipForBlackForThisLine(int line, int index) {
+        return 0;
     }
 }
