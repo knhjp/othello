@@ -8,4 +8,11 @@ package fastboard.lineflipper.calc;
  * A simple class to store how many pieces we are flipping on each direction
  */
 public class NumFlip {
+    public final int upNum;
+    public final int downNum;
+
+    public NumFlip(int upNum, int downNum) {
+        this.upNum = upNum;
+        this.downNum = downNum;
+    }
 }
