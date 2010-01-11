@@ -41,5 +41,11 @@ public class LineFlipperNumFlipCalcTest extends OthelloTestCase {
         numFlip = calc.numFlipForBlackForThisLine(line, index);
         assertEquals(0,numFlip.upNum);
         assertEquals(2,numFlip.downNum);
+
+        line = LineConverter.convertStringToLine("_oooooox");
+        index = 7;
+        numFlip = calc.numFlipForBlackForThisLine(line, index);
+        assertEquals(0,numFlip.upNum);
+        assertEquals(6,numFlip.downNum);
     }
 }
