@@ -32,7 +32,7 @@ public class LineFlipperNumFlipCalc {
         return ret;
     }
 
-    private NumFlip numFlipForBlackForThisLine(int line, int index) {
+    NumFlip numFlipForBlackForThisLine(int line, int index) {
         int upCount = 0;
         int downCount = 0;
         if (LineDecoder.decoders[index].isEmpty(line)) {
@@ -41,10 +41,10 @@ public class LineFlipperNumFlipCalc {
                 if (LineDecoder.decoders[curIndex].isWhite(line)) {
                     do {
                         curIndex--;
-                        upCount++;
+                        downCount++;
                     } while (curIndex != 0 && LineDecoder.decoders[curIndex].isWhite(line));
                     if (!LineDecoder.decoders[curIndex].isBlack(line)) {
-                        upCount = 0;
+                        downCount = 0;
                     }
                 }
             }
@@ -54,9 +54,10 @@ public class LineFlipperNumFlipCalc {
                 if (LineDecoder.decoders[curIndex].isWhite(line)) {
                     do {
                         curIndex++;
+                        upCount++;
                     } while (curIndex != 7 && LineDecoder.decoders[curIndex].isWhite(line));
                     if (!LineDecoder.decoders[curIndex].isBlack(line)) {
-                        downCount = 0;
+                        upCount = 0;
                     }
                 }
             }
