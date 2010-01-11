@@ -24,19 +24,19 @@ public class LineFlipperNumFlipCalcTest extends OthelloTestCase {
         assertEquals(0,numFlip.upNum);
         assertEquals(0,numFlip.downNum);
 
-        line = LineConverter.convertStringToLine("_____xo_");
+        line = LineConverter.convertStringToLine("__xo_xo_");
         index = 0;
         numFlip = calc.numFlipForBlackForThisLine(line, index);
         assertEquals(1,numFlip.upNum);
         assertEquals(0,numFlip.downNum);
 
-        line = LineConverter.convertStringToLine("___xoo__");
+        line = LineConverter.convertStringToLine("_o_xoo__");
         index = 1;
         numFlip = calc.numFlipForBlackForThisLine(line, index);
         assertEquals(2,numFlip.upNum);
         assertEquals(0,numFlip.downNum);
 
-        line = LineConverter.convertStringToLine("___oox__");
+        line = LineConverter.convertStringToLine("___oox_x");
         index = 5;
         numFlip = calc.numFlipForBlackForThisLine(line, index);
         assertEquals(0,numFlip.upNum);
@@ -47,5 +47,17 @@ public class LineFlipperNumFlipCalcTest extends OthelloTestCase {
         numFlip = calc.numFlipForBlackForThisLine(line, index);
         assertEquals(0,numFlip.upNum);
         assertEquals(6,numFlip.downNum);
+
+        line = LineConverter.convertStringToLine("xoooooo_");
+        index = 0;
+        numFlip = calc.numFlipForBlackForThisLine(line, index);
+        assertEquals(6,numFlip.upNum);
+        assertEquals(0,numFlip.downNum);
+
+        line = LineConverter.convertStringToLine("xoo_ooox");
+        index = 4;
+        numFlip = calc.numFlipForBlackForThisLine(line, index);
+        assertEquals(2,numFlip.upNum);
+        assertEquals(3,numFlip.downNum);
     }
 }
