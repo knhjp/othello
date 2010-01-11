@@ -1,6 +1,7 @@
 package fastboard.lineflipper.calc;
 
 import base.testcase.OthelloTestCase;
+import fastboard.lineconverter.LineConverter;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,6 +13,15 @@ import base.testcase.OthelloTestCase;
 public class LineFlipperNumFlipCalcTest extends OthelloTestCase {
     public void testNumFlipForBlackForThisLine() {
         LineFlipperNumFlipCalc calc = new LineFlipperNumFlipCalc();
-        
+
+        int line;
+        int index;
+        NumFlip numFlip;
+
+        line = LineConverter.convertStringToLine("________");
+        index = 0;
+        numFlip = calc.numFlipForBlackForThisLine(line, index);
+        assertEquals(0,numFlip.upNum);
+        assertEquals(0,numFlip.downNum);
     }
 }
