@@ -11,6 +11,7 @@ import base.testcase.OthelloTestCase;
  */
 public class LineFlipperNumFlipCalcTest extends OthelloTestCase {
     public void testNumFlipForBlackForThisLine() {
-
+        LineFlipperNumFlipCalc calc = new LineFlipperNumFlipCalc();
+        
     }
 }
