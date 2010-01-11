@@ -8,7 +8,7 @@ import fastboard.lineconverter.LineConverter;
  * User: ed
  * Date: Jan 10, 2010
  * Time: 1:59:41 PM
- * To change this template use File | Settings | File Templates.
+ * This test that we are computing the LineFlipperNumFlip arrays properly
  */
 public class LineFlipperNumFlipCalcTest extends OthelloTestCase {
     public void testNumFlipForBlackForThisLine() {
@@ -47,5 +47,11 @@ public class LineFlipperNumFlipCalcTest extends OthelloTestCase {
         numFlip = calc.numFlipForBlackForThisLine(line, index);
         assertEquals(0,numFlip.upNum);
         assertEquals(6,numFlip.downNum);
+
+        line = LineConverter.convertStringToLine("xoooooo_");
+        index = 0;
+        numFlip = calc.numFlipForBlackForThisLine(line, index);
+        assertEquals(6,numFlip.upNum);
+        assertEquals(0,numFlip.downNum);
     }
 }
