@@ -32,7 +32,7 @@ public class LineFlipperNumFlipCalc {
         return ret;
     }
 
-    private NumFlip numFlipForBlackForThisLine(int line, int index) {
+    NumFlip numFlipForBlackForThisLine(int line, int index) {
         int upCount = 0;
         int downCount = 0;
         if (LineDecoder.decoders[index].isEmpty(line)) {

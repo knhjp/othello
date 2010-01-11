@@ -1,5 +1,7 @@
 package fastboard.lineflipper.calc;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ed
@@ -7,5 +9,8 @@ package fastboard.lineflipper.calc;
  * Time: 1:59:41 PM
  * This test that we are computing the LineFlipperNumFlip arrays properly
  */
-public class LineFlipperNumFlipCalcTest {
+public class LineFlipperNumFlipCalcTest extends OthelloTestCase {
+    public void testNumFlipForBlackForThisLine() {
+
+    }
 }
