@@ -225,6 +225,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Base/Base.iml" filepath="$PROJECT_DIR$/Base/Base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Evaluator/Evaluator.iml" filepath="$PROJECT_DIR$/Evaluator/Evaluator.iml" />
       <module fileurl="file://$PROJECT_DIR$/FastBoard/FastBoard.iml" filepath="$PROJECT_DIR$/FastBoard/FastBoard.iml" />
       <module fileurl="file://$PROJECT_DIR$/Search/Search.iml" filepath="$PROJECT_DIR$/Search/Search.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimpleBoard/SimpleBoard.iml" filepath="$PROJECT_DIR$/SimpleBoard/SimpleBoard.iml" />
