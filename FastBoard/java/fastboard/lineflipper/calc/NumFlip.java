@@ -15,4 +15,22 @@ public class NumFlip {
         this.upNum = upNum;
         this.downNum = downNum;
     }
+
+    @Override public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        NumFlip numFlip = (NumFlip) o;
+
+        if (downNum != numFlip.downNum) return false;
+        if (upNum != numFlip.upNum) return false;
+
+        return true;
+    }
+
+    @Override public int hashCode() {
+        int result = upNum;
+        result = 31 * result + downNum;
+        return result;
+    }
 }
