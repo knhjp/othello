@@ -75,7 +75,7 @@ public class LineFlipperNumFlipCalc {
                     do {
                         curIndex--;
                         downCount++;
-                    } while (curIndex != 0 && LineDecoder.decoders[curIndex].isWhite(line));
+                    } while (curIndex != 0 && LineDecoder.decoders[curIndex].isBlack(line));
                     if (!LineDecoder.decoders[curIndex].isWhite(line)) {
                         downCount = 0;
                     }
@@ -88,7 +88,7 @@ public class LineFlipperNumFlipCalc {
                     do {
                         curIndex++;
                         upCount++;
-                    } while (curIndex != 7 && LineDecoder.decoders[curIndex].isWhite(line));
+                    } while (curIndex != 7 && LineDecoder.decoders[curIndex].isBlack(line));
                     if (!LineDecoder.decoders[curIndex].isWhite(line)) {
                         upCount = 0;
                     }
