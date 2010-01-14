@@ -64,4 +64,51 @@ public class LineFlipperNumFlipCalc {
         }
         return new NumFlip(upCount, downCount);
     }
+
+    public NumFlip[][] calcNumFlipForWhite() {
+        NumFlip[][] ret = new NumFlip[FastCheckCalc.squaresForALine][];
+
+        for (int index = 0; index < ret.length; index++) {
+            ret[index] = new NumFlip[FastCheckCalc.threeToTheEighth];
+
+            for (int line = 0; line < FastCheckCalc.threeToTheEighth; line++) {
+                ret[index][line] = numFlipForWhiteForThisLine(line, index);
+            }
+        }
+
+        return ret;
+    }
+
+    NumFlip numFlipForWhiteForThisLine(int line, int index) {
+        int upCount = 0;
+        int downCount = 0;
+        if (LineDecoder.decoders[index].isEmpty(line)) {
+            if (index > 1) {
+                int curIndex = index - 1;
+                if (LineDecoder.decoders[curIndex].isBlack(line)) {
+                    do {
+                        curIndex--;
+                        downCount++;
+                    } while (curIndex != 0 && LineDecoder.decoders[curIndex].isWhite(line));
+                    if (!LineDecoder.decoders[curIndex].isWhite(line)) {
+                        downCount = 0;
+                    }
+                }
+            }
+
+            if (index < 6) {
+                int curIndex = index + 1;
+                if (LineDecoder.decoders[curIndex].isBlack(line)) {
+                    do {
+                        curIndex++;
+                        upCount++;
+                    } while (curIndex != 7 && LineDecoder.decoders[curIndex].isWhite(line));
+                    if (!LineDecoder.decoders[curIndex].isWhite(line)) {
+                        upCount = 0;
+                    }
+                }
+            }
+        }
+        return new NumFlip(upCount, downCount);
+    }
 }
