@@ -11,13 +11,13 @@ import fastboard.checkmove.linedecoder.LineDecoder;
  */
 
 public class WhiteLineDecoder implements ColorLineDecoder {
-    private LineDecoder lineDecoder;
+    private final LineDecoder lineDecoder;
     public WhiteLineDecoder(LineDecoder lineDecoder) {
         this.lineDecoder = lineDecoder;
     }
 
     @Override public boolean isMyColor(int line) {
-        return false;
+        return lineDecoder.isWhite(line);
     }
 
     @Override
@@ -27,7 +27,6 @@ public class WhiteLineDecoder implements ColorLineDecoder {
 
     @Override
     public boolean isEmpty(int line) {
-//        return lineDecoder.isEmpty(line);
-        return false;
+        return lineDecoder.isEmpty(line);
     }
 }
