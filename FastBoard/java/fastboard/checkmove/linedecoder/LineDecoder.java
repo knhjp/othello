@@ -18,7 +18,6 @@ public interface LineDecoder {
             new LineDecoder6(),
             new LineDecoder7(),
     };
-
     boolean isWhite(int line);
     boolean isBlack(int line);
     boolean isEmpty(int line);
