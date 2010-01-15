@@ -7,5 +7,16 @@ package fastboard.checkmove.linedecoder.color;
  * Time: 8:52:03 PM
  * To change this template use File | Settings | File Templates.
  */
-public class BlackLineDecoder {
+public class BlackLineDecoder implements ColorLineDecoder {
+    @Override public boolean isMyColor() {
+        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override public boolean isOppColor() {
+        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override public boolean isEmpty() {
+        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    }
 }
