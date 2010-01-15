@@ -9,8 +9,11 @@ import fastboard.checkmove.linedecoder.LineDecoder;
  * Time: 7:02:53 PM
  * This class decodes a line from the perspective of white
  */
+
 public class WhiteLineDecoder implements ColorLineDecoder {
+    private LineDecoder lineDecoder;
     public WhiteLineDecoder(LineDecoder lineDecoder) {
+        this.lineDecoder = lineDecoder;
     }
 
     @Override public boolean isMyColor(int line) {
