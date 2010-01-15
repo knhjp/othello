@@ -17,7 +17,7 @@ public class FastCheckE2Test extends OthelloTestCase {
     public void testIsMoveValidBlack() {
         FastCheckCalc calc = new FastCheckCalc();
         boolean[][] fastCheckCalcArray = calc.calcIsMoveValidForBlack();
-        FastCheckD2 check = new FastCheckD2(fastCheckCalcArray);
+        FastCheckE2 check = new FastCheckE2(fastCheckCalcArray);
 
         FastBoardFlips flips = new FastBoardFlips();
 
