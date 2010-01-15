@@ -17,7 +17,7 @@ public class WhiteLineDecoder implements ColorLineDecoder {
     }
 
     @Override public boolean isMyColor(int line) {
-        return false;
+        return lineDecoder.isWhite(line);
     }
 
     @Override
