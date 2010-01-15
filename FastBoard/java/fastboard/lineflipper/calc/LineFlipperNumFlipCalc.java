@@ -65,6 +65,20 @@ public class LineFlipperNumFlipCalc {
         return new NumFlip(upCount, downCount);
     }
 
+    public NumFlip[][] calcNumFlipForWhite() {
+        NumFlip[][] ret = new NumFlip[FastCheckCalc.squaresForALine][];
+
+        for (int index = 0; index < ret.length; index++) {
+            ret[index] = new NumFlip[FastCheckCalc.threeToTheEighth];
+
+            for (int line = 0; line < FastCheckCalc.threeToTheEighth; line++) {
+                ret[index][line] = numFlipForWhiteForThisLine(line, index);
+            }
+        }
+
+        return ret;
+    }
+
     NumFlip numFlipForWhiteForThisLine(int line, int index) {
         int upCount = 0;
         int downCount = 0;
