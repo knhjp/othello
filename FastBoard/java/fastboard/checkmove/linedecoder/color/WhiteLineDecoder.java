@@ -27,6 +27,6 @@ public class WhiteLineDecoder implements ColorLineDecoder {
 
     @Override
     public boolean isEmpty(int line) {
-        return false;
+        return lineDecoder.isEmpty(line);
     }
 }
