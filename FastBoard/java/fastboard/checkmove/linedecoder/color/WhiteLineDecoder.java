@@ -12,7 +12,8 @@ import fastboard.checkmove.linedecoder.LineDecoder;
 
 public class WhiteLineDecoder implements ColorLineDecoder {
     private LineDecoder lineDecoder;
-    public WhiteLineDecoder() {
+    public WhiteLineDecoder(LineDecoder lineDecoder) {
+
     }
 
     @Override public boolean isMyColor(int line) {
