@@ -1,5 +1,7 @@
 package fastboard.checkmove.linedecoder.color;
 
+import fastboard.checkmove.linedecoder.LineDecoder;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ed
@@ -8,4 +10,5 @@ package fastboard.checkmove.linedecoder.color;
  * This class decodes a line from the perspective of white
  */
 public class WhiteLineDecoder {
+    private LineDecoder lineDecoder;
 }
