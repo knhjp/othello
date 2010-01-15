@@ -16,15 +16,15 @@ public class BlackLineDecoder implements ColorLineDecoder {
         this.lineDecoder = lineDecoder;
     }
 
-    @Override public boolean isMyColor() {
+    @Override public boolean isMyColor(int line) {
         return false;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    @Override public boolean isOppColor() {
+    @Override public boolean isOppColor(int line) {
         return false;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    @Override public boolean isEmpty() {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    @Override public boolean isEmpty(int line) {
+        return lineDecoder.isEmpty(line);
     }
 }
