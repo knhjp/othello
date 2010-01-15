@@ -8,4 +8,7 @@ package fastboard.checkmove.linedecoder.color;
  * To change this template use File | Settings | File Templates.
  */
 public interface ColorLineDecoder {
+    boolean isMyColor();
+    boolean isOppColor();
+    boolean isEmpty();
 }
