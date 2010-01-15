@@ -10,7 +10,10 @@ import fastboard.checkmove.linedecoder.LineDecoder;
  * To change this template use File | Settings | File Templates.
  */
 public class BlackLineDecoder implements ColorLineDecoder {
+    private final LineDecoder lineDecoder;
+
     public BlackLineDecoder(LineDecoder lineDecoder) {
+        this.lineDecoder = lineDecoder;
     }
 
     @Override public boolean isMyColor() {
