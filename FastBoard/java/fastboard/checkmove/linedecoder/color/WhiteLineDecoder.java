@@ -22,7 +22,7 @@ public class WhiteLineDecoder implements ColorLineDecoder {
 
     @Override
     public boolean isOppColor(int line) {
-        return false;
+        return lineDecoder.isBlack(line);
     }
 
     @Override
