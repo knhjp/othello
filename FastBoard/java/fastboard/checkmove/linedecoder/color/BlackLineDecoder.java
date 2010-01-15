@@ -21,7 +21,7 @@ public class BlackLineDecoder implements ColorLineDecoder {
     }
 
     @Override public boolean isOppColor(int line) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        return lineDecoder.isWhite(line);
     }
 
     @Override public boolean isEmpty(int line) {
