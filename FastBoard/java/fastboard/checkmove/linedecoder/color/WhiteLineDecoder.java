@@ -8,6 +8,9 @@ package fastboard.checkmove.linedecoder.color;
  * This class decodes a line from the perspective of white
  */
 public class WhiteLineDecoder implements ColorLineDecoder {
+    public WhiteLineDecoder() {
+    }
+
     @Override public boolean isMyColor(int line) {
         return false;
     }
