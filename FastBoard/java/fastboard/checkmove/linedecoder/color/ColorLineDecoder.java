@@ -7,5 +7,5 @@ package fastboard.checkmove.linedecoder.color;
  * Time: 6:46:03 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ColorLineDecoder {
+public interface ColorLineDecoder {
 }
