@@ -5,7 +5,7 @@ package fastboard.checkmove.linedecoder.color;
  * User: knhjp
  * Date: Jan 14, 2010
  * Time: 8:52:03 PM
- * To change this template use File | Settings | File Templates.
+ * This class decodes a line from the perspective of black
  */
 public class BlackLineDecoder {
 }
