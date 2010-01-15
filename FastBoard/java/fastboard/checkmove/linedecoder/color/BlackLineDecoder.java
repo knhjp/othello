@@ -1,5 +1,7 @@
 package fastboard.checkmove.linedecoder.color;
 
+import fastboard.checkmove.linedecoder.LineDecoder;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -8,7 +10,7 @@ package fastboard.checkmove.linedecoder.color;
  * To change this template use File | Settings | File Templates.
  */
 public class BlackLineDecoder implements ColorLineDecoder {
-    public BlackLineDecoder() {
+    public BlackLineDecoder(LineDecoder lineDecoder) {
     }
 
     @Override public boolean isMyColor() {
