@@ -8,6 +8,9 @@ package fastboard.checkmove.linedecoder.color;
  * To change this template use File | Settings | File Templates.
  */
 public class BlackLineDecoder implements ColorLineDecoder {
+    public BlackLineDecoder() {
+    }
+
     @Override public boolean isMyColor() {
         return false;  //To change body of implemented methods use File | Settings | File Templates.
     }
