@@ -11,7 +11,7 @@ import fastboard.checkmove.linedecoder.LineDecoder;
  */
 
 public class WhiteLineDecoder implements ColorLineDecoder {
-    private LineDecoder lineDecoder;
+    private final LineDecoder lineDecoder;
     public WhiteLineDecoder(LineDecoder lineDecoder) {
         this.lineDecoder = lineDecoder;
     }
