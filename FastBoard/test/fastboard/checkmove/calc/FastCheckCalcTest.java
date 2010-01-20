@@ -2,6 +2,11 @@ package fastboard.checkmove.calc;
 
 import base.testcase.OthelloTestCase;
 import fastboard.lineconverter.LineConverter;
+import fastboard.checkmove.linedecoder.color.BlackLineDecoder;
+import fastboard.checkmove.linedecoder.color.ColorLineDecoder;
+import fastboard.checkmove.linedecoder.color.WhiteLineDecoder;
+import fastboard.checkmove.linedecoder.LineDecoder;
+import fastboard.checkmove.linedecoder.LineDecoderGenerator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,6 +16,90 @@ import fastboard.lineconverter.LineConverter;
  * This tests FastFlipCalc to make sure the arrays that it produced seems valid
  */
 public class FastCheckCalcTest extends OthelloTestCase {
+    public void testIsMoveValidForThisLine() {
+        final LineDecoderGenerator decoderGenerator = new LineDecoderGenerator();
+        final BlackLineDecoder[] blackLineDecoders = decoderGenerator.getBlackLineDecoders();
+        final WhiteLineDecoder[] whiteLineDecoders = decoderGenerator.getWhiteLineDecoders();
+
+        FastCheckCalc calc = new FastCheckCalc();
+
+        int line;
+        int index;
+
+        line = LineConverter.convertStringToLine("________");
+        index = 0;
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,index));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,index));
+
+        line = LineConverter.convertStringToLine("_____xo_");
+        index = 0;
+        assertTrue(calc.isMoveValidForThisLine(blackLineDecoders, line,index));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,index));
+
+        line = LineConverter.convertStringToLine("_____ox_");
+        index = 0;
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders, line,index));
+        assertTrue(calc.isMoveValidForThisLine(whiteLineDecoders,line,index));
+
+        line = LineConverter.convertStringToLine("____xoo_");
+        index = 0;
+        assertTrue(calc.isMoveValidForThisLine(blackLineDecoders,line,index));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,index));
+
+        line = LineConverter.convertStringToLine("____oxx_");
+        index = 0;
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,index));
+        assertTrue(calc.isMoveValidForThisLine(whiteLineDecoders,line,index));
+
+        index = 1;
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,index));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,index));
+
+        line = LineConverter.convertStringToLine("____xo_o");
+        assertTrue(calc.isMoveValidForThisLine(blackLineDecoders,line,index));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,index));
+
+        line = LineConverter.convertStringToLine("____ox_x");
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,index));
+        assertTrue(calc.isMoveValidForThisLine(whiteLineDecoders,line,index));
+
+        line = LineConverter.convertStringToLine("__oooox_");
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,0));
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,1));
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,2));
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,3));
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,4));
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,5));
+        assertTrue(calc.isMoveValidForThisLine(blackLineDecoders,line,6));
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,7));
+
+        assertTrue(calc.isMoveValidForThisLine(whiteLineDecoders,line,0));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,1));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,2));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,3));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,4));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,5));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,6));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,7));
+
+        //test overflow
+        line = LineConverter.convertStringToLine("___ooooo");
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,5));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,5));
+
+        line = LineConverter.convertStringToLine("___xxxxx");
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,5));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,5));
+
+        line = LineConverter.convertStringToLine("ooooooo_");
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,0));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,0));
+
+        line = LineConverter.convertStringToLine("xxxxxxx_");
+        assertFalse(calc.isMoveValidForThisLine(blackLineDecoders,line,0));
+        assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,0));
+    }
+
     public void testIsMoveValidForBlackForThisLine() {
         FastCheckCalc calc = new FastCheckCalc();
 
