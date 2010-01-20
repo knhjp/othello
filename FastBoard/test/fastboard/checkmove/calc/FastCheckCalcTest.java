@@ -100,6 +100,39 @@ public class FastCheckCalcTest extends OthelloTestCase {
         assertFalse(calc.isMoveValidForThisLine(whiteLineDecoders,line,0));
     }
 
+    public void testCalcIsMoveValid() {
+        final LineDecoderGenerator decoderGenerator = new LineDecoderGenerator();
+        final BlackLineDecoder[] blackLineDecoders = decoderGenerator.getBlackLineDecoders();
+        final WhiteLineDecoder[] whiteLineDecoders = decoderGenerator.getWhiteLineDecoders();
+
+        FastCheckCalc calc = new FastCheckCalc();
+
+        boolean[][] result = calc.calcIsMoveValid(blackLineDecoders);
+
+        int line = LineConverter.convertStringToLine("xoo__oox");
+        assertFalse(result[0][line]);
+        assertFalse(result[1][line]);
+        assertFalse(result[2][line]);
+        assertTrue(result[3][line]);
+        assertTrue(result[4][line]);
+        assertFalse(result[5][line]);
+        assertFalse(result[6][line]);
+        assertFalse(result[7][line]);
+
+        result = calc.calcIsMoveValid(whiteLineDecoders);
+
+        line = LineConverter.convertStringToLine("oxx__xxo");
+        assertFalse(result[0][line]);
+        assertFalse(result[1][line]);
+        assertFalse(result[2][line]);
+        assertTrue(result[3][line]);
+        assertTrue(result[4][line]);
+        assertFalse(result[5][line]);
+        assertFalse(result[6][line]);
+        assertFalse(result[7][line]);
+
+    }
+
     public void testIsMoveValidForBlackForThisLine() {
         FastCheckCalc calc = new FastCheckCalc();
 
