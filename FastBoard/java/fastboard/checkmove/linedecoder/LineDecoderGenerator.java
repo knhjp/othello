@@ -1,6 +1,7 @@
 package fastboard.checkmove.linedecoder;
 
 import fastboard.checkmove.linedecoder.color.BlackLineDecoder;
+import fastboard.checkmove.linedecoder.color.WhiteLineDecoder;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,7 +11,8 @@ import fastboard.checkmove.linedecoder.color.BlackLineDecoder;
  * This produces line decoders for different colors
  */
 public class LineDecoderGenerator {
-    private final BlackLineDecoder[] blackDecoders;
+    private final BlackLineDecoder[] blackLineDecoders;
+    private final WhiteLineDecoder[] whiteLineDecoders;
 
     public LineDecoderGenerator() {
         final LineDecoder[] decoders = new LineDecoder[]{
@@ -24,7 +26,7 @@ public class LineDecoderGenerator {
                 new LineDecoder7(),
         };
 
-        blackDecoders = new BlackLineDecoder[]{
+        this.blackLineDecoders = new BlackLineDecoder[]{
                 new BlackLineDecoder(decoders[0]),
                 new BlackLineDecoder(decoders[1]),
                 new BlackLineDecoder(decoders[2]),
@@ -33,6 +35,17 @@ public class LineDecoderGenerator {
                 new BlackLineDecoder(decoders[5]),
                 new BlackLineDecoder(decoders[6]),
                 new BlackLineDecoder(decoders[7]),
+        };
+
+        this.whiteLineDecoders = new WhiteLineDecoder[]{
+                new WhiteLineDecoder(decoders[0]),
+                new WhiteLineDecoder(decoders[1]),
+                new WhiteLineDecoder(decoders[2]),
+                new WhiteLineDecoder(decoders[3]),
+                new WhiteLineDecoder(decoders[4]),
+                new WhiteLineDecoder(decoders[5]),
+                new WhiteLineDecoder(decoders[6]),
+                new WhiteLineDecoder(decoders[7]),
         };
     }
 }
