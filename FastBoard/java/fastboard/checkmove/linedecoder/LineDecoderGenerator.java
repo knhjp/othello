@@ -8,4 +8,6 @@ package fastboard.checkmove.linedecoder;
  * To change this template use File | Settings | File Templates.
  */
 public class LineDecoderGenerator {
+    public LineDecoderGenerator() {
+    }
 }
