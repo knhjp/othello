@@ -1,6 +1,7 @@
 package fastboard.checkmove.calc;
 
 import fastboard.checkmove.linedecoder.LineDecoder;
+import fastboard.checkmove.linedecoder.color.ColorLineDecoder;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,6 +13,10 @@ import fastboard.checkmove.linedecoder.LineDecoder;
 public class FastCheckCalc {
     public final static int threeToTheEighth = 3*3*3*3*3*3*3*3;
     public final static int squaresForALine = 8;
+
+    public boolean[][] calcIsMoveValid(ColorLineDecoder[] lineDecoders) {
+        return null;
+    }
 
     public boolean[][] calcIsMoveValidForBlack() {
         boolean[][] ret = new boolean[squaresForALine][];
