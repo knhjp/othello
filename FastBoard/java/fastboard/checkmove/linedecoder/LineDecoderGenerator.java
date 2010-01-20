@@ -48,4 +48,12 @@ public class LineDecoderGenerator {
                 new WhiteLineDecoder(decoders[7]),
         };
     }
+
+    public BlackLineDecoder[] getBlackLineDecoders() {
+        return blackLineDecoders;
+    }
+
+    public WhiteLineDecoder[] getWhiteLineDecoders() {
+        return whiteLineDecoders;
+    }
 }
