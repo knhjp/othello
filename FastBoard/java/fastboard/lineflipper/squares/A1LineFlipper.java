@@ -1,6 +1,7 @@
 package fastboard.lineflipper.squares;
 
 import fastboard.lineflipper.LineFlipper;
+import fastboard.lineflipper.calc.NumFlip;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,7 +15,7 @@ public class A1LineFlipper {
     public final LineFlipper[] a1_blackLineFlippers_a1_h1 = null;
     public final LineFlipper[] a1_blackLineFlippers_a1_h8 = null;
 
-    public A1LineFlipper() {
+    public A1LineFlipper(NumFlip[] numFlips) {
         a1_blackLineFlippers_a1_a8 = new LineFlipper[3 * 3 * 3 * 3 * 3 * 3 * 3 * 3];
 
     }
