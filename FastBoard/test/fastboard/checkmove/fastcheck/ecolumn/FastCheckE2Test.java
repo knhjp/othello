@@ -33,7 +33,7 @@ public class FastCheckE2Test extends OthelloTestCase {
         assertFalse(check.isValidMove(flips));
         flips.d1_h5 = LineConverter.convertStringToLine("_____oxo");
         assertTrue(check.isValidMove(flips));
-
+        
         flips.d1_h5 = LineConverter.convertStringToLine("_____xox");
         flips.a2_h2 = LineConverter.convertStringToLine("_____xox");
         assertFalse(check.isValidMove(flips));
