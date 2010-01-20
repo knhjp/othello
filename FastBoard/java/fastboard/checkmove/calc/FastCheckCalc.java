@@ -1,6 +1,7 @@
 package fastboard.checkmove.calc;
 
 import fastboard.checkmove.linedecoder.LineDecoder;
+import fastboard.checkmove.linedecoder.color.ColorLineDecoder;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,6 +13,49 @@ import fastboard.checkmove.linedecoder.LineDecoder;
 public class FastCheckCalc {
     public final static int threeToTheEighth = 3*3*3*3*3*3*3*3;
     public final static int squaresForALine = 8;
+
+    public boolean[][] calcIsMoveValid(ColorLineDecoder[] lineDecoders) {
+        boolean[][] ret = new boolean[squaresForALine][];
+
+        for (int index=0 ; index<ret.length ; index++) {
+            ret[index] = new boolean[threeToTheEighth];
+
+            for (int line=0 ; line<threeToTheEighth ; line++) {
+                ret[index][line] = isMoveValidForThisLine(lineDecoders,line,index);
+            }
+        }
+
+        return ret;
+    }
+
+    boolean isMoveValidForThisLine(ColorLineDecoder[] lineDecoders,int line, int index) {
+        if (lineDecoders[index].isEmpty(line)) {
+                if (index>1) {
+                    int curIndex = index - 1;
+                    if (lineDecoders[curIndex].isOppColor(line)) {
+                        do {
+                            curIndex--;
+                        } while (curIndex!=0 && lineDecoders[curIndex].isOppColor(line));
+                        if (lineDecoders[curIndex].isMyColor(line)) {
+                            return true;
+                        }
+                    }
+                }
+
+                if (index<6) {
+                    int curIndex = index + 1;
+                    if (lineDecoders[curIndex].isOppColor(line)) {
+                        do {
+                            curIndex++;
+                        } while (curIndex!=7 && lineDecoders[curIndex].isOppColor(line));
+                        if (lineDecoders[curIndex].isMyColor(line)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        return false;
+    }
 
     public boolean[][] calcIsMoveValidForBlack() {
         boolean[][] ret = new boolean[squaresForALine][];
