@@ -14,12 +14,14 @@ import fastboard.checkmove.linedecoder.LineDecoderGenerator;
  * a static field
  */
 public class FastMakeGenerator {
+    private final FastMake[][] fastMakes;
+
     public FastMakeGenerator(LineDecoderGenerator generator) {
         final LineFlipperNumFlipCalc calc = new LineFlipperNumFlipCalc();
         final NumFlip[][] blackNumFlips = calc.calcNumFlip(generator.getBlackLineDecoders());
         final NumFlip[][] whiteNumFlips = calc.calcNumFlip(generator.getWhiteLineDecoders());
 
-        FastMake[][] fastMakes = {
+        fastMakes = new FastMake[][]{
                 {},
                 {},
                 {
