@@ -1,5 +1,7 @@
 package fastboard;
 
+import base.testcase.OthelloTestCase;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -7,5 +9,5 @@ package fastboard;
  * Time: 6:12:07 PM
  * This class contains objects that are commonly used in FastBoard testing
  */
-public class FastBoardTestCase {
+public class FastBoardTestCase extends OthelloTestCase {
 }
