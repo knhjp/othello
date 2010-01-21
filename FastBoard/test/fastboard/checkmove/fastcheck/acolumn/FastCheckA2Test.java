@@ -1,10 +1,9 @@
 package fastboard.checkmove.fastcheck.acolumn;
 
-import base.testcase.OthelloTestCase;
+import fastboard.FastBoardTestCase;
 import fastboard.checkmove.calc.FastCheckCalc;
 import fastboard.fastflip.FastBoardFlips;
 import fastboard.lineconverter.LineConverter;
-import fastboard.FastBoardTestCase;
 
 /**
  * Created by IntelliJ IDEA.
