@@ -13,7 +13,7 @@ import fastboard.lineflipper.squares.A1LineFlipper;
  * This updates the current board depending on the existing position for A1 for black
  */
 public class FastMakeA1_Black implements FastMake {
-    private A1LineFlipper lineFlipper = new A1LineFlipper();
+    private A1LineFlipper lineFlipper = new A1LineFlipper(null);
 
     @Override public int makeMove(FastBoardFlips lines) {
         int discDiff =
