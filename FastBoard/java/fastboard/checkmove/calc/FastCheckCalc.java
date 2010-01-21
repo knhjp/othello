@@ -28,7 +28,7 @@ public class FastCheckCalc {
         return ret;
     }
 
-    boolean isMoveValidForThisLine(ColorLineDecoder[] lineDecoders,int line, int index) {
+    boolean isMoveValidForThisLine(ColorLineDecoder[] lineDecoders, int line, int index) {
         if (lineDecoders[index].isEmpty(line)) {
                 if (index>1) {
                     int curIndex = index - 1;
