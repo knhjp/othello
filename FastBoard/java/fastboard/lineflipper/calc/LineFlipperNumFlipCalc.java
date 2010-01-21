@@ -12,7 +12,25 @@ import fastboard.checkmove.linedecoder.color.ColorLineDecoder;
  * This class calculates how many pieces would be flip given a certain line configuration
  */
 public class LineFlipperNumFlipCalc {
+    /**
+     * Calculates how many pieces get flipped given a configuration
+     *
+     * @return an int[][] for the results. Result[index][line] means how  many discs you would flip for a given
+     *         index and line configuration
+     */
+    public NumFlip[][] calcNumFlip(ColorLineDecoder[] lineDecoders) {
+        NumFlip[][] ret = new NumFlip[FastCheckCalc.squaresForALine][];
 
+        for (int index = 0; index < ret.length; index++) {
+            ret[index] = new NumFlip[FastCheckCalc.threeToTheEighth];
+
+            for (int line = 0; line < FastCheckCalc.threeToTheEighth; line++) {
+                ret[index][line] = numFlipForThisLine(lineDecoders,line, index);
+            }
+        }
+
+        return ret;
+    }
 
     NumFlip numFlipForThisLine(ColorLineDecoder[] lineDecoders, int line, int index) {
         int upCount = 0;
