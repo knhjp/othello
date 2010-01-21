@@ -9,4 +9,6 @@ package fastboard.fastmake;
  * a static field
  */
 public class FastMakeGenerator {
+    public FastMakeGenerator() {
+    }
 }
