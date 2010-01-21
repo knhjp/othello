@@ -43,7 +43,7 @@ public class FastCheckA1Test extends FastBoardTestCase {
 
     public void testIsMoveValidWhite() {
         FastCheckCalc calc = new FastCheckCalc();
-        boolean[][] fastCheckCalcArray = calc.calcIsMoveValidForWhite();
+        boolean[][] fastCheckCalcArray = calc.calcIsMoveValid(whiteLineDecoders);
         FastCheckA1 check = new FastCheckA1(fastCheckCalcArray);
 
         FastBoardFlips flips = new FastBoardFlips();
