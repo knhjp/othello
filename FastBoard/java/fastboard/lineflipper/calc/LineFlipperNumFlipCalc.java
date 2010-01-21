@@ -2,6 +2,7 @@ package fastboard.lineflipper.calc;
 
 import fastboard.checkmove.calc.FastCheckCalc;
 import fastboard.checkmove.linedecoder.LineDecoder;
+import fastboard.checkmove.linedecoder.color.ColorLineDecoder;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,6 +12,59 @@ import fastboard.checkmove.linedecoder.LineDecoder;
  * This class calculates how many pieces would be flip given a certain line configuration
  */
 public class LineFlipperNumFlipCalc {
+    /**
+     * Calculates how many pieces get flipped given a configuration
+     *
+     * @param lineDecoders line decoders used to determine whether or not a particular square is mine or opponent's
+     * @return an int[][] for the results. Result[index][line] means how  many discs you would flip for a given
+     *         index and line configuration
+     */
+    public NumFlip[][] calcNumFlip(ColorLineDecoder[] lineDecoders) {
+        NumFlip[][] ret = new NumFlip[FastCheckCalc.squaresForALine][];
+
+        for (int index = 0; index < ret.length; index++) {
+            ret[index] = new NumFlip[FastCheckCalc.threeToTheEighth];
+
+            for (int line = 0; line < FastCheckCalc.threeToTheEighth; line++) {
+                ret[index][line] = numFlipForThisLine(lineDecoders,line, index);
+            }
+        }
+
+        return ret;
+    }
+
+    NumFlip numFlipForThisLine(ColorLineDecoder[] lineDecoders, int line, int index) {
+        int upCount = 0;
+        int downCount = 0;
+        if (LineDecoder.decoders[index].isEmpty(line)) {
+            if (index > 1) {
+                int curIndex = index - 1;
+                if (lineDecoders[curIndex].isOppColor(line)) {
+                    do {
+                        curIndex--;
+                        downCount++;
+                    } while (curIndex != 0 && lineDecoders[curIndex].isOppColor(line));
+                    if (!lineDecoders[curIndex].isMyColor(line)) {
+                        downCount = 0;
+                    }
+                }
+            }
+
+            if (index < 6) {
+                int curIndex = index + 1;
+                if (lineDecoders[curIndex].isOppColor(line)) {
+                    do {
+                        curIndex++;
+                        upCount++;
+                    } while (curIndex != 7 && lineDecoders[curIndex].isOppColor(line));
+                    if (!lineDecoders[curIndex].isMyColor(line)) {
+                        upCount = 0;
+                    }
+                }
+            }
+        }
+        return new NumFlip(upCount, downCount);
+    }
 
     /**
      * Calculates how many pieces get flipped given a configuration

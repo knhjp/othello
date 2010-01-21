@@ -3,6 +3,7 @@ package fastboard.fastmake.fastmake;
 import fastboard.fastmake.FastMake;
 import fastboard.fastflip.FastBoardFlips;
 import fastboard.lineflipper.LineFlipper;
+import fastboard.lineflipper.calc.NumFlip;
 import fastboard.lineflipper.squares.A1LineFlipper;
 
 /**
@@ -13,7 +14,11 @@ import fastboard.lineflipper.squares.A1LineFlipper;
  * This updates the current board depending on the existing position for A1 for black
  */
 public class FastMakeA1_Black implements FastMake {
-    private A1LineFlipper lineFlipper = new A1LineFlipper();
+    private final A1LineFlipper lineFlipper;
+
+    public FastMakeA1_Black(NumFlip[] numFlips) {
+        this.lineFlipper = new A1LineFlipper(numFlips);
+    }
 
     @Override public int makeMove(FastBoardFlips lines) {
         int discDiff =
