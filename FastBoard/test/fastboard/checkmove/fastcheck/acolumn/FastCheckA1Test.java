@@ -1,6 +1,5 @@
 package fastboard.checkmove.fastcheck.acolumn;
 
-import base.testcase.OthelloTestCase;
 import fastboard.checkmove.calc.FastCheckCalc;
 import fastboard.fastflip.FastBoardFlips;
 import fastboard.lineconverter.LineConverter;
