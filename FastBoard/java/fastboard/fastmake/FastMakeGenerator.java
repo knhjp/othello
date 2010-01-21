@@ -1,5 +1,10 @@
 package fastboard.fastmake;
 
+import fastboard.fastmake.fastmake.FastMakeA1_Black;
+import fastboard.lineflipper.calc.LineFlipperNumFlipCalc;
+import fastboard.lineflipper.calc.NumFlip;
+import fastboard.checkmove.linedecoder.LineDecoderGenerator;
+
 /**
  * Created by IntelliJ IDEA.
  * User: knhjp
@@ -10,5 +15,18 @@ package fastboard.fastmake;
  */
 public class FastMakeGenerator {
     public FastMakeGenerator() {
+        final LineDecoderGenerator generator = new LineDecoderGenerator();
+        final LineFlipperNumFlipCalc calc = new LineFlipperNumFlipCalc();
+        final NumFlip[][] blackNumFlips = calc.calcNumFlip(generator.getBlackLineDecoders());
+        final NumFlip[][] whiteNumFlips = calc.calcNumFlip(generator.getWhiteLineDecoders());
+
+        FastMake[][] fastMakes = {
+                {},
+                {},
+                {
+                        null, null, null, null, null, null, null, null, null, null,
+                        null, new FastMakeA1_Black(null)
+                }
+        };
     }
 }
