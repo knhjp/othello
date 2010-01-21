@@ -16,7 +16,7 @@ public interface FastMake {
             {},
             {
                     null,null,null,null,null,null,null,null,null,null,
-                    null,new FastMakeA1_Black()
+                    null,new FastMakeA1_Black(null)
             }
     };
 
