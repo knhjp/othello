@@ -11,15 +11,6 @@ import fastboard.fastmake.fastmake.FastMakeA1_Black;
  * This interface is meant to be like FastFlip, providing a way to make moves based on the line configurations
  */
 public interface FastMake {
-    FastMake[][] fastMakes = {
-            {},
-            {},
-            {
-                    null,null,null,null,null,null,null,null,null,null,
-                    null,new FastMakeA1_Black(null)
-            }
-    };
-
     /**
      * Given the current configuration of the lines, it decides which discs to flip to make a move
      * @param lines the current representation. The position will be updated here as well

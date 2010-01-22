@@ -13,7 +13,10 @@ import fastboard.fastmake.FastMake;
  * This is meant to be a fast implementation of Board
  */
 public class FastBoard extends FastBoardFlips implements Board<FastBoard> {
-    public FastBoard() {
+    private final FastMake[][] fastMakes;
+
+    public FastBoard(FastMake[][] fastMakes) {
+        this.fastMakes = fastMakes;
     }
 
     @Override public int getSquare(int location) {
@@ -29,7 +32,7 @@ public class FastBoard extends FastBoardFlips implements Board<FastBoard> {
     }
 
     @Override public void makeMove(int color, int location) {
-        FastMake.fastMakes[color][location].makeMove(this);
+        this.fastMakes[color][location].makeMove(this);
     }
 
     @Override public void copyBoard(FastBoard board) {
