@@ -1,8 +1,7 @@
 package fastboard.lineflipper.calc;
 
-import base.testcase.OthelloTestCase;
-import fastboard.lineconverter.LineConverter;
 import fastboard.FastBoardTestCase;
+import fastboard.lineconverter.LineConverter;
 
 /**
  * Created by IntelliJ IDEA.
@@ -24,6 +23,9 @@ public class LineFlipperNumFlipCalcTest extends FastBoardTestCase {
         numFlip = calc.numFlipForThisLine(blackLineDecoders, line, index);
         assertEquals(0,numFlip.upNum);
         assertEquals(0,numFlip.downNum);
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
+        assertEquals(0,numFlip.upNum);
+        assertEquals(0,numFlip.downNum);
 
         line = LineConverter.convertStringToLine("__xo_xo_");
         index = 0;
@@ -31,11 +33,29 @@ public class LineFlipperNumFlipCalcTest extends FastBoardTestCase {
         assertEquals(1,numFlip.upNum);
         assertEquals(0,numFlip.downNum);
 
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
+        assertEquals(0,numFlip.upNum);
+        assertEquals(0,numFlip.downNum);
+
+        index=3;
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
+        assertEquals(0,numFlip.upNum);
+        assertEquals(1,numFlip.downNum);
+
         line = LineConverter.convertStringToLine("_o_xoo__");
         index = 1;
         numFlip = calc.numFlipForThisLine(blackLineDecoders, line, index);
         assertEquals(2,numFlip.upNum);
         assertEquals(0,numFlip.downNum);
+
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
+        assertEquals(0,numFlip.upNum);
+        assertEquals(0,numFlip.downNum);
+
+        index = 5;
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
+        assertEquals(0,numFlip.upNum);
+        assertEquals(1,numFlip.downNum);
 
         line = LineConverter.convertStringToLine("___oox_x");
         index = 5;
@@ -43,11 +63,27 @@ public class LineFlipperNumFlipCalcTest extends FastBoardTestCase {
         assertEquals(0,numFlip.upNum);
         assertEquals(2,numFlip.downNum);
 
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
+        assertEquals(0,numFlip.upNum);
+        assertEquals(0,numFlip.downNum);
+
+        index = 1;
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
+        assertEquals(1,numFlip.upNum);
+        assertEquals(0,numFlip.downNum);
+
         line = LineConverter.convertStringToLine("_oooooox");
         index = 7;
         numFlip = calc.numFlipForThisLine(blackLineDecoders, line, index);
         assertEquals(0,numFlip.upNum);
         assertEquals(6,numFlip.downNum);
+
+        line = LineConverter.convertStringToLine("_xxxxxxo");
+        index = 7;
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
+        assertEquals(0,numFlip.upNum);
+        assertEquals(6,numFlip.downNum);
+
 
         line = LineConverter.convertStringToLine("xoooooo_");
         index = 0;
@@ -55,9 +91,21 @@ public class LineFlipperNumFlipCalcTest extends FastBoardTestCase {
         assertEquals(6,numFlip.upNum);
         assertEquals(0,numFlip.downNum);
 
+        line = LineConverter.convertStringToLine("oxxxxxx_");
+        index = 0;
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
+        assertEquals(6,numFlip.upNum);
+        assertEquals(0,numFlip.downNum);
+
         line = LineConverter.convertStringToLine("xoo_ooox");
         index = 4;
         numFlip = calc.numFlipForThisLine(blackLineDecoders, line, index);
+        assertEquals(2,numFlip.upNum);
+        assertEquals(3,numFlip.downNum);
+
+        line = LineConverter.convertStringToLine("oxx_xxxo");
+        index = 4;
+        numFlip = calc.numFlipForThisLine(whiteLineDecoders, line, index);
         assertEquals(2,numFlip.upNum);
         assertEquals(3,numFlip.downNum);
     }
