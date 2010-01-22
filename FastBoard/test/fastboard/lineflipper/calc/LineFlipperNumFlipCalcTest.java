@@ -61,7 +61,7 @@ public class LineFlipperNumFlipCalcTest extends OthelloTestCase {
         assertEquals(3,numFlip.downNum);
     }
 
-    public void testCalcIsMoveValidForBlack() {
+    public void testCalcNumFlipForBlack() {
         LineFlipperNumFlipCalc calc = new LineFlipperNumFlipCalc();
 
         NumFlip[][] result = calc.calcNumFlipForBlack();
