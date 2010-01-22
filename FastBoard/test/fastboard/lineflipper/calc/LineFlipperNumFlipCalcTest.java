@@ -124,6 +124,18 @@ public class LineFlipperNumFlipCalcTest extends FastBoardTestCase {
         assertEquals(new NumFlip(0,0),result[5][line]);
         assertEquals(new NumFlip(0,0),result[6][line]);
         assertEquals(new NumFlip(0,0),result[7][line]);
+
+        result = calc.calcNumFlip(whiteLineDecoders);
+
+        line = LineConverter.convertStringToLine("oxx__xxo");
+        assertEquals(new NumFlip(0,0),result[0][line]);
+        assertEquals(new NumFlip(0,0),result[1][line]);
+        assertEquals(new NumFlip(0,0),result[2][line]);
+        assertEquals(new NumFlip(0,2),result[3][line]);
+        assertEquals(new NumFlip(2,0),result[4][line]);
+        assertEquals(new NumFlip(0,0),result[5][line]);
+        assertEquals(new NumFlip(0,0),result[6][line]);
+        assertEquals(new NumFlip(0,0),result[7][line]);
     }
 
     public void testNumFlipForBlackForThisLine() {
