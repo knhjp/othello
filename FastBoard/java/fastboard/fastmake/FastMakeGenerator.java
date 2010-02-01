@@ -1,9 +1,9 @@
 package fastboard.fastmake;
 
+import fastboard.checkmove.linedecoder.LineDecoderGenerator;
 import fastboard.fastmake.fastmake.FastMakeA1_Black;
 import fastboard.lineflipper.calc.LineFlipperNumFlipCalc;
 import fastboard.lineflipper.calc.NumFlip;
-import fastboard.checkmove.linedecoder.LineDecoderGenerator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -26,7 +26,7 @@ public class FastMakeGenerator {
                 {},
                 {
                         null, null, null, null, null, null, null, null, null, null,
-                        null, new FastMakeA1_Black(null)
+                        null, new FastMakeA1_Black(blackNumFlips)
                 }
         };
     }
