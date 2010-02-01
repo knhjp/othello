@@ -15,6 +15,7 @@ public class LineFlipperNumFlipCalc {
     /**
      * Calculates how many pieces get flipped given a configuration
      *
+     * @param lineDecoders color line deocders used to determine numer of discs to be flipped
      * @return an int[][] for the results. Result[index][line] means how  many discs you would flip for a given
      *         index and line configuration
      */
