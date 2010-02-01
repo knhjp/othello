@@ -1,7 +1,7 @@
 package fastboard.fastmake;
 
 import fastboard.checkmove.linedecoder.LineDecoderGenerator;
-import fastboard.fastmake.fastmake.FastMakeA1_Black;
+import fastboard.fastmake.fastmake.FastMakeA1;
 import fastboard.lineflipper.calc.LineFlipperNumFlipCalc;
 import fastboard.lineflipper.calc.NumFlip;
 
@@ -26,7 +26,7 @@ public class FastMakeGenerator {
                 {},
                 {
                         null, null, null, null, null, null, null, null, null, null,
-                        null, new FastMakeA1_Black(blackNumFlips)
+                        null, new FastMakeA1(blackNumFlips)
                 }
         };
     }
