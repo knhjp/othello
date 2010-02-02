@@ -18,7 +18,7 @@ public class A1LineFlipper {
     public A1LineFlipper(NumFlip[][] numFlips) {
         a1_blackLineFlippers_a1_a8 = new LineFlipper[3 * 3 * 3 * 3 * 3 * 3 * 3 * 3];
         for (int i=0 ; i<a1_blackLineFlippers_a1_a8.length; i++) {
-            
+            NumFlip curNumFlip = numFlips[7][i];
         }
     }
 }
