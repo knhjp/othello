@@ -1,7 +1,6 @@
 package fastboard.fastmake;
 
 import fastboard.fastflip.FastBoardFlips;
-import fastboard.fastmake.fastmake.FastMakeA1_Black;
 
 /**
  * Created by IntelliJ IDEA.
