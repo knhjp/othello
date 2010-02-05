@@ -12,10 +12,10 @@ import fastboard.lineflipper.squares.A1LineFlipper;
  * Time: 2:24:19 PM
  * This updates the current board depending on the existing position for A1
  */
-public class FastMakeA1 implements FastMake {
+public class BlackFastMakeA1 implements FastMake {
     private final A1LineFlipper lineFlipper;
 
-    public FastMakeA1(NumFlip[][] numFlips) {
+    public BlackFastMakeA1(NumFlip[][] numFlips) {
         this.lineFlipper = new A1LineFlipper(numFlips);
     }
 
