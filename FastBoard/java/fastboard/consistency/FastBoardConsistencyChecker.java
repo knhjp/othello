@@ -18,6 +18,7 @@ public class FastBoardConsistencyChecker {
     }
 
     public boolean isConsistent(FastBoard fastBoard) {
+        int blackMinusWhite = 0;
         for (FastBoardSquareChecker checker : checkers) {
             
         }
