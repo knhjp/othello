@@ -11,6 +11,9 @@ import fastboard.FastBoard;
  * blackMinusWhite should be consistent with the line configurations)
  */
 public class FastBoardConsistencyChecker {
+    public FastBoardConsistencyChecker() {
+    }
+
     public boolean isConsistent(FastBoard fastBoard) {
         return true;
     }
