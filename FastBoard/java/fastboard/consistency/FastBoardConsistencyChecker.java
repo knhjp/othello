@@ -11,7 +11,16 @@ import fastboard.FastBoard;
  * blackMinusWhite should be consistent with the line configurations)
  */
 public class FastBoardConsistencyChecker {
+    private final FastBoardSquareChecker[] checkers;
+
+    public FastBoardConsistencyChecker(FastBoardSquareChecker[] checkers) {
+        this.checkers = checkers;
+    }
+
     public boolean isConsistent(FastBoard fastBoard) {
+        for (FastBoardSquareChecker checker : checkers) {
+            
+        }
         return true;
     }
 }
