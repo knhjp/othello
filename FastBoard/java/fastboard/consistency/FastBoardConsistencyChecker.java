@@ -26,6 +26,6 @@ public class FastBoardConsistencyChecker {
             }
             blackMinusWhite += squareResult;
         }
-        return true;
+        return blackMinusWhite == fastBoard.getBlackMinusWhite();
     }
 }
