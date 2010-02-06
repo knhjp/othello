@@ -1,5 +1,7 @@
 package fastboard.consistency;
 
+import fastboard.FastBoard;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ed
@@ -9,4 +11,7 @@ package fastboard.consistency;
  * blackMinusWhite should be consistent with the line configurations)
  */
 public class FastBoardConsistencyChecker {
+    public boolean isConsistent(FastBoard fastBoard) {
+        return true;
+    }
 }
