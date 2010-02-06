@@ -18,6 +18,9 @@ public class FastBoardConsistencyChecker {
     }
 
     public boolean isConsistent(FastBoard fastBoard) {
+        for (FastBoardSquareChecker checker : checkers) {
+            
+        }
         return true;
     }
 }
