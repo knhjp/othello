@@ -12,18 +12,18 @@ import fastboard.lineflipper.squares.A1LineFlipper;
  * Time: 2:24:19 PM
  * This updates the current board depending on the existing position for A1
  */
-public class FastMakeA1 implements FastMake {
+public class BlackFastMakeA1 implements FastMake {
     private final A1LineFlipper lineFlipper;
 
-    public FastMakeA1(NumFlip[][] numFlips) {
+    public BlackFastMakeA1(NumFlip[][] numFlips) {
         this.lineFlipper = new A1LineFlipper(numFlips);
     }
 
     @Override public int makeMove(FastBoardFlips lines) {
         int discDiff =
-                lineFlipper.a1_blackLineFlippers_a1_a8[lines.a1_a8].flipLine(lines) +
-                lineFlipper.a1_blackLineFlippers_a1_h1[lines.a1_h1].flipLine(lines) +
-                lineFlipper.a1_blackLineFlippers_a1_h8[lines.a1_h8].flipLine(lines);
+                lineFlipper.a1_lineFlippers_a1_a8[lines.a1_a8].flipLine(lines) +
+                lineFlipper.a1_lineFlippers_a1_h1[lines.a1_h1].flipLine(lines) +
+                lineFlipper.a1_lineFlippers_a1_h8[lines.a1_h8].flipLine(lines);
         lines.blackPlaceA1();
         discDiff +=1;
         return discDiff;

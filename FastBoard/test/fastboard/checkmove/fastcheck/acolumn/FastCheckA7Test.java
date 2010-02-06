@@ -1,6 +1,6 @@
 package fastboard.checkmove.fastcheck.acolumn;
 
-import base.testcase.OthelloTestCase;
+import fastboard.FastBoardTestCase;
 import fastboard.checkmove.calc.FastCheckCalc;
 import fastboard.fastflip.FastBoardFlips;
 import fastboard.lineconverter.LineConverter;
@@ -12,10 +12,10 @@ import fastboard.lineconverter.LineConverter;
  * Time: 02:53:25 PM
  * Tests whether or not FastCheckA7 checks for valid moves properly
  */
-public class FastCheckA7Test extends OthelloTestCase {
+public class FastCheckA7Test extends FastBoardTestCase {
     public void testIsMoveValidBlack() {
         FastCheckCalc calc = new FastCheckCalc();
-        boolean[][] fastCheckCalcArray = calc.calcIsMoveValidForBlack();
+        boolean[][] fastCheckCalcArray = calc.calcIsMoveValid(blackLineDecoders);
         FastCheckA7 check = new FastCheckA7(fastCheckCalcArray);
 
         FastBoardFlips flips = new FastBoardFlips();
@@ -42,7 +42,7 @@ public class FastCheckA7Test extends OthelloTestCase {
 
     public void testIsMoveValidWhite() {
         FastCheckCalc calc = new FastCheckCalc();
-        boolean[][] fastCheckCalcArray = calc.calcIsMoveValidForWhite();
+        boolean[][] fastCheckCalcArray = calc.calcIsMoveValid(whiteLineDecoders);
         FastCheckA7 check = new FastCheckA7(fastCheckCalcArray);
 
         FastBoardFlips flips = new FastBoardFlips();
