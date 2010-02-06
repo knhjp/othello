@@ -5,7 +5,7 @@ package fastboard.consistency;
  * User: ed
  * Date: Feb 6, 2010
  * Time: 11:14:06 AM
- * To change this template use File | Settings | File Templates.
+ * This is the interface for checking whether or not a square of the FastBoard is consistent
  */
 public interface FastBoardSquareChecker {
 }
