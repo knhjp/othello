@@ -16,4 +16,10 @@ public interface LineFlipper {
      * @return the number of discDiff changed
      */
     int flipLine(FastBoardFlips lines);
+
+    class NULL implements LineFlipper {
+        @Override public int flipLine(FastBoardFlips lines) {
+            return 0;
+        }
+    }
 }
