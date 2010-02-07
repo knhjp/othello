@@ -2,6 +2,7 @@ package fastboard.fastmake.fastmake;
 
 import fastboard.fastflip.FastBoardFlips;
 import fastboard.fastmake.FastMake;
+import fastboard.lineflipper.LineFlipper;
 import fastboard.lineflipper.calc.NumFlip;
 import fastboard.lineflipper.squares.A1LineFlipper;
 
@@ -16,6 +17,7 @@ public class BlackFastMakeA1 implements FastMake {
     private final A1LineFlipper lineFlipper;
 
     public BlackFastMakeA1(NumFlip[][] numFlips) {
+        LineFlipper[][] blackFlippers = new LineFlipper[][]{{}}; 
         this.lineFlipper = new A1LineFlipper(numFlips);
     }
 
