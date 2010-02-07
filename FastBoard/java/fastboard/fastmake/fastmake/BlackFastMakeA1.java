@@ -17,8 +17,8 @@ public class BlackFastMakeA1 implements FastMake {
     private final A1LineFlipper lineFlipper;
 
     public BlackFastMakeA1(NumFlip[][] numFlips) {
-        LineFlipper[][] blackFlippers = new LineFlipper[][]{{}}; 
-        this.lineFlipper = new A1LineFlipper(numFlips);
+        LineFlipper[][] blackFlippers_a1_a8 = new LineFlipper[][]{{}}; 
+        this.lineFlipper = new A1LineFlipper(numFlips,blackFlippers_a1_a8);
     }
 
     @Override public int makeMove(FastBoardFlips lines) {
