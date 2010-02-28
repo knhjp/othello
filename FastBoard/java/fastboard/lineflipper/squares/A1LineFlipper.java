@@ -19,6 +19,7 @@ public class A1LineFlipper {
         a1_lineFlippers_a1_a8 = new LineFlipper[3 * 3 * 3 * 3 * 3 * 3 * 3 * 3];
         for (int i=0 ; i< a1_lineFlippers_a1_a8.length; i++) {
             NumFlip curNumFlip = numFlips[7][i];
+            a1_lineFlippers_a1_a8[i]=flippers_a1_a8[curNumFlip.upNum][curNumFlip.downNum];
         }
     }
 }
