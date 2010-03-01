@@ -17,9 +17,9 @@ abstract class AbstractFastMakeA1 implements FastMake {
     private final A1LineFlipper lineFlipper;
 
     protected AbstractFastMakeA1(NumFlip[][] numFlips) {
-        LineFlipper[][] blackFlippers_a1_a8 = new LineFlipper[][]{{}};
-        LineFlipper[][] blackFlippers_a1_h1 = new LineFlipper[][]{{}};
-        LineFlipper[][] blackFlippers_a1_h8 = new LineFlipper[][]{{}};
+        LineFlipper[][] blackFlippers_a1_a8 = calcA1_a8();
+        LineFlipper[][] blackFlippers_a1_h1 = calcA1_h1();
+        LineFlipper[][] blackFlippers_a1_h8 = calcA1_H8();
         this.lineFlipper = new A1LineFlipper(numFlips,blackFlippers_a1_a8,
                 blackFlippers_a1_h1,blackFlippers_a1_h8);
     }
@@ -32,5 +32,17 @@ abstract class AbstractFastMakeA1 implements FastMake {
         lines.blackPlaceA1();
         discDiff +=1;
         return discDiff;
+    }
+
+    private LineFlipper[][] calcA1_a8() {
+        return new LineFlipper[][]{{}};
+    }
+
+    private LineFlipper[][] calcA1_h1() {
+        return new LineFlipper[][]{{}};
+    }
+
+    private LineFlipper[][] calcA1_H8() {
+        return new LineFlipper[][]{{}};
     }
 }

@@ -10,8 +10,6 @@ import fastboard.lineflipper.calc.NumFlip;
  * This updates the current board depending on the existing position for A1
  */
 public class BlackFastMakeA1 extends AbstractFastMakeA1 {
-
-
     public BlackFastMakeA1(NumFlip[][] numFlips) {
         super(numFlips);
     }
