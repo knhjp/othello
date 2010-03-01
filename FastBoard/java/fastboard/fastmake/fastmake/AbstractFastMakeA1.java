@@ -5,7 +5,7 @@ package fastboard.fastmake.fastmake;
  * User: knhjp
  * Date: Feb 28, 2010
  * Time: 9:01:07 PM
- * To change this template use File | Settings | File Templates.
+ * This updates the current board depending on the existing position for A1
  */
-public class AbstractFastMakeA1 {
+abstract class AbstractFastMakeA1 {
 }
