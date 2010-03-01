@@ -1,7 +1,6 @@
 package fastboard.fastmake.fastmake;
 
 import fastboard.fastflip.FastBoardFlips;
-import fastboard.fastmake.FastMake;
 import fastboard.lineflipper.LineFlipper;
 import fastboard.lineflipper.calc.NumFlip;
 import fastboard.lineflipper.squares.A1LineFlipper;
@@ -13,7 +12,7 @@ import fastboard.lineflipper.squares.A1LineFlipper;
  * Time: 2:24:19 PM
  * This updates the current board depending on the existing position for A1
  */
-public class BlackFastMakeA1 implements FastMake {
+public class BlackFastMakeA1 extends AbstractFastMakeA1 {
     private final A1LineFlipper lineFlipper;
 
     public BlackFastMakeA1(NumFlip[][] numFlips) {
