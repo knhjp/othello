@@ -18,6 +18,14 @@ public class FastBoardConsistencyChecker {
     }
 
     public boolean isConsistent(FastBoard fastBoard) {
-        return true;
+        int blackMinusWhite = 0;
+        for (FastBoardSquareChecker checker : checkers) {
+            final int squareResult = checker.checkSquareIsConsistent();
+            if (squareResult == FastBoardSquareChecker.badResult) {
+                return false;
+            }
+            blackMinusWhite += squareResult;
+        }
+        return blackMinusWhite == fastBoard.getBlackMinusWhite();
     }
 }

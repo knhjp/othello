@@ -8,6 +8,7 @@ package fastboard.consistency;
  * This is the interface for checking whether or not a square of the FastBoard is consistent
  */
 public interface FastBoardSquareChecker {
+    static final int badResult = 1218;
     /**
      * Check that a particular square on the FastBoard is consistent
      * @return the blackMinusWhite contribution of this square
