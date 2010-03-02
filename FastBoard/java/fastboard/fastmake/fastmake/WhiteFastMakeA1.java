@@ -5,7 +5,7 @@ package fastboard.fastmake.fastmake;
  * User: knhjp
  * Date: Mar 1, 2010
  * Time: 7:39:50 PM
- * To change this template use File | Settings | File Templates.
+ * This updates the current board depending on the existing position for A1 for white
  */
 public class WhiteFastMakeA1 {
 }
