@@ -1,6 +1,10 @@
 package fastboard.fastmake.fastmake;
 
+import fastboard.fastflip.FastBoardFlips;
 import fastboard.fastmake.FastMake;
+import fastboard.lineflipper.LineFlipper;
+import fastboard.lineflipper.calc.NumFlip;
+import fastboard.lineflipper.squares.A1LineFlipper;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,4 +14,27 @@ import fastboard.fastmake.FastMake;
  * This updates the current board depending on the existing position for A1
  */
 abstract class AbstractFastMakeA1 implements FastMake {
+    private final A1LineFlipper lineFlipper;
+
+    protected AbstractFastMakeA1(NumFlip[][] numFlips) {
+        LineFlipper[][] blackFlippers_a1_a8 = calcA1_a8();
+        LineFlipper[][] blackFlippers_a1_h1 = calcA1_h1();
+        LineFlipper[][] blackFlippers_a1_h8 = calcA1_h8();
+        this.lineFlipper = new A1LineFlipper(numFlips,blackFlippers_a1_a8,
+                blackFlippers_a1_h1,blackFlippers_a1_h8);
+    }
+
+    @Override public int makeMove(FastBoardFlips lines) {
+        int discDiff =
+                lineFlipper.a1_lineFlippers_a1_a8[lines.a1_a8].flipLine(lines) +
+                lineFlipper.a1_lineFlippers_a1_h1[lines.a1_h1].flipLine(lines) +
+                lineFlipper.a1_lineFlippers_a1_h8[lines.a1_h8].flipLine(lines);
+        lines.blackPlaceA1();
+        discDiff +=1;
+        return discDiff;
+    }
+
+    abstract LineFlipper[][] calcA1_a8();
+    abstract LineFlipper[][] calcA1_h1();
+    abstract LineFlipper[][] calcA1_h8();
 }
